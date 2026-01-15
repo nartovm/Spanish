@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Verbal Español — Dark Theme Final</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Restoring Dark Theme Palette */
+            /* Header Backgrounds */
+            --c-declarar: #66bb6a;
+            /* Green */
+            --c-nodeclarar: #42a5f5;
+            /* Blue */
+            --c-afirmar: #ab47bc;
+            /* Purple */
+            --c-imaginar: #ffa726;
+            /* Orange */
+
+            /* Side Labels */
+            --c-side-aqui: #66bb6a;
+            --c-side-alli: #fdd835;
+
+            /* Cell Colors - DARK */
+            --c-bg-cell: #2d2d44;
+            --c-bg-example: #232336;
+            --c-text-name: #b0bec5;
+            --c-text-verb: #ffffff;
+            --c-text-example: #90a4ae;
+
+            /* Borders/Grid */
+            --c-grid-gap: #1a1a2e;
+            /* Dark gap */
+            --c-bg-app: #0f0f1a;
+            /* Dark Page BG */
+
+            /* Hover */
+            --c-bg-hover: #393952;
+            --c-bg-hover-ex: #2f2f45;
+        }
+
+        body {
+            background-color: var(--c-bg-app);
+            color: #fff;
+        }
+
+        .navbar {
+            background: #1a1a2e;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar a {
+            color: #aaa;
+        }
+
+        .navbar span {
+            color: #666;
+        }
+
+        .navbar a:hover {
+            color: #fff;
+        }
+
+        .page-header h1 {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: #aaa;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* GRID Container */
+        .verb-grid-container {
+            display: grid;
+            grid-template-columns: 50px 0px 0.95fr 1.6fr 0.7fr 0.75fr 1.0fr 1.0fr;
+            grid-template-rows: auto auto auto 1fr 1fr;
+            gap: 2px;
+            background: var(--c-grid-gap);
+            border: 1px solid #444;
+
+            width: 100%;
+            min-width: 1000px;
+
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Cells */
+        .grid-cell {
+            background: var(--c-grid-gap);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .grid-cell a {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            height: 100%;
+        }
+
+        /* SPLIT STRUCTURE (Top / Bottom) */
+
+        .cell-top {
+            background: var(--c-bg-cell);
+            /* Fixed 'basis' logic */
+            flex: 0 0 130px;
+            /* Generous height for 3 lines of text + verb */
+            padding: 10px;
+            padding-top: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            transition: background 0.2s;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .cell-bottom {
+            background: var(--c-bg-example);
+            padding: 10px;
+            display: flex;
+            /* ALIGN TOP (flex-start) instead of center */
+            align-items: flex-start;
+            flex: 1;
+            /* GROWS to fill the rest of the height */
+            min-height: 80px;
+            /* Generous example space */
+            transition: background 0.2s;
+        }
+
+        /* HOVER EFFECTS */
+        .grid-cell:not(.split-cell):hover .cell-top {
+            background: var(--c-bg-hover);
+        }
+
+        .grid-cell:not(.split-cell):hover .cell-bottom {
+            background: var(--c-bg-hover-ex);
+        }
+
+        .grid-cell:not(.split-cell):hover {
+            transform: translateY(-2px);
+            z-index: 10;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+
+        /* HEADER STYLES */
+        .header-cell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            padding: 10px 4px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: center;
+            line-height: 1.2;
+            font-size: 1.1rem;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .h-declarar {
+            grid-column: 3 / 7;
+            grid-row: 1 / 2;
+            background: var(--c-declarar);
+        }
+
+        .h-nodeclarar {
+            grid-column: 7 / 9;
+            grid-row: 1 / 3;
+            background: var(--c-nodeclarar);
+        }
+
+        .h-afirmar {
+            grid-column: 3 / 5;
+            grid-row: 2 / 3;
+            background: var(--c-afirmar);
+        }
+
+        .h-imaginar {
+            grid-column: 5 / 7;
+            grid-row: 2 / 3;
+            background: var(--c-imaginar);
+        }
+
+        /* Sub-headers */
+        .h-sub {
+            grid-row: 3 / 4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 8px;
+            color: #1a1a2e;
+        }
+
+        .sub-afirmar {
+            background: #e1bee7;
+        }
+
+        .sub-imaginar {
+            background: #ffe0b2;
+        }
+
+        .sub-nodeclarar {
+            background: #b3e5fc;
+        }
+
+        /* Side Labels (Vertical) */
+        .side-label {
+            grid-column: 1 / 2;
+            grid-row-end: span 1;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            padding: 10px 0;
+        }
+
+        .row-aqui-label {
+            grid-row: 4 / 5;
+            background: var(--c-side-aqui);
+            color: white;
+        }
+
+        .row-alli-label {
+            grid-row: 5 / 6;
+            background: var(--c-side-alli);
+            color: #333;
+        }
+
+        .marker {
+            display: none;
+        }
+
+        .header-corner {
+            grid-column: 1 / 3;
+            grid-row: 1 / 4;
+            background: #1a1a2e;
+            border: none;
+        }
+
+        /* CONTENT TYPOGRAPHY */
+        .tense-name {
+            font-size: 0.85rem;
+            color: var(--c-text-name);
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            line-height: 1.3;
+            min-height: 2.6em;
+            /* Space for 2-3 lines */
+        }
+
+        .tense-verb {
+            font-size: 0.95rem;
+            color: var(--c-text-verb);
+            font-weight: 800;
+            margin-bottom: auto;
+            text-transform: uppercase;
+        }
+
+        .tense-example {
+            font-size: 0.8rem;
+            color: var(--c-text-example);
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+
+        /* Split Cells */
+        .split-cell {
+            display: flex;
+            flex-direction: row;
+            pointer-events: none;
+            background: transparent;
+        }
+
+        .split-half {
+            flex: 1;
+            position: relative;
+            border-right: 1px solid #444;
+            display: flex;
+            flex-direction: column;
+            pointer-events: auto;
+            transition: transform 0.2s ease;
+        }
+
+        .split-half:last-child {
+            border-right: none;
+        }
+
+        .split-half a {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .split-half .cell-top {
+            background: var(--c-bg-cell);
+            /* Match main top height */
+            flex: 0 0 130px;
+            padding: 10px;
+            padding-top: 15px;
+            transition: background 0.2s;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .split-half .cell-bottom {
+            background: var(--c-bg-example);
+            padding: 10px;
+            flex: 1;
+            display: flex;
+            /* Align Top for splits too */
+            align-items: flex-start;
+            transition: background 0.2s;
+            /* inherit min-height */
+        }
+
+        .split-half:hover {
+            transform: translateY(-2px);
+            z-index: 10;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .split-half:hover .cell-top {
+            background: var(--c-bg-hover);
+        }
+
+        .split-half:hover .cell-bottom {
+            background: var(--c-bg-hover-ex);
+        }
+
+        @media (max-width: 1000px) {
+            .verb-grid-container {
+                min-width: 900px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="breadcrumb">
+            <a href="../../index.html">🏠 Главная</a>
+            <span>→</span>
+            <a href="../index.html">📚 Теория</a>
+            <span>→</span>
+            <span style="color: #66bb6a;">Глагольная система</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>Sistema Verbal Español</h1>
+            <p class="subtitle">Кликай на ячейку для подробной информации</p>
+        </header>
+
+        <div style="overflow-x: auto; padding-bottom: 20px;">
+            <div class="verb-grid-container">
+
+                <!-- CORNER -->
+                <div class="header-corner"></div>
+
+                <!-- ROW 1 Headers -->
+                <div class="header-cell h-declarar">DECLARAR</div>
+                <div class="header-cell h-nodeclarar">NO DECLARAR 🗨️</div>
+
+                <!-- ROW 2 Headers -->
+                <div class="header-cell h-afirmar">AFIRMAR 👁️</div>
+                <div class="header-cell h-imaginar">IMAGINAR 💭</div>
+
+                <!-- ROW 3 Sub-Headers -->
+                <div class="h-sub sub-afirmar" style="grid-column: 3;"><span>DENTRO</span><span>👁️〰️</span></div>
+                <div class="h-sub sub-afirmar" style="grid-column: 4;"><span>FUERA</span><span>➡️👁️</span></div>
+                <div class="h-sub sub-imaginar" style="grid-column: 5;"><span>DENTRO</span><span>💭〰️</span></div>
+                <div class="h-sub sub-imaginar" style="grid-column: 6;"><span>FUERA</span><span>➡️💭</span></div>
+                <div class="h-sub sub-nodeclarar" style="grid-column: 7;"><span>DENTRO</span><span>🤐〰️</span></div>
+                <div class="h-sub sub-nodeclarar" style="grid-column: 8;"><span>FUERA</span><span>➡️🤐</span></div>
+
+                <!-- ROW 4: AQUI -->
+                <div class="side-label row-aqui-label">AQUÍ 📍</div>
+
+                <!-- Cell 3: Presente -->
+                <div class="grid-cell" style="grid-column: 3;">
+                    <a href="tiempos/presente.html">
+                        <div class="cell-top">
+                            <div class="tense-name">Presente de Indicativo</div>
+                            <div class="tense-verb">HABLO</div>
+                        </div>
+                        <div class="cell-bottom">
+                            <div class="tense-example">Ahora vivo en Málaga.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Cell 4: Pret Perfecto -->
+                <div class="grid-cell" style="grid-column: 4;">
+                    <a href="tiempos/preterito-perfecto.html">
+                        <div class="cell-top">
+                            <div class="tense-name">Pretérito Perfecto</div>
+                            <div class="tense-verb">HE HABLADO</div>
+                        </div>
+                        <div class="cell-bottom">
+                            <div class="tense-example">Este año he vivido en Madrid.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Cell 5: Futuro Simple -->
+                <div class="grid-cell" style="grid-column: 5;">
+                    <a href="tiempos/futuro-simple.html">
+                        <div class="cell-top">
+                            <div class="tense-name">Futuro Simple</div>
+                            <div class="tense-verb">HABLARÉ</div>
+                        </div>
+                        <div class="cell-bottom">
+                            <div class="tense-example">El año que viene viviré en Granada.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Cell 6: Futuro Perfecto -->
+                <div class="grid-cell" style="grid-column: 6;">
+                    <a href="tiempos/futuro-perfecto.html">
+                        <div class="cell-top">
+                            <div class="tense-name">Futuro Perfecto</div>
+                            <div class="tense-verb">HABRÉ HABLADO</div>
+                        </div>
+                        <div class="cell-bottom">
+                            <div class="tense-example">Habré vivido en unos cinco países.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Cell 7: Presente Subj -->
+                <div class="grid-cell" style="grid-column: 7;">
+                    <a href="tiempos/presente-subjuntivo.html">
+                        <div class="cell-top">
+                            <div class="tense-name">Presente de Subjuntivo</div>
+                            <div class="tense-verb">HABLE</div>
+                        </div>
+                        <div class="cell-bottom">
+                            <div class="tense-example">Quiero que viva en Estocolmo.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Cell 8: Pret Perf Subj (Full Name) -->
+                <div class="grid-cell" style="grid-column: 8;">
+                    <a href="tiempos/preterito-perfecto-subjuntivo.html">
+                        <div class="cell-top">
+                            <div class="tense-name">Pretérito Perfecto de Subjuntivo</div>
+                            <div class="tense-verb">HAYA HABLADO</div>
+                        </div>
+                        <div class="cell-bottom">
+                            <div class="tense-example">Busco a alguien que haya vivido en Senegal.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- ROW 5: ALLI -->
+                <div class="side-label row-alli-label">ALLÍ 📍</div>
+
+                <!-- Cell 3: Imperfecto -->
+                <div class="grid-cell" style="grid-column: 3;">
+                    <a href="tiempos/imperfecto.html">
+                        <div class="cell-top">
+                            <div class="tense-name">Pretérito Imperfecto</div>
+                            <div class="tense-verb">HABLABA</div>
+                        </div>
+                        <div class="cell-bottom">
+                            <div class="tense-example">De pequeño, vivía en Roma.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Cell 4: SPLIT (Indefinido / Pluscuamperfecto) (Full Names) -->
+                <div class="grid-cell split-cell" style="grid-column: 4;">
+                    <div class="split-half">
+                        <a href="tiempos/indefinido.html">
+                            <div class="cell-top">
+                                <div class="tense-name">Pretérito Indefinido</div>
+                                <div class="tense-verb">HABLÉ</div>
+                            </div>
+                            <div class="cell-bottom">
+                                <div class="tense-example">Viví en Lisboa diez años.</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="split-half">
+                        <a href="tiempos/pluscuamperfecto.html">
+                            <div class="cell-top">
+                                <div class="tense-name">Pretérito Pluscuamperfecto</div>
+                                <div class="tense-verb">HABÍA HABLADO</div>
+                            </div>
+                            <!-- FIXED TEXT: Removed ellipsis, restored full text -->
+                            <div class="cell-bottom">
+                                <div class="tense-example">Antes de 2021, había vivido en BCN.</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cell 5: Condicional -->
+                <div class="grid-cell" style="grid-column: 5;">
+                    <a href="tiempos/condicional.html">
+                        <div class="cell-top">
+                            <div class="tense-name">Condicional Simple</div>
+                            <div class="tense-verb">HABLARÍA</div>
+                        </div>
+                        <div class="cell-bottom">
+                            <div class="tense-example">Supongo que viviría en Kioto.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Cell 6: Condicional Perf -->
+                <div class="grid-cell" style="grid-column: 6;">
+                    <a href="tiempos/condicional-perfecto.html">
+                        <div class="cell-top">
+                            <div class="tense-name">Condicional Perfecto</div>
+                            <div class="tense-verb">HABRÍA HABLADO</div>
+                        </div>
+                        <div class="cell-bottom">
+                            <div class="tense-example">Supongo que habría vivido en Beijing.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Cell 7: Imperfecto Subj -->
+                <div class="grid-cell" style="grid-column: 7;">
+                    <a href="tiempos/imperfecto-subjuntivo.html">
+                        <div class="cell-top">
+                            <div class="tense-name">Imperfecto de Subjuntivo</div>
+                            <div class="tense-verb">HABLARA</div>
+                        </div>
+                        <div class="cell-bottom">
+                            <div class="tense-example">No creo que viviera en Helsinki.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Cell 8: Pluscuamp Subj (Full Name) -->
+                <div class="grid-cell" style="grid-column: 8;">
+                    <a href="tiempos/pluscuamperfecto-subjuntivo.html">
+                        <div class="cell-top">
+                            <div class="tense-name">Pretérito Pluscuamperfecto de Subjuntivo</div>
+                            <div class="tense-verb">HUBIERA HABLADO</div>
+                        </div>
+                        <div class="cell-bottom">
+                            <div class="tense-example">Buscaba a alguien que hubiera vivido en Chile.</div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="../index.html" class="btn btn-secondary">← Назад к теории</a>
+        </div>
+    </div>
+</body>
+
+</html>
