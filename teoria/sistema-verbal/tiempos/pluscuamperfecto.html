@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pretérito Pluscuamperfecto — Испанский B2.1</title>
+    <title>Pretérito Pluscuamperfecto — Español B2.1</title>
     <link rel="stylesheet" href="../../../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -138,23 +138,43 @@
             color: var(--c-orange);
         }
 
-        .example {
+        .usage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        @media (max-width: 700px) {
+            .usage-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .usage-item {
             background: var(--c-bg-cell);
             border-left: 3px solid var(--c-yellow);
-            padding: 0.6rem 1rem;
-            margin: 0.5rem 0;
+            padding: 0.75rem 1rem;
             border-radius: 0 6px 6px 0;
         }
 
-        .example .es {
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 0.25rem;
+        .usage-item h4 {
+            margin: 0 0 0.4rem 0;
+            font-size: 0.8rem;
+            color: var(--c-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .example .tr {
-            font-size: 0.85rem;
+        .usage-item .es {
+            font-weight: 600;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        .usage-item .tr {
+            font-size: 0.8rem;
             color: var(--c-text-dim);
+            margin-top: 0.25rem;
         }
 
         .btn-back {
@@ -172,8 +192,8 @@
 <body>
     <nav class="navbar">
         <div class="breadcrumb">
-            <a href="../../../index.html">🏠</a> <span style="color:#666">→</span>
-            <a href="../../index.html">Теория</a> <span style="color:#666">→</span>
+            <a href="../../../index.html">🏠 Inicio</a> <span style="color:#666">→</span>
+            <a href="../../index.html">📚 Teoría</a> <span style="color:#666">→</span>
             <a href="../index.html">Sistema Verbal</a> <span style="color:#666">→</span>
             <span style="color: var(--c-accent);">Pluscuamperfecto</span>
         </div>
@@ -182,32 +202,46 @@
     <div class="container">
         <header class="tense-header">
             <h1>Pretérito Pluscuamperfecto</h1>
-            <p class="subtitle">Давнопрошедшее (предпрошедшее)</p>
-            <span class="position-badge">📢 DECLARAR · 👁️ AFIRMAR · ➡️🔲 FUERA · 🔭 ALLÍ</span>
+            <p class="subtitle">Давнопрошедшее / предпрошедшее</p>
+            <span class="position-badge">📢 DECLARAR · 👁️ AFIRMAR · ➡️ FUERA · 🔭 ALLÍ</span>
         </header>
 
         <section class="section">
-            <h2>📍 Позиция в системе</h2>
+            <h2>📍 Posición en el sistema</h2>
             <div class="info-grid">
                 <div class="card">
                     <h4>Что означает?</h4>
-                    <p>"Прошлое в прошлом". Действие <strong>завершено</strong> (FUERA) <strong>до</strong> другого
-                        момента в прошлом. "К тому времени уже..."</p>
+                    <p>Действие, <strong>завершённое ДО</strong> другого прошлого момента. «Прошлое в прошлом». FUERA
+                        (завершено) + ALLÍ (дистанция).</p>
                 </div>
                 <div class="card">
-                    <h4>Аналоги</h4>
-                    <p>🇷🇺 Нет формы! "Я уже сделал (к тому моменту)"<br>
-                        🇬🇧 <em>I had spoken</em> — Past Perfect, точный аналог!</p>
+                    <h4>Отношение к другим временам</h4>
+                    <p>Как Perfecto относится к Presente, так Pluscuamperfecto относится к Imperfecto/Indefinido.</p>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <h2>📐 Образование: HABER (imperfecto) + participio</h2>
+            <h2>🔄 Comparación</h2>
+            <div class="info-grid">
+                <div class="card">
+                    <h4>🇷🇺 Русский</h4>
+                    <p>В русском нет отдельной формы. Переводим прошедшим СВ + контекст: <em>Я уже сделал (когда он
+                            пришёл)</em>.</p>
+                </div>
+                <div class="card">
+                    <h4>🇬🇧 English</h4>
+                    <p><strong>Past Perfect (had + PP)</strong>: <em>I had done</em>. Точный аналог!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📐 Formación: HABER (imperfecto) + participio</h2>
             <table class="conj-table">
                 <tr>
                     <th>Лицо</th>
-                    <th>HABER (imperf.)</th>
+                    <th>HABER (imp.)</th>
                     <th>+ participio</th>
                 </tr>
                 <tr>
@@ -239,23 +273,33 @@
         </section>
 
         <section class="section">
-            <h2>💡 Употребление</h2>
-            <div class="example">
-                <div class="es">Antes de 2021, había vivido en Barcelona.</div>
-                <div class="tr">До другого момента в прошлом.</div>
-            </div>
-            <div class="example">
-                <div class="es">No quiso comer porque ya había desayunado.</div>
-                <div class="tr">Причина, предшествующая событию.</div>
-            </div>
-            <div class="example">
-                <div class="es">Cuando llegué, ya se había ido.</div>
-                <div class="tr">Действие уже завершилось к моменту.</div>
+            <h2>💡 Usos principales</h2>
+            <div class="usage-grid">
+                <div class="usage-item">
+                    <h4>Acción anterior a otra</h4>
+                    <div class="es">Cuando llegué, ya había salido.</div>
+                    <div class="tr">Когда я пришёл, он уже ушёл. Два прошлых.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Experiencia hasta momento</h4>
+                    <div class="es">Antes de 2021, había vivido en BCN.</div>
+                    <div class="tr">До 2021 жил в Барселоне (потом уехал).</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Estilo indirecto</h4>
+                    <div class="es">Dijo que lo había hecho.</div>
+                    <div class="tr">«Сказал, что сделал» — Perfecto → Plusc.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Causa en el pasado</h4>
+                    <div class="es">Estaba cansado porque no había dormido.</div>
+                    <div class="tr">Был уставшим, потому что не спал.</div>
+                </div>
             </div>
         </section>
 
         <div style="text-align: center; margin-top: 2rem;">
-            <a href="../index.html" class="btn-back">← Назад к таблице</a>
+            <a href="../index.html" class="btn-back">← Volver a la tabla</a>
         </div>
     </div>
 </body>

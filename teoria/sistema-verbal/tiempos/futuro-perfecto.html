@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futuro Perfecto — Испанский B2.1</title>
+    <title>Futuro Perfecto — Español B2.1</title>
     <link rel="stylesheet" href="../../../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -14,6 +14,7 @@
             --c-text-dim: #90a4ae;
             --c-accent: #667eea;
             --c-orange: #ffa726;
+            --c-green: #66bb6a;
         }
 
         body {
@@ -61,11 +62,11 @@
 
         .position-badge {
             display: inline-block;
-            background: var(--c-bg-cell);
+            background: var(--c-orange);
             padding: 0.4rem 0.8rem;
             border-radius: 6px;
             font-size: 0.8rem;
-            color: #ccc;
+            color: #fff;
         }
 
         .section {
@@ -137,44 +138,43 @@
             color: var(--c-orange);
         }
 
-        .example {
+        .usage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        @media (max-width: 700px) {
+            .usage-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .usage-item {
             background: var(--c-bg-cell);
-            border-left: 3px solid var(--c-accent);
-            padding: 0.6rem 1rem;
-            margin: 0.5rem 0;
+            border-left: 3px solid var(--c-orange);
+            padding: 0.75rem 1rem;
             border-radius: 0 6px 6px 0;
         }
 
-        .example .es {
+        .usage-item h4 {
+            margin: 0 0 0.4rem 0;
+            font-size: 0.8rem;
+            color: var(--c-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .usage-item .es {
             font-weight: 600;
             color: #fff;
-            margin-bottom: 0.25rem;
+            font-size: 0.9rem;
         }
 
-        .example .tr {
-            font-size: 0.85rem;
+        .usage-item .tr {
+            font-size: 0.8rem;
             color: var(--c-text-dim);
-        }
-
-        .warning {
-            background: rgba(233, 30, 99, 0.1);
-            border-left: 3px solid #e91e63;
-            padding: 0.6rem 1rem;
-            margin: 0.5rem 0;
-            border-radius: 0 6px 6px 0;
-        }
-
-        .warning h4 {
-            margin: 0 0 0.3rem 0;
-            font-size: 0.85rem;
-            color: #e91e63;
-        }
-
-        .warning p {
-            margin: 0;
-            font-size: 0.85rem;
-            color: #ccc;
-            line-height: 1.5;
+            margin-top: 0.25rem;
         }
 
         .btn-back {
@@ -192,8 +192,8 @@
 <body>
     <nav class="navbar">
         <div class="breadcrumb">
-            <a href="../../../index.html">🏠</a> <span style="color:#666">→</span>
-            <a href="../../index.html">Теория</a> <span style="color:#666">→</span>
+            <a href="../../../index.html">🏠 Inicio</a> <span style="color:#666">→</span>
+            <a href="../../index.html">📚 Teoría</a> <span style="color:#666">→</span>
             <a href="../index.html">Sistema Verbal</a> <span style="color:#666">→</span>
             <span style="color: var(--c-accent);">Futuro Perfecto</span>
         </div>
@@ -203,27 +203,40 @@
         <header class="tense-header">
             <h1>Futuro Perfecto</h1>
             <p class="subtitle">Будущее совершённое</p>
-            <span class="position-badge">📢 DECLARAR · 💭 IMAGINAR · ➡️🔲 FUERA · 📍 AQUÍ</span>
+            <span class="position-badge">📢 DECLARAR · 💭 IMAGINAR · ➡️ FUERA · 📍 AQUÍ</span>
         </header>
 
         <section class="section">
-            <h2>📍 Позиция в системе</h2>
+            <h2>📍 Posición en el sistema</h2>
             <div class="info-grid">
                 <div class="card">
                     <h4>Что означает?</h4>
-                    <p>Действие будет <strong>завершено</strong> (FUERA) к моменту в будущем. Или <strong>предположение
-                            о прошлом</strong>.</p>
+                    <p>= Futuro Simple + <strong>завершённость</strong> (FUERA). Действие будет завершено К
+                        определённому моменту в будущем.</p>
                 </div>
                 <div class="card">
-                    <h4>Аналоги</h4>
-                    <p>🇷🇺 "К тому времени я уже сделаю..." (контекст)<br>
-                        🇬🇧 <em>I will have done</em> — точный аналог!</p>
+                    <h4>Почему IMAGINAR + FUERA?</h4>
+                    <p>Мы моделируем (IMAGINAR) + это уже будет сделано (FUERA). Отсюда: гипотезы о прошлом!</p>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <h2>📐 Образование: HABER (futuro) + participio</h2>
+            <h2>🔄 Comparación</h2>
+            <div class="info-grid">
+                <div class="card">
+                    <h4>🇷🇺 Русский</h4>
+                    <p>Будущее СВ: <em>К завтра я уже сделаю</em>. Нет отдельной формы, контекст важен.</p>
+                </div>
+                <div class="card">
+                    <h4>🇬🇧 English</h4>
+                    <p><strong>Will have + past participle</strong>: <em>I will have done</em>. Точный аналог!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📐 Formación: HABER (futuro) + participio</h2>
             <table class="conj-table">
                 <tr>
                     <th>Лицо</th>
@@ -259,31 +272,33 @@
         </section>
 
         <section class="section">
-            <h2>💡 Употребление</h2>
-            <div class="example">
-                <div class="es">Para 2030, habré vivido en cinco países.</div>
-                <div class="tr">Завершённое к моменту в будущем.</div>
-            </div>
-            <div class="example">
-                <div class="es">Cuando llegues, ya habré terminado.</div>
-                <div class="tr">Предшествование будущему действию.</div>
-            </div>
-            <div class="example">
-                <div class="es">— ¿Por qué no vino? — Habrá perdido el tren.</div>
-                <div class="tr">⚡ Вероятность о ПРОШЛОМ! = Наверное, опоздал.</div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>⚠️ Важно</h2>
-            <div class="warning">
-                <h4>⚡ Futuro Perfecto de probabilidad — про ПРОШЛОЕ!</h4>
-                <p>"Habrá llegado ya" = "Наверное, уже приехал" (а НЕ "приедет")</p>
+            <h2>💡 Usos principales</h2>
+            <div class="usage-grid">
+                <div class="usage-item">
+                    <h4>Acción futura completada</h4>
+                    <div class="es">Para las 10, ya habré terminado.</div>
+                    <div class="tr">К 10 часам уже закончу. = I will have finished.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Experiencia acumulada</h4>
+                    <div class="es">Para 2030, habré vivido en cinco países.</div>
+                    <div class="tr">К 2030 буду жить уже в 5 странах.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Hipótesis sobre pasado</h4>
+                    <div class="es">¿Dónde está Juan? — Habrá perdido el tren.</div>
+                    <div class="tr">«Наверное, опоздал на поезд.» Гипотеза!</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Sorpresa / incredulidad</h4>
+                    <div class="es">¡Habrás visto qué descarado!</div>
+                    <div class="tr">Ну ты видел какой наглец! (риторическое)</div>
+                </div>
             </div>
         </section>
 
         <div style="text-align: center; margin-top: 2rem;">
-            <a href="../index.html" class="btn-back">← Назад к таблице</a>
+            <a href="../index.html" class="btn-back">← Volver a la tabla</a>
         </div>
     </div>
 </body>

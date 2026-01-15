@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pretérito Perfecto — Испанский B2.1</title>
+    <title>Pretérito Perfecto — Español B2.1</title>
     <link rel="stylesheet" href="../../../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --c-bg-app: #0f0f1a;
-            --c-bg-card: #1a1a2e;
             --c-bg-cell: #2d2d44;
             --c-text-dim: #90a4ae;
             --c-accent: #667eea;
             --c-orange: #ffa726;
+            --c-green: #66bb6a;
         }
 
         body {
@@ -62,11 +62,11 @@
 
         .position-badge {
             display: inline-block;
-            background: var(--c-bg-cell);
+            background: var(--c-green);
             padding: 0.4rem 0.8rem;
             border-radius: 6px;
             font-size: 0.8rem;
-            color: #ccc;
+            color: #fff;
         }
 
         .section {
@@ -138,23 +138,43 @@
             color: var(--c-orange);
         }
 
-        .example {
+        .usage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        @media (max-width: 700px) {
+            .usage-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .usage-item {
             background: var(--c-bg-cell);
-            border-left: 3px solid var(--c-accent);
-            padding: 0.6rem 1rem;
-            margin: 0.5rem 0;
+            border-left: 3px solid var(--c-green);
+            padding: 0.75rem 1rem;
             border-radius: 0 6px 6px 0;
         }
 
-        .example .es {
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 0.25rem;
+        .usage-item h4 {
+            margin: 0 0 0.4rem 0;
+            font-size: 0.8rem;
+            color: var(--c-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .example .tr {
-            font-size: 0.85rem;
+        .usage-item .es {
+            font-weight: 600;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        .usage-item .tr {
+            font-size: 0.8rem;
             color: var(--c-text-dim);
+            margin-top: 0.25rem;
         }
 
         .warning {
@@ -188,8 +208,44 @@
             border: 1px solid #444;
         }
 
-        .btn-back:hover {
-            background: #3a3a50;
+        details {
+            background: rgba(102, 126, 234, 0.08);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            border-radius: 6px;
+            margin: 0.75rem 0;
+        }
+
+        details summary {
+            cursor: pointer;
+            padding: 0.6rem 1rem;
+            font-weight: 600;
+            color: var(--c-accent);
+            font-size: 0.9rem;
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        details .content {
+            padding: 1rem;
+            font-size: 0.85rem;
+            color: #bbb;
+            line-height: 1.6;
+        }
+
+        details .content p {
+            margin: 0 0 0.75rem 0;
+        }
+
+        .note {
+            background: rgba(102, 186, 234, 0.1);
+            border-left: 3px solid #42a5f5;
+            padding: 0.6rem 1rem;
+            margin: 0.75rem 0;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.85rem;
+            color: #bbb;
         }
     </style>
 </head>
@@ -197,8 +253,8 @@
 <body>
     <nav class="navbar">
         <div class="breadcrumb">
-            <a href="../../../index.html">🏠</a> <span style="color:#666">→</span>
-            <a href="../../index.html">Теория</a> <span style="color:#666">→</span>
+            <a href="../../../index.html">🏠 Inicio</a> <span style="color:#666">→</span>
+            <a href="../../index.html">📚 Teoría</a> <span style="color:#666">→</span>
             <a href="../index.html">Sistema Verbal</a> <span style="color:#666">→</span>
             <span style="color: var(--c-accent);">Pretérito Perfecto</span>
         </div>
@@ -208,39 +264,57 @@
         <header class="tense-header">
             <h1>Pretérito Perfecto</h1>
             <p class="subtitle">Прошедшее совершённое (перфект)</p>
-            <span class="position-badge">📢 DECLARAR · 👁️ AFIRMAR · ➡️🔲 FUERA · 📍 AQUÍ</span>
+            <span class="position-badge">📢 DECLARAR · 👁️ AFIRMAR · ➡️ FUERA · 📍 AQUÍ</span>
         </header>
 
         <section class="section">
-            <h2>📍 Позиция в системе</h2>
+            <h2>📍 Posición en el sistema</h2>
             <div class="info-grid">
                 <div class="card">
                     <h4>Что означает?</h4>
-                    <p>Действие <strong>завершено</strong> (FUERA), но связано с <strong>настоящим</strong> (AQUÍ). Мы
-                        смотрим на результат из "сейчас".</p>
+                    <p>Действие <strong>завершено</strong> (FUERA), но говорящий рассматривает его из
+                        <strong>настоящего</strong> (AQUÍ). Результат или опыт актуален сейчас.</p>
                 </div>
                 <div class="card">
-                    <h4>Аналоги</h4>
-                    <p>🇷🇺 Прошедшее СВ: <em>сделал, написал</em> (но без связи с "сейчас")<br>
-                        🇬🇧 Present Perfect: <em>I have done</em> — точный аналог!</p>
+                    <h4>Ключевая идея</h4>
+                    <p>«Мост» между прошлым и настоящим. «Что случилось, но важно сейчас» — не сам момент действия, а
+                        его <strong>связь с настоящим</strong>.</p>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <h2>📐 Образование: HABER (presente) + participio</h2>
+            <h2>🔄 Comparación</h2>
+            <div class="note">
+                <strong>⚡ Ключевое:</strong> Pretérito Perfecto ≈ <strong>Present Perfect</strong> в английском. В
+                русском такого времени <strong>нет</strong>!
+            </div>
+            <div class="info-grid">
+                <div class="card">
+                    <h4>🇷🇺 Русский</h4>
+                    <p>Переводится прошедшим СВ: <em>сделал, написал</em>. Но русский не различает «сделал вчера» и
+                        «сделал и это актуально сейчас».</p>
+                </div>
+                <div class="card">
+                    <h4>🇬🇧 English</h4>
+                    <p><strong>I have done</strong> — точный аналог! «Незавершённый период» или «опыт до сейчас».</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📐 Formación: HABER (presente) + participio</h2>
             <table class="conj-table">
                 <tr>
                     <th>Лицо</th>
                     <th>HABER</th>
-                    <th>+ participio (-ado/-ido)</th>
+                    <th>Participio</th>
                 </tr>
                 <tr>
                     <td>yo</td>
                     <td><strong>he</strong></td>
-                    <td rowspan="6" style="vertical-align:middle; text-align:center;">hablado, comido, vivido<br><em
-                            style="color:#888;">Неправ.: hecho, dicho, escrito, visto, puesto, vuelto, abierto,
-                            roto</em></td>
+                    <td rowspan="6" style="text-align:center; vertical-align:middle;">habl<strong>ado</strong>,
+                        com<strong>ido</strong>, viv<strong>ido</strong></td>
                 </tr>
                 <tr>
                     <td>tú</td>
@@ -266,40 +340,64 @@
         </section>
 
         <section class="section">
-            <h2>💡 Употребление</h2>
-            <div class="example">
-                <div class="es">Este año he vivido en Madrid.</div>
-                <div class="tr">Незавершённый период (этот год ещё идёт).</div>
+            <h2>💡 Usos principales</h2>
+            <div class="usage-grid">
+                <div class="usage-item">
+                    <h4>Período no terminado</h4>
+                    <div class="es">Este año he vivido en Madrid.</div>
+                    <div class="tr">Этот год ещё идёт. Маркеры: hoy, esta semana, este mes...</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Experiencia vital</h4>
+                    <div class="es">¿Has estado alguna vez en Japón?</div>
+                    <div class="tr">Опыт за всю жизнь. = Have you ever been...?</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Resultado presente</h4>
+                    <div class="es">He perdido las llaves. No puedo entrar.</div>
+                    <div class="tr">Потерял → результат: сейчас не могу войти.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Marcadores: ya, todavía no</h4>
+                    <div class="es">Todavía no he terminado.</div>
+                    <div class="tr">«Ya», «todavía no» часто → Perfecto.</div>
+                </div>
             </div>
-            <div class="example">
-                <div class="es">¿Has estado en Japón?</div>
-                <div class="tr">Опыт в жизни (до сейчас). = Have you been?</div>
-            </div>
-            <div class="example">
-                <div class="es">He perdido las llaves.</div>
-                <div class="tr">Недавнее действие с результатом сейчас (ключей нет).</div>
-            </div>
-            <div class="example">
-                <div class="es">Todavía no he desayunado.</div>
-                <div class="tr">Маркеры: ya, todavía no, alguna vez, nunca.</div>
-            </div>
+
+            <details>
+                <summary>📖 Perfecto vs Indefinido: подробно</summary>
+                <div class="content">
+                    <p><strong>Главный критерий: связь с настоящим</strong></p>
+                    <p>• <strong>Perfecto (AQUÍ):</strong> Говорящий чувствует связь с «сейчас».</p>
+                    <p>• <strong>Indefinido (ALLÍ):</strong> Событие полностью в прошлом, связи нет.</p>
+                    <p style="padding: 0.5rem; background: rgba(255,255,255,0.05); border-radius: 4px;">
+                        <strong>Hoy he comido pizza.</strong> (Сегодня — незавершённый период → Perfecto)<br>
+                        <strong>Ayer comí pizza.</strong> (Вчера — завершённый день → Indefinido)
+                    </p>
+                    <p><strong>⚠️ Латинская Америка:</strong> Indefinido используется почти везде вместо Perfecto.</p>
+                </div>
+            </details>
         </section>
 
         <section class="section">
-            <h2>⚠️ Типичные ошибки</h2>
+            <h2>⚠️ Errores típicos</h2>
             <div class="warning">
-                <h4>❌ Perfecto с "ayer", "la semana pasada"</h4>
-                <p><s>Ayer he comido pizza</s> → <strong>Ayer comí pizza</strong><br>Завершённый период → Indefinido!
-                </p>
+                <h4>❌ Perfecto с маркерами завершённого прошлого</h4>
+                <p><s>Ayer he comido pizza</s> → <strong>Ayer comí pizza</strong>. «Ayer», «la semana pasada» →
+                    Indefinido!</p>
             </div>
             <div class="warning">
                 <h4>❌ Разделение HABER и participio</h4>
-                <p><s>He siempre vivido</s> → <strong>Siempre he vivido</strong><br>Ничего между haber и participio!</p>
+                <p><s>He siempre vivido aquí</s> → <strong>Siempre he vivido aquí</strong>. Между ними НИЧЕГО!</p>
+            </div>
+            <div class="warning">
+                <h4>❌ Изменение рода причастия</h4>
+                <p><s>Ella ha llegada</s> → <strong>Ella ha llegado</strong>. С haber participio НЕ ИЗМЕНЯЕТСЯ.</p>
             </div>
         </section>
 
         <div style="text-align: center; margin-top: 2rem;">
-            <a href="../index.html" class="btn-back">← Назад к таблице</a>
+            <a href="../index.html" class="btn-back">← Volver a la tabla</a>
         </div>
     </div>
 </body>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Condicional Perfecto — Испанский B2.1</title>
+    <title>Condicional Perfecto — Español B2.1</title>
     <link rel="stylesheet" href="../../../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -137,23 +137,43 @@
             color: var(--c-orange);
         }
 
-        .example {
+        .usage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        @media (max-width: 700px) {
+            .usage-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .usage-item {
             background: var(--c-bg-cell);
             border-left: 3px solid var(--c-orange);
-            padding: 0.6rem 1rem;
-            margin: 0.5rem 0;
+            padding: 0.75rem 1rem;
             border-radius: 0 6px 6px 0;
         }
 
-        .example .es {
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 0.25rem;
+        .usage-item h4 {
+            margin: 0 0 0.4rem 0;
+            font-size: 0.8rem;
+            color: var(--c-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .example .tr {
-            font-size: 0.85rem;
+        .usage-item .es {
+            font-weight: 600;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        .usage-item .tr {
+            font-size: 0.8rem;
             color: var(--c-text-dim);
+            margin-top: 0.25rem;
         }
 
         .btn-back {
@@ -171,10 +191,10 @@
 <body>
     <nav class="navbar">
         <div class="breadcrumb">
-            <a href="../../../index.html">🏠</a> <span style="color:#666">→</span>
-            <a href="../../index.html">Теория</a> <span style="color:#666">→</span>
+            <a href="../../../index.html">🏠 Inicio</a> <span style="color:#666">→</span>
+            <a href="../../index.html">📚 Teoría</a> <span style="color:#666">→</span>
             <a href="../index.html">Sistema Verbal</a> <span style="color:#666">→</span>
-            <span style="color: var(--c-accent);">Condicional Perfecto</span>
+            <span style="color: var(--c-accent);">Cond. Perfecto</span>
         </div>
     </nav>
 
@@ -182,11 +202,11 @@
         <header class="tense-header">
             <h1>Condicional Perfecto</h1>
             <p class="subtitle">Условное совершённое</p>
-            <span class="position-badge">📢 DECLARAR · 💭 IMAGINAR · ➡️🔲 FUERA · 🔭 ALLÍ</span>
+            <span class="position-badge">📢 DECLARAR · 💭 IMAGINAR · ➡️ FUERA · 🔭 ALLÍ</span>
         </header>
 
         <section class="section">
-            <h2>📍 Позиция в системе</h2>
+            <h2>📍 Posición en el sistema</h2>
             <div class="info-grid">
                 <div class="card">
                     <h4>Что означает?</h4>
@@ -194,15 +214,29 @@
                             сделано</strong> (но не сделано). Нереализованная возможность.</p>
                 </div>
                 <div class="card">
-                    <h4>Аналоги</h4>
-                    <p>🇷🇺 "бы" + СВ: <em>Я бы уже сделал</em><br>
-                        🇬🇧 <em>I would have spoken</em> — точный аналог!</p>
+                    <h4>Ключевое применение</h4>
+                    <p>Главная часть условных III типа: <em>Si hubiera estudiado, <strong>habría</strong> aprobado</em>.
+                    </p>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <h2>📐 Образование: HABER (condicional) + participio</h2>
+            <h2>🔄 Comparación</h2>
+            <div class="info-grid">
+                <div class="card">
+                    <h4>🇷🇺 Русский</h4>
+                    <p>«бы» + СВ прошедшего: <em>Я бы уже сделал (если бы...)</em>.</p>
+                </div>
+                <div class="card">
+                    <h4>🇬🇧 English</h4>
+                    <p><strong>Would have + PP</strong>: <em>I would have done</em>. Точный аналог!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📐 Formación: HABER (condicional) + participio</h2>
             <table class="conj-table">
                 <tr>
                     <th>Лицо</th>
@@ -238,27 +272,33 @@
         </section>
 
         <section class="section">
-            <h2>💡 Употребление</h2>
-            <div class="example">
-                <div class="es">Si hubiera estudiado, habría aprobado.</div>
-                <div class="tr">Условие III типа (нереальное прошлое). Не учился → не сдал.</div>
-            </div>
-            <div class="example">
-                <div class="es">Supongo que habría vivido en Beijing.</div>
-                <div class="tr">Предположение о завершённом прошлом.</div>
-            </div>
-            <div class="example">
-                <div class="es">¡Habrías podido avisarme!</div>
-                <div class="tr">Упрёк: Ты мог бы предупредить! (но не предупредил)</div>
-            </div>
-            <div class="example">
-                <div class="es">Pensé que para hoy ya habría terminado.</div>
-                <div class="tr">"Будущее в прошедшем" + завершённость.</div>
+            <h2>💡 Usos principales</h2>
+            <div class="usage-grid">
+                <div class="usage-item">
+                    <h4>Condicional III tipo</h4>
+                    <div class="es">Si hubiera estudiado, habría aprobado.</div>
+                    <div class="tr">Нереальное прошлое. Не учился → не сдал.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Hipótesis sobre pasado</h4>
+                    <div class="es">Supongo que habría vivido en Beijing.</div>
+                    <div class="tr">«Наверное, жил бы там.» Гипотеза.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Reproche (упрёк)</h4>
+                    <div class="es">¡Habrías podido avisarme!</div>
+                    <div class="tr">Мог бы предупредить! (но не предупредил)</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Futuro en pasado + perfecto</h4>
+                    <div class="es">Pensé que ya habría terminado.</div>
+                    <div class="tr">Думал, что к тому времени уже закончит.</div>
+                </div>
             </div>
         </section>
 
         <div style="text-align: center; margin-top: 2rem;">
-            <a href="../index.html" class="btn-back">← Назад к таблице</a>
+            <a href="../index.html" class="btn-back">← Volver a la tabla</a>
         </div>
     </div>
 </body>

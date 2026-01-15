@@ -4,20 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presente de Indicativo — Испанский B2.1</title>
+    <title>Presente de Indicativo — Español B2.1</title>
     <link rel="stylesheet" href="../../../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --c-bg-app: #0f0f1a;
-            --c-bg-card: #1a1a2e;
             --c-bg-cell: #2d2d44;
             --c-text-dim: #90a4ae;
             --c-accent: #667eea;
-            --c-green: #66bb6a;
             --c-orange: #ffa726;
-            --c-purple: #ab47bc;
-            --c-blue: #42a5f5;
+            --c-green: #66bb6a;
         }
 
         body {
@@ -44,7 +41,6 @@
             padding: 20px;
         }
 
-        /* Header */
         .tense-header {
             text-align: center;
             padding: 1.5rem 0;
@@ -66,14 +62,13 @@
 
         .position-badge {
             display: inline-block;
-            background: var(--c-bg-cell);
+            background: var(--c-green);
             padding: 0.4rem 0.8rem;
             border-radius: 6px;
             font-size: 0.8rem;
-            color: #ccc;
+            color: #fff;
         }
 
-        /* Sections */
         .section {
             margin-bottom: 1.5rem;
         }
@@ -86,7 +81,6 @@
             border-bottom: 1px solid #333;
         }
 
-        /* Grid layouts */
         .info-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -99,7 +93,6 @@
             }
         }
 
-        /* Cards */
         .card {
             background: var(--c-bg-cell);
             border-radius: 8px;
@@ -119,11 +112,6 @@
             line-height: 1.5;
         }
 
-        .card em {
-            color: #888;
-        }
-
-        /* Conjugation table */
         .conj-table {
             width: 100%;
             border-collapse: collapse;
@@ -146,35 +134,50 @@
             font-weight: 600;
         }
 
-        .conj-table td {
-            color: #fff;
-        }
-
         .conj-table strong {
             color: var(--c-orange);
         }
 
-        /* Examples */
-        .example {
+        /* Compact examples */
+        .usage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        @media (max-width: 700px) {
+            .usage-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .usage-item {
             background: var(--c-bg-cell);
-            border-left: 3px solid var(--c-accent);
-            padding: 0.6rem 1rem;
-            margin: 0.5rem 0;
+            border-left: 3px solid var(--c-green);
+            padding: 0.75rem 1rem;
             border-radius: 0 6px 6px 0;
         }
 
-        .example .es {
+        .usage-item h4 {
+            margin: 0 0 0.4rem 0;
+            font-size: 0.8rem;
+            color: var(--c-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .usage-item .es {
             font-weight: 600;
             color: #fff;
-            margin-bottom: 0.25rem;
+            font-size: 0.9rem;
         }
 
-        .example .tr {
-            font-size: 0.85rem;
+        .usage-item .tr {
+            font-size: 0.8rem;
             color: var(--c-text-dim);
+            margin-top: 0.25rem;
         }
 
-        /* Warning */
         .warning {
             background: rgba(233, 30, 99, 0.1);
             border-left: 3px solid #e91e63;
@@ -196,23 +199,54 @@
             line-height: 1.5;
         }
 
-        /* Buttons */
-        .btn {
+        .btn-back {
             display: inline-block;
             padding: 0.6rem 1.2rem;
             border-radius: 6px;
             text-decoration: none;
-            font-weight: 500;
-        }
-
-        .btn-back {
             background: var(--c-bg-cell);
             color: #fff;
             border: 1px solid #444;
         }
 
-        .btn-back:hover {
-            background: #3a3a50;
+        details {
+            background: rgba(102, 126, 234, 0.08);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            border-radius: 6px;
+            margin: 0.75rem 0;
+        }
+
+        details summary {
+            cursor: pointer;
+            padding: 0.6rem 1rem;
+            font-weight: 600;
+            color: var(--c-accent);
+            font-size: 0.9rem;
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        details .content {
+            padding: 1rem;
+            font-size: 0.85rem;
+            color: #bbb;
+            line-height: 1.6;
+        }
+
+        details .content p {
+            margin: 0 0 0.75rem 0;
+        }
+
+        .note {
+            background: rgba(102, 186, 234, 0.1);
+            border-left: 3px solid #42a5f5;
+            padding: 0.6rem 1rem;
+            margin: 0.75rem 0;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.85rem;
+            color: #bbb;
         }
     </style>
 </head>
@@ -220,8 +254,8 @@
 <body>
     <nav class="navbar">
         <div class="breadcrumb">
-            <a href="../../../index.html">🏠 Главная</a> <span style="color:#666">→</span>
-            <a href="../../index.html">📚 Теория</a> <span style="color:#666">→</span>
+            <a href="../../../index.html">🏠 Inicio</a> <span style="color:#666">→</span>
+            <a href="../../index.html">📚 Teoría</a> <span style="color:#666">→</span>
             <a href="../index.html">Sistema Verbal</a> <span style="color:#666">→</span>
             <span style="color: var(--c-accent);">Presente</span>
         </div>
@@ -235,24 +269,56 @@
         </header>
 
         <section class="section">
-            <h2>📍 Позиция в системе</h2>
+            <h2>📍 Posición en el sistema</h2>
             <div class="info-grid">
                 <div class="card">
                     <h4>Что означает?</h4>
-                    <p>Базовое время "здесь и сейчас". Говорящий <strong>утверждает факт</strong>, который он
-                        <strong>знает/видит</strong>, действие <strong>не завершено</strong>, точка отсчёта —
-                        <strong>настоящее</strong>.</p>
+                    <p><strong>Базовое время</strong> — «здесь и сейчас». Говорящий утверждает факт (DECLARAR), который
+                        он знает/видит (AFIRMAR), действие не завершено (DENTRO), точка отсчёта — настоящее (AQUÍ).</p>
                 </div>
                 <div class="card">
-                    <h4>Аналоги</h4>
-                    <p>🇷🇺 Настоящее НСВ: <em>читаю, живу</em><br>
-                        🇬🇧 Present Simple + Continuous: <em>I read / I am reading</em></p>
+                    <h4>Почему так устроено?</h4>
+                    <p>Presente — это «нулевой уровень» системы. Все остальные времена строятся от него путём сдвига по
+                        осям: в прошлое (ALLÍ), в виртуальность (IMAGINAR), в завершённость (FUERA).</p>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <h2>📐 Спряжение</h2>
+            <h2>🔄 Comparación con ruso e inglés</h2>
+            <div class="note">
+                <strong>⚡ Важно:</strong> Испанский Presente покрывает <strong>и</strong> русское настоящее НСВ,
+                <strong>и</strong> английский Present Simple + Present Continuous!
+            </div>
+            <div class="info-grid">
+                <div class="card">
+                    <h4>🇷🇺 Русский</h4>
+                    <p>Соответствует настоящему НСВ: <em>читаю, живу, говорю</em>. В русском нет отдельной формы для
+                        «прямо сейчас» vs «обычно».</p>
+                </div>
+                <div class="card">
+                    <h4>🇬🇧 English</h4>
+                    <p><strong>Leo</strong> = I read (habits) <strong>И</strong> I am reading (now). Для акцента на
+                        «сейчас» — <em>estar + gerundio</em>.</p>
+                </div>
+            </div>
+
+            <details>
+                <summary>📖 Почему Present Continuous — это тоже Presente?</summary>
+                <div class="content">
+                    <p>В английском <em>I read</em> и <em>I am reading</em> — разные формы. В испанском
+                        <strong>«Leo»</strong> значит и то, и другое:</p>
+                    <p>• <strong>Leo mucho</strong> = I read a lot (привычка) | <strong>Leo ahora mismo</strong> = I am
+                        reading right now</p>
+                    <p>Если нужно <strong>подчеркнуть</strong> текущий момент: <strong>Estar + gerundio:</strong>
+                        <em>Estoy leyendo</em> (Я читаю прямо сейчас). Но это необязательно — в отличие от английского.
+                    </p>
+                </div>
+            </details>
+        </section>
+
+        <section class="section">
+            <h2>📐 Conjugación</h2>
             <table class="conj-table">
                 <tr>
                     <th></th>
@@ -300,35 +366,63 @@
         </section>
 
         <section class="section">
-            <h2>💡 Употребление</h2>
-            <div class="example">
-                <div class="es">Ahora vivo en Málaga.</div>
-                <div class="tr">Действие сейчас: Сейчас живу в Малаге.</div>
+            <h2>💡 Usos principales</h2>
+            <div class="usage-grid">
+                <div class="usage-item">
+                    <h4>Hechos actuales</h4>
+                    <div class="es">Ahora mismo vivo en Málaga.</div>
+                    <div class="tr">Прямо сейчас живу в Малаге. = I live / I am living.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Hábitos / rutinas</h4>
+                    <div class="es">Desayuno a las ocho todos los días.</div>
+                    <div class="tr">Маркеры: siempre, nunca, a menudo, cada día...</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Verdades universales</h4>
+                    <div class="es">El agua hierve a 100°C.</div>
+                    <div class="tr">Вода кипит при 100°C. Вневременные факты.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Presente histórico</h4>
+                    <div class="es">En 1492, Colón descubre América.</div>
+                    <div class="tr">«Оживляет» прошлые события в нарративе.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Futuro programado</h4>
+                    <div class="es">Mañana te llamo. El avión sale a las 8.</div>
+                    <div class="tr">Как в РУ: «Завтра звоню», «Вылетает в 8».</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Condición real (si + pres.)</h4>
+                    <div class="es">Si llueve, me quedo en casa.</div>
+                    <div class="tr">I тип: реальное условие → Presente или Futuro.</div>
+                </div>
             </div>
-            <div class="example">
-                <div class="es">Desayuno a las ocho todos los días.</div>
-                <div class="tr">Привычка: Завтракаю в 8 каждый день.</div>
-            </div>
-            <div class="example">
-                <div class="es">El agua hierve a 100°C.</div>
-                <div class="tr">Общая истина: Вода кипит при 100°C.</div>
-            </div>
-            <div class="example">
-                <div class="es">En 1492, Colón descubre América.</div>
-                <div class="tr">Исторический презенс: оживляет нарратив.</div>
-            </div>
-            <div class="example">
-                <div class="es">Mañana te llamo.</div>
-                <div class="tr">Будущее с уверенностью: Завтра позвоню.</div>
-            </div>
+
+            <details>
+                <summary>📖 Presente en construcciones complejas</summary>
+                <div class="content">
+                    <p><strong>После «cuando»/«mientras» для будущих действий → Subjuntivo!</strong></p>
+                    <p style="padding: 0.5rem; background: rgba(233,30,99,0.1); border-radius: 4px;">
+                        ❌ <s>Cuando llegas</s>, llámame. → ✓ <strong>Cuando llegues</strong>, llámame.
+                    </p>
+                    <p style="margin-top: 1rem;"><strong>Perífrasis con Presente:</strong></p>
+                    <p>
+                        • <strong>Estar + gerundio:</strong> Estoy comiendo = I am eating (прямо сейчас)<br>
+                        • <strong>Ir a + infinitivo:</strong> Voy a comer = I'm going to eat<br>
+                        • <strong>Llevar + gerundio:</strong> Llevo dos horas esperando = I've been waiting for 2 hours
+                    </p>
+                </div>
+            </details>
         </section>
 
         <section class="section">
-            <h2>⚠️ Типичные ошибки</h2>
+            <h2>⚠️ Errores típicos</h2>
             <div class="warning">
-                <h4>❌ Presente вместо Subjuntivo</h4>
-                <p><s>Quiero que vienes</s> → <strong>Quiero que vengas</strong><br>После "quiero que" — Subjuntivo,
-                    т.к. это не факт, а желание.</p>
+                <h4>❌ Presente вместо Subjuntivo после триггеров</h4>
+                <p><s>Quiero que vienes</s> → <strong>Quiero que vengas</strong><br>
+                    После «quiero que», «espero que» — Subjuntivo!</p>
             </div>
             <div class="warning">
                 <h4>❌ Путаница -ER / -IR</h4>
@@ -338,7 +432,7 @@
         </section>
 
         <div style="text-align: center; margin-top: 2rem;">
-            <a href="../index.html" class="btn btn-back">← Назад к таблице</a>
+            <a href="../index.html" class="btn-back">← Volver a la tabla</a>
         </div>
     </div>
 </body>

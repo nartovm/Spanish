@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Condicional Simple — Испанский B2.1</title>
+    <title>Condicional Simple — Español B2.1</title>
     <link rel="stylesheet" href="../../../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -138,23 +138,43 @@
             color: var(--c-orange);
         }
 
-        .example {
+        .usage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        @media (max-width: 700px) {
+            .usage-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .usage-item {
             background: var(--c-bg-cell);
             border-left: 3px solid var(--c-orange);
-            padding: 0.6rem 1rem;
-            margin: 0.5rem 0;
+            padding: 0.75rem 1rem;
             border-radius: 0 6px 6px 0;
         }
 
-        .example .es {
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 0.25rem;
+        .usage-item h4 {
+            margin: 0 0 0.4rem 0;
+            font-size: 0.8rem;
+            color: var(--c-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .example .tr {
-            font-size: 0.85rem;
+        .usage-item .es {
+            font-weight: 600;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        .usage-item .tr {
+            font-size: 0.8rem;
             color: var(--c-text-dim);
+            margin-top: 0.25rem;
         }
 
         .warning {
@@ -187,14 +207,40 @@
             color: #fff;
             border: 1px solid #444;
         }
+
+        details {
+            background: rgba(102, 126, 234, 0.08);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            border-radius: 6px;
+            margin: 0.75rem 0;
+        }
+
+        details summary {
+            cursor: pointer;
+            padding: 0.6rem 1rem;
+            font-weight: 600;
+            color: var(--c-accent);
+            font-size: 0.9rem;
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        details .content {
+            padding: 1rem;
+            font-size: 0.85rem;
+            color: #bbb;
+            line-height: 1.6;
+        }
     </style>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="breadcrumb">
-            <a href="../../../index.html">🏠</a> <span style="color:#666">→</span>
-            <a href="../../index.html">Теория</a> <span style="color:#666">→</span>
+            <a href="../../../index.html">🏠 Inicio</a> <span style="color:#666">→</span>
+            <a href="../../index.html">📚 Teoría</a> <span style="color:#666">→</span>
             <a href="../index.html">Sistema Verbal</a> <span style="color:#666">→</span>
             <span style="color: var(--c-accent);">Condicional</span>
         </div>
@@ -208,106 +254,118 @@
         </header>
 
         <section class="section">
-            <h2>📍 Позиция в системе</h2>
+            <h2>📍 Posición en el sistema</h2>
             <div class="info-grid">
                 <div class="card">
                     <h4>Что означает?</h4>
-                    <p>= <strong>Futuro в прошлом</strong>. Воображаем (IMAGINAR) из точки в прошлом (ALLÍ). Гипотеза,
-                        условие, "будущее в прошедшем".</p>
+                    <p><strong>Futuro в прошлом</strong> или <strong>гипотетическая реальность</strong>. IMAGINAR
+                        (моделируем) + ALLÍ (дистанция: прошлое, нереальность, вежливость).</p>
                 </div>
                 <div class="card">
-                    <h4>Аналоги</h4>
-                    <p>🇷🇺 "бы": <em>Я бы сделал, сказал бы</em><br>
-                        🇬🇧 <em>I would speak</em> — точный аналог!</p>
+                    <h4>Ключевая идея</h4>
+                    <p>Как Futuro, но сдвинуто «назад» или «в сторону». Отсюда: условные предложения, вежливость,
+                        гипотезы о прошлом.</p>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <h2>📐 Образование: Infinitivo + окончания Imperfecto</h2>
+            <h2>🔄 Comparación</h2>
+            <div class="info-grid">
+                <div class="card">
+                    <h4>🇷🇺 Русский</h4>
+                    <p>«бы» + глагол: <em>Я бы сделал, я бы пошёл</em>. Очень похоже!</p>
+                </div>
+                <div class="card">
+                    <h4>🇬🇧 English</h4>
+                    <p><strong>Would + verb</strong>: <em>I would do</em>. Точный аналог по форме и значению.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📐 Formación: infinitivo + terminaciones</h2>
             <table class="conj-table">
                 <tr>
                     <th></th>
-                    <th>hablar</th>
-                    <th>comer</th>
-                    <th>vivir</th>
+                    <th>Все глаголы</th>
                 </tr>
                 <tr>
                     <td>yo</td>
                     <td>hablar<strong>ía</strong></td>
-                    <td>comer<strong>ía</strong></td>
-                    <td>vivir<strong>ía</strong></td>
                 </tr>
                 <tr>
                     <td>tú</td>
                     <td>hablar<strong>ías</strong></td>
-                    <td>comer<strong>ías</strong></td>
-                    <td>vivir<strong>ías</strong></td>
                 </tr>
                 <tr>
                     <td>él/ella</td>
                     <td>hablar<strong>ía</strong></td>
-                    <td>comer<strong>ía</strong></td>
-                    <td>vivir<strong>ía</strong></td>
                 </tr>
                 <tr>
                     <td>nosotros</td>
                     <td>hablar<strong>íamos</strong></td>
-                    <td>comer<strong>íamos</strong></td>
-                    <td>vivir<strong>íamos</strong></td>
                 </tr>
                 <tr>
                     <td>vosotros</td>
                     <td>hablar<strong>íais</strong></td>
-                    <td>comer<strong>íais</strong></td>
-                    <td>vivir<strong>íais</strong></td>
                 </tr>
                 <tr>
                     <td>ellos</td>
                     <td>hablar<strong>ían</strong></td>
-                    <td>comer<strong>ían</strong></td>
-                    <td>vivir<strong>ían</strong></td>
                 </tr>
             </table>
-            <p style="margin-top:0.75rem; font-size:0.85rem; color:var(--c-text-dim);"><strong>Те же неправильные, что в
-                    Futuro:</strong> tendría, saldría, podría, sabría, haría, diría, querría, vendría</p>
+            <p style="margin-top:0.75rem; font-size:0.85rem; color:var(--c-text-dim);">Те же неправильные основы, что в
+                Futuro: tendría, podría, querría...</p>
         </section>
 
         <section class="section">
-            <h2>💡 Употребление</h2>
-            <div class="example">
-                <div class="es">Si tuviera dinero, viajaría por el mundo.</div>
-                <div class="tr">Условие II типа (нереальное настоящее).</div>
-            </div>
-            <div class="example">
-                <div class="es">Dijo que vendría.</div>
-                <div class="tr">"Будущее в прошедшем" (косвенная речь).</div>
-            </div>
-            <div class="example">
-                <div class="es">Supongo que viviría en Kioto.</div>
-                <div class="tr">Предположение о прошлом.</div>
-            </div>
-            <div class="example">
-                <div class="es">¿Podrías ayudarme?</div>
-                <div class="tr">Вежливая просьба.</div>
-            </div>
-            <div class="example">
-                <div class="es">Me gustaría visitar Japón.</div>
-                <div class="tr">Желание, мечта.</div>
+            <h2>💡 Usos principales</h2>
+            <div class="usage-grid">
+                <div class="usage-item">
+                    <h4>Condicional II tipo</h4>
+                    <div class="es">Si tuviera dinero, <strong>viajaría</strong>.</div>
+                    <div class="tr">Главная часть условия. Si + Imp.Subj., Cond.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Hipótesis (pasado)</h4>
+                    <div class="es">Supongo que viviría en Kioto.</div>
+                    <div class="tr">«Наверное, жил бы». Гипотеза о прошлом.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Futuro en el pasado</h4>
+                    <div class="es">Dijo que vendría.</div>
+                    <div class="tr">Сказал, что придёт. «Would» в косвенной речи.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Cortesía</h4>
+                    <div class="es">Querría un café. ¿Podría ayudarme?</div>
+                    <div class="tr">Вежливые просьбы. Мягче, чем presente.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Consejo / sugerencia</h4>
+                    <div class="es">Yo que tú, no lo haría.</div>
+                    <div class="tr">«На твоём месте я бы не стал...»</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Deseos</h4>
+                    <div class="es">Me gustaría ir a la playa.</div>
+                    <div class="tr">«Мне хотелось бы...» Желание.</div>
+                </div>
             </div>
         </section>
 
         <section class="section">
-            <h2>⚠️ Критическая ошибка</h2>
+            <h2>⚠️ Errores típicos</h2>
             <div class="warning">
-                <h4>❌ Condicional после "si"</h4>
-                <p><s>Si tendría dinero...</s> → <strong>Si tuviera dinero, viajaría</strong><br>После "si" в нереальных
-                    условиях → ТОЛЬКО Imperfecto de Subjuntivo!</p>
+                <h4>❌ Condicional после «si» в условных</h4>
+                <p><s>Si tendría dinero...</s> → <strong>Si tuviera dinero, viajaría</strong>. После «si» — Subjuntivo,
+                    не Condicional!</p>
             </div>
         </section>
 
         <div style="text-align: center; margin-top: 2rem;">
-            <a href="../index.html" class="btn-back">← Назад к таблице</a>
+            <a href="../index.html" class="btn-back">← Volver a la tabla</a>
         </div>
     </div>
 </body>

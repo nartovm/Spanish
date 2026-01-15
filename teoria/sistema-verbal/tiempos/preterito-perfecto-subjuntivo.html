@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pretérito Perfecto de Subjuntivo — Испанский B2.1</title>
+    <title>Pretérito Perfecto de Subjuntivo — Español B2.1</title>
     <link rel="stylesheet" href="../../../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -15,6 +15,7 @@
             --c-accent: #667eea;
             --c-orange: #ffa726;
             --c-blue: #42a5f5;
+            --c-green: #66bb6a;
         }
 
         body {
@@ -138,44 +139,43 @@
             color: var(--c-orange);
         }
 
-        .example {
+        .usage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        @media (max-width: 700px) {
+            .usage-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .usage-item {
             background: var(--c-bg-cell);
             border-left: 3px solid var(--c-blue);
-            padding: 0.6rem 1rem;
-            margin: 0.5rem 0;
+            padding: 0.75rem 1rem;
             border-radius: 0 6px 6px 0;
         }
 
-        .example .es {
+        .usage-item h4 {
+            margin: 0 0 0.4rem 0;
+            font-size: 0.8rem;
+            color: var(--c-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .usage-item .es {
             font-weight: 600;
             color: #fff;
-            margin-bottom: 0.25rem;
+            font-size: 0.9rem;
         }
 
-        .example .tr {
-            font-size: 0.85rem;
+        .usage-item .tr {
+            font-size: 0.8rem;
             color: var(--c-text-dim);
-        }
-
-        .warning {
-            background: rgba(233, 30, 99, 0.1);
-            border-left: 3px solid #e91e63;
-            padding: 0.6rem 1rem;
-            margin: 0.5rem 0;
-            border-radius: 0 6px 6px 0;
-        }
-
-        .warning h4 {
-            margin: 0 0 0.3rem 0;
-            font-size: 0.85rem;
-            color: #e91e63;
-        }
-
-        .warning p {
-            margin: 0;
-            font-size: 0.85rem;
-            color: #ccc;
-            line-height: 1.5;
+            margin-top: 0.25rem;
         }
 
         .btn-back {
@@ -193,10 +193,10 @@
 <body>
     <nav class="navbar">
         <div class="breadcrumb">
-            <a href="../../../index.html">🏠</a> <span style="color:#666">→</span>
-            <a href="../../index.html">Теория</a> <span style="color:#666">→</span>
+            <a href="../../../index.html">🏠 Inicio</a> <span style="color:#666">→</span>
+            <a href="../../index.html">📚 Teoría</a> <span style="color:#666">→</span>
             <a href="../index.html">Sistema Verbal</a> <span style="color:#666">→</span>
-            <span style="color: var(--c-accent);">Pret. Perf. Subjuntivo</span>
+            <span style="color: var(--c-accent);">Pret. Perf. Subj.</span>
         </div>
     </nav>
 
@@ -204,31 +204,45 @@
         <header class="tense-header">
             <h1>Pretérito Perfecto de Subjuntivo</h1>
             <p class="subtitle">Прошедшее совершённое сослагательное</p>
-            <span class="position-badge">🤐 NO DECLARAR · ➡️🔲 FUERA · 📍 AQUÍ</span>
+            <span class="position-badge">🤐 NO DECLARAR · ➡️ FUERA · 📍 AQUÍ</span>
         </header>
 
         <section class="section">
-            <h2>📍 Позиция в системе</h2>
+            <h2>📍 Posición en el sistema</h2>
             <div class="info-grid">
                 <div class="card">
                     <h4>Что означает?</h4>
-                    <p>= Presente de Subjuntivo + <strong>завершённость</strong>. Используется там же, где Presente
-                        Subj., но действие <strong>уже произошло</strong>.</p>
+                    <p>= Presente de Subjuntivo + <strong>завершённость</strong>. Действие завершено, но в контексте
+                        Subjuntivo (желание, сомнение, оценка).</p>
                 </div>
                 <div class="card">
-                    <h4>Аналоги</h4>
-                    <p>🇷🇺 "чтобы" + СВ прошедшего: <em>Рад, что ты сделал</em><br>
-                        🇬🇧 Present Perfect Subjunctive (редко)</p>
+                    <h4>Отношение к Perfecto Indicativo</h4>
+                    <p>Как Perfecto (he hablado) относится к Presente, так Pret. Perf. Subj. (haya hablado) — к Pres.
+                        Subj.</p>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <h2>📐 Образование: HABER (subj.) + participio</h2>
+            <h2>🔄 Comparación</h2>
+            <div class="info-grid">
+                <div class="card">
+                    <h4>🇷🇺 Русский</h4>
+                    <p>«чтобы» + СВ прошедшего: <em>Сомневаюсь, что он УЖЕ сделал</em>.</p>
+                </div>
+                <div class="card">
+                    <h4>🇬🇧 English</h4>
+                    <p>Present Perfect Subjunctive: <em>I doubt that he <strong>has done</strong> it</em>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📐 Formación: HABER (presente subj.) + participio</h2>
             <table class="conj-table">
                 <tr>
                     <th>Лицо</th>
-                    <th>HABER (subj.)</th>
+                    <th>HABER (pres. subj.)</th>
                     <th>+ participio</th>
                 </tr>
                 <tr>
@@ -260,37 +274,33 @@
         </section>
 
         <section class="section">
-            <h2>💡 Употребление</h2>
-            <div class="example">
-                <div class="es">Me alegro de que hayas aprobado.</div>
-                <div class="tr">Эмоция о завершённом: Рад, что ты сдал.</div>
-            </div>
-            <div class="example">
-                <div class="es">No creo que haya llegado todavía.</div>
-                <div class="tr">Сомнение о прошлом: Не думаю, что уже приехал.</div>
-            </div>
-            <div class="example">
-                <div class="es">Busco a alguien que haya vivido en Senegal.</div>
-                <div class="tr">Опыт в прошлом (кто-то, кто жил там).</div>
-            </div>
-            <div class="example">
-                <div class="es">Cuando hayas terminado, avísame.</div>
-                <div class="tr">После завершения в будущем.</div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>⚠️ Важно</h2>
-            <div class="warning">
-                <h4>Presente Subj. vs Perfecto Subj.</h4>
-                <p><strong>Espero que venga</strong> = Надеюсь, что придёт (будущее)<br>
-                    <strong>Espero que haya venido</strong> = Надеюсь, что уже пришёл (прошлое)
-                </p>
+            <h2>💡 Usos principales</h2>
+            <div class="usage-grid">
+                <div class="usage-item">
+                    <h4>Experiencia (неизвестная)</h4>
+                    <div class="es">Busco a alguien que haya vivido en Senegal.</div>
+                    <div class="tr">Ищу того, кто жил (не знаю, есть ли).</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Duda sobre pasado reciente</h4>
+                    <div class="es">No creo que haya llegado todavía.</div>
+                    <div class="tr">Не думаю, что он уже приехал.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Alegría / emoción</h4>
+                    <div class="es">Me alegro de que hayas venido.</div>
+                    <div class="tr">Рад, что ты пришёл. (уже случилось)</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Cuando + futuro perfecto</h4>
+                    <div class="es">Cuando haya terminado, te llamo.</div>
+                    <div class="tr">Когда закончу → будущее = Subj.</div>
+                </div>
             </div>
         </section>
 
         <div style="text-align: center; margin-top: 2rem;">
-            <a href="../index.html" class="btn-back">← Назад к таблице</a>
+            <a href="../index.html" class="btn-back">← Volver a la tabla</a>
         </div>
     </div>
 </body>

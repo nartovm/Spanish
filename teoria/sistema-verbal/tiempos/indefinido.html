@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pretérito Indefinido — Испанский B2.1</title>
+    <title>Pretérito Indefinido — Español B2.1</title>
     <link rel="stylesheet" href="../../../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -138,23 +138,43 @@
             color: var(--c-orange);
         }
 
-        .example {
+        .usage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        @media (max-width: 700px) {
+            .usage-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .usage-item {
             background: var(--c-bg-cell);
             border-left: 3px solid var(--c-yellow);
-            padding: 0.6rem 1rem;
-            margin: 0.5rem 0;
+            padding: 0.75rem 1rem;
             border-radius: 0 6px 6px 0;
         }
 
-        .example .es {
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 0.25rem;
+        .usage-item h4 {
+            margin: 0 0 0.4rem 0;
+            font-size: 0.8rem;
+            color: var(--c-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .example .tr {
-            font-size: 0.85rem;
+        .usage-item .es {
+            font-weight: 600;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        .usage-item .tr {
+            font-size: 0.8rem;
             color: var(--c-text-dim);
+            margin-top: 0.25rem;
         }
 
         .warning {
@@ -187,14 +207,50 @@
             color: #fff;
             border: 1px solid #444;
         }
+
+        details {
+            background: rgba(102, 126, 234, 0.08);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            border-radius: 6px;
+            margin: 0.75rem 0;
+        }
+
+        details summary {
+            cursor: pointer;
+            padding: 0.6rem 1rem;
+            font-weight: 600;
+            color: var(--c-accent);
+            font-size: 0.9rem;
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        details .content {
+            padding: 1rem;
+            font-size: 0.85rem;
+            color: #bbb;
+            line-height: 1.6;
+        }
+
+        .note {
+            background: rgba(102, 186, 234, 0.1);
+            border-left: 3px solid #42a5f5;
+            padding: 0.6rem 1rem;
+            margin: 0.75rem 0;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.85rem;
+            color: #bbb;
+        }
     </style>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="breadcrumb">
-            <a href="../../../index.html">🏠</a> <span style="color:#666">→</span>
-            <a href="../../index.html">Теория</a> <span style="color:#666">→</span>
+            <a href="../../../index.html">🏠 Inicio</a> <span style="color:#666">→</span>
+            <a href="../../index.html">📚 Teoría</a> <span style="color:#666">→</span>
             <a href="../index.html">Sistema Verbal</a> <span style="color:#666">→</span>
             <span style="color: var(--c-accent);">Indefinido</span>
         </div>
@@ -203,33 +259,49 @@
     <div class="container">
         <header class="tense-header">
             <h1>Pretérito Indefinido</h1>
-            <p class="subtitle">Прошедшее завершённое (аорист)</p>
-            <span class="position-badge">📢 DECLARAR · 👁️ AFIRMAR · 🔭 ALLÍ (полностью в прошлом)</span>
+            <p class="subtitle">Простое прошедшее</p>
+            <span class="position-badge">📢 DECLARAR · 👁️ AFIRMAR · ➡️ FUERA · 🔭 ALLÍ</span>
         </header>
 
         <section class="section">
-            <h2>📍 Позиция в системе</h2>
+            <h2>📍 Posición en el sistema</h2>
             <div class="info-grid">
                 <div class="card">
                     <h4>Что означает?</h4>
-                    <p>Аорист = "прошлое и точка". Действие <strong>полностью в прошлом</strong>, связь с настоящим
-                        <strong>отсутствует</strong>.</p>
+                    <p>Действие <strong>завершено</strong> (FUERA) и полностью <strong>в прошлом</strong> (ALLÍ). Мы
+                        видим его целиком, как факт, без связи с настоящим.</p>
                 </div>
                 <div class="card">
-                    <h4>Аналоги</h4>
-                    <p>🇷🇺 Прошедшее СВ: <em>сделал, написал, пришёл</em><br>
-                        🇬🇧 <em>I spoke / I did</em> — Simple Past</p>
+                    <h4>Ключевая метафора</h4>
+                    <p>Indefinido = «фотография» события. Точечное, завершённое, отрезанное от сейчас. В отличие от
+                        Perfecto — нет связи с настоящим.</p>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <h2>📐 Спряжение</h2>
+            <h2>🔄 Comparación</h2>
+            <div class="info-grid">
+                <div class="card">
+                    <h4>🇷🇺 Русский</h4>
+                    <p>Прошедшее <strong>СВ</strong>: <em>сделал, написал, приехал</em>. Похоже, но русский не различает
+                        связь с настоящим.</p>
+                </div>
+                <div class="card">
+                    <h4>🇬🇧 English</h4>
+                    <p><strong>Simple Past</strong>: <em>I did, I wrote</em>. Но в EN нет такого строгого разделения
+                        «yesterday → Simple Past, today → Perfect».</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📐 Conjugación</h2>
             <table class="conj-table">
                 <tr>
                     <th></th>
                     <th>-AR (hablar)</th>
-                    <th>-ER/-IR (comer, vivir)</th>
+                    <th>-ER/-IR (comer/vivir)</th>
                 </tr>
                 <tr>
                     <td>yo</td>
@@ -262,42 +334,66 @@
                     <td>com<strong>ieron</strong></td>
                 </tr>
             </table>
-            <p style="margin-top:0.75rem; font-size:0.85rem; color:var(--c-text-dim);"><strong>Много
-                    неправильных:</strong> tuve, estuve, pude, puse, supe, hice, dije, vine, fui (ser/ir), di, vi</p>
+            <p style="margin-top:0.75rem; font-size:0.85rem; color:var(--c-text-dim);">Много неправильных глаголов — ищи
+                в справочниках при необходимости.</p>
         </section>
 
         <section class="section">
-            <h2>💡 Употребление</h2>
-            <div class="example">
-                <div class="es">Viví en Lisboa diez años.</div>
-                <div class="tr">Завершённый период (жил, уже не живу).</div>
+            <h2>💡 Usos principales</h2>
+            <div class="usage-grid">
+                <div class="usage-item">
+                    <h4>Acción puntual</h4>
+                    <div class="es">Ayer llegué a las ocho.</div>
+                    <div class="tr">Точечное событие в конкретный момент.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Período cerrado</h4>
+                    <div class="es">Viví en Lisboa diez años.</div>
+                    <div class="tr">Период закончен. Маркеры: ayer, la semana pasada, en 2020...</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Secuencia de eventos</h4>
+                    <div class="es">Entró, miró y salió.</div>
+                    <div class="tr">Цепочка действий в нарративе.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Cambio de situación</h4>
+                    <div class="es">De repente, empezó a llover.</div>
+                    <div class="tr">Смена состояния, начало/конец действия.</div>
+                </div>
             </div>
-            <div class="example">
-                <div class="es">Me levanté, desayuné y salí.</div>
-                <div class="tr">Цепочка событий (нарратив).</div>
-            </div>
-            <div class="example">
-                <div class="es">Dormía cuando sonó el teléfono.</div>
-                <div class="tr">Прерывание фона (Imperfecto = фон).</div>
-            </div>
-            <div class="example">
-                <div class="es">Ayer compré un coche nuevo.</div>
-                <div class="tr">Маркеры: ayer, la semana pasada, en 2020...</div>
-            </div>
+
+            <details>
+                <summary>📖 Indefinido vs Perfecto vs Imperfecto</summary>
+                <div class="content">
+                    <p><strong>Indefinido:</strong> завершённое, отрезанное от «сейчас» (<em>ayer comí</em>).</p>
+                    <p><strong>Perfecto:</strong> завершённое, НО связанное с «сейчас» (<em>hoy he comido</em>).</p>
+                    <p><strong>Imperfecto:</strong> процесс в прошлом, без акцента на завершении (<em>comía
+                            cuando...</em>).</p>
+                    <p style="padding: 0.5rem; background: rgba(255,255,255,0.05); border-radius: 4px;">
+                        <em>Ayer</em> <strong>llovió</strong> (факт). | <em>Cuando salí,</em> <strong>llovía</strong>
+                        (фон).
+                    </p>
+                </div>
+            </details>
         </section>
 
         <section class="section">
-            <h2>⚠️ Важно</h2>
+            <h2>⚠️ Errores típicos</h2>
             <div class="warning">
-                <h4>Perfecto vs Indefinido (Испания vs ЛатАм)</h4>
-                <p><strong>Испания:</strong> "Hoy he comido" (сегодня = незавершённый период → Perfecto)<br>
-                    <strong>ЛатАм:</strong> "Hoy comí" (для всего прошлого → Indefinido)
+                <h4>❌ Indefinido с маркерами незавершённого периода</h4>
+                <p><s>Hoy comí pizza</s> (в Испании) → <strong>Hoy he comido pizza</strong>. «Hoy», «esta semana» →
+                    Perfecto (в Испании).</p>
+            </div>
+            <div class="warning">
+                <h4>❌ Imperfecto для точечных событий</h4>
+                <p><s>Ayer llegaba a casa</s> → <strong>Ayer llegué a casa</strong>. Конкретное событие = Indefinido.
                 </p>
             </div>
         </section>
 
         <div style="text-align: center; margin-top: 2rem;">
-            <a href="../index.html" class="btn-back">← Назад к таблице</a>
+            <a href="../index.html" class="btn-back">← Volver a la tabla</a>
         </div>
     </div>
 </body>

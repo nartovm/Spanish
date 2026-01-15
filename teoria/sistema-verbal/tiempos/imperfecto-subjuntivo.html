@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imperfecto de Subjuntivo — Испанский B2.1</title>
+    <title>Imperfecto de Subjuntivo — Español B2.1</title>
     <link rel="stylesheet" href="../../../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -139,23 +139,43 @@
             color: var(--c-orange);
         }
 
-        .example {
+        .usage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        @media (max-width: 700px) {
+            .usage-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .usage-item {
             background: var(--c-bg-cell);
             border-left: 3px solid var(--c-blue);
-            padding: 0.6rem 1rem;
-            margin: 0.5rem 0;
+            padding: 0.75rem 1rem;
             border-radius: 0 6px 6px 0;
         }
 
-        .example .es {
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 0.25rem;
+        .usage-item h4 {
+            margin: 0 0 0.4rem 0;
+            font-size: 0.8rem;
+            color: var(--c-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .example .tr {
-            font-size: 0.85rem;
+        .usage-item .es {
+            font-weight: 600;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        .usage-item .tr {
+            font-size: 0.8rem;
             color: var(--c-text-dim);
+            margin-top: 0.25rem;
         }
 
         .warning {
@@ -188,53 +208,110 @@
             color: #fff;
             border: 1px solid #444;
         }
+
+        details {
+            background: rgba(102, 126, 234, 0.08);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            border-radius: 6px;
+            margin: 0.75rem 0;
+        }
+
+        details summary {
+            cursor: pointer;
+            padding: 0.6rem 1rem;
+            font-weight: 600;
+            color: var(--c-accent);
+            font-size: 0.9rem;
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        details .content {
+            padding: 1rem;
+            font-size: 0.85rem;
+            color: #bbb;
+            line-height: 1.6;
+        }
+
+        details .content p {
+            margin: 0 0 0.75rem 0;
+        }
+
+        .note {
+            background: rgba(102, 186, 234, 0.1);
+            border-left: 3px solid #42a5f5;
+            padding: 0.6rem 1rem;
+            margin: 0.75rem 0;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.85rem;
+            color: #bbb;
+        }
     </style>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="breadcrumb">
-            <a href="../../../index.html">🏠</a> <span style="color:#666">→</span>
-            <a href="../../index.html">Теория</a> <span style="color:#666">→</span>
+            <a href="../../../index.html">🏠 Inicio</a> <span style="color:#666">→</span>
+            <a href="../../index.html">📚 Teoría</a> <span style="color:#666">→</span>
             <a href="../index.html">Sistema Verbal</a> <span style="color:#666">→</span>
-            <span style="color: var(--c-accent);">Imperfecto de Subjuntivo</span>
+            <span style="color: var(--c-accent);">Imperfecto Subj.</span>
         </div>
     </nav>
 
     <div class="container">
         <header class="tense-header">
             <h1>Imperfecto de Subjuntivo</h1>
-            <p class="subtitle">Прошедшее сослагательное</p>
+            <p class="subtitle">Прошедшее сослагательное наклонение</p>
             <span class="position-badge">🤐 NO DECLARAR · 🔲 DENTRO · 🔭 ALLÍ</span>
         </header>
 
         <section class="section">
-            <h2>📍 Позиция в системе</h2>
+            <h2>📍 Posición en el sistema — ¡Tiempo clave!</h2>
+            <div class="note">
+                <strong>⚡ Одно из важнейших времён!</strong> Без него невозможны: условные II/III типа, согласование
+                времён, вежливые просьбы, «как будто».
+            </div>
             <div class="info-grid">
                 <div class="card">
                     <h4>Что означает?</h4>
-                    <p>= <strong>Presente de Subjuntivo в прошлом</strong>. Сослагательное (NO DECLARAR) + точка отсчёта
-                        в прошлом (ALLÍ).</p>
-                    <p style="margin-top:0.5rem;"><em>Две формы (-ra / -se) взаимозаменяемы. -ra чаще в разговоре.</em>
-                    </p>
+                    <p>= <strong>Presente de Subjuntivo в прошлом</strong> (ALLÍ). Сослагательное (не утверждаю факт) +
+                        точка отсчёта сдвинута в прошлое.</p>
                 </div>
                 <div class="card">
-                    <h4>Аналоги</h4>
-                    <p>🇷🇺 "бы" + прошедшее: <em>Если бы он пришёл...</em><br>
-                        🇬🇧 Past Subjunctive: <em>If I were..., I wish he came</em></p>
+                    <h4>Почему ALLÍ?</h4>
+                    <p>ALLÍ = психологическая дистанция: <strong>прошлое</strong>, <strong>нереальное настоящее</strong>
+                        или <strong>вежливость</strong>.</p>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <h2>📐 Образование: основа 3 л. мн.ч. Indefinido + окончания</h2>
-            <p style="font-size:0.85rem; color:var(--c-text-dim); margin-bottom:0.75rem;">hablaron → habla- | comieron →
-                comie- | vivieron → vivie-</p>
+            <h2>🔄 Comparación</h2>
+            <div class="info-grid">
+                <div class="card">
+                    <h4>🇷🇺 Русский</h4>
+                    <p>«бы» + прошедшее: <em>Если бы он пришёл... Хотел бы я...</em> В русском одна конструкция на всё.
+                    </p>
+                </div>
+                <div class="card">
+                    <h4>🇬🇧 English</h4>
+                    <p>Past Subjunctive / Simple Past в if-clauses: <em>If I were..., I wish he came...</em></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📐 Formación: base de ellos/Indefinido + terminaciones</h2>
+            <p style="font-size:0.85rem; color:var(--c-text-dim); margin-bottom:0.75rem;">hablaron →
+                habla<strong>ra</strong> | comieron → comie<strong>ra</strong> | tuvieron → tuvie<strong>ra</strong></p>
             <table class="conj-table">
                 <tr>
                     <th></th>
-                    <th>-RA</th>
-                    <th>-SE</th>
+                    <th>-RA (чаще)</th>
+                    <th>-SE (формальнее)</th>
                 </tr>
                 <tr>
                     <td>yo</td>
@@ -267,45 +344,77 @@
                     <td>habla<strong>sen</strong></td>
                 </tr>
             </table>
-            <p style="margin-top:0.75rem; font-size:0.85rem; color:var(--c-text-dim);"><strong>Неправильные:</strong>
-                tuviera, fuera, dijera, hiciera, pudiera, supiera...</p>
+            <p style="margin-top:0.75rem; font-size:0.85rem; color:var(--c-text-dim);">Формы -ra и -se
+                <strong>взаимозаменяемы</strong>. -ra чаще в разговоре.</p>
         </section>
 
         <section class="section">
-            <h2>💡 Употребление</h2>
-            <div class="example">
-                <div class="es">No creía que viviera en Helsinki.</div>
-                <div class="tr">После главного в прошлом (concordancia temporal).</div>
+            <h2>💡 Usos principales</h2>
+            <div class="usage-grid">
+                <div class="usage-item">
+                    <h4>Condicional II tipo</h4>
+                    <div class="es">Si <strong>tuviera</strong> dinero, <strong>viajaría</strong>.</div>
+                    <div class="tr">Нереальное настоящее: денег нет → Si + Imp.Subj., Cond.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Condicional III tipo</h4>
+                    <div class="es">Si <strong>hubiera</strong> estudiado, <strong>habría</strong> aprobado.</div>
+                    <div class="tr">Нереальное прошлое: Si + Plusc.Subj., Cond.Perf.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Concordancia temporal</h4>
+                    <div class="es">No creía que <strong>viviera</strong> en Helsinki.</div>
+                    <div class="tr">Главное в прошлом → придаточное в Imp. Subj.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>«Como si» — всегда!</h4>
+                    <div class="es">Habla <strong>como si fuera</strong> nativo.</div>
+                    <div class="tr">После «como si» — только Imp. Subj.!</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Cortesía extrema</h4>
+                    <div class="es">Quisiera un café, por favor.</div>
+                    <div class="tr">Quisiera = очень мягкое «хотел бы».</div>
+                </div>
+                <div class="usage-item">
+                    <h4>Ojalá + pasado</h4>
+                    <div class="es">¡Ojalá pudiera volar!</div>
+                    <div class="tr">Нереальное желание (сейчас не могу).</div>
+                </div>
             </div>
-            <div class="example">
-                <div class="es">Si tuviera tiempo, iría contigo.</div>
-                <div class="tr">Условие II типа: нереальное НАСТОЯЩЕЕ.</div>
-            </div>
-            <div class="example">
-                <div class="es">Si hubiera sabido, no habría venido.</div>
-                <div class="tr">Условие III типа: нереальное ПРОШЛОЕ.</div>
-            </div>
-            <div class="example">
-                <div class="es">Habla como si fuera nativo.</div>
-                <div class="tr">"Como si" (как будто) → всегда Imperfecto Subj.</div>
-            </div>
-            <div class="example">
-                <div class="es">Quisiera un café, por favor.</div>
-                <div class="tr">Вежливость (очень мягко).</div>
-            </div>
+
+            <details>
+                <summary>📖 Concordancia de tiempos: полная схема</summary>
+                <div class="content">
+                    <p><strong>Главное в настоящем/будущем → Presente de Subjuntivo</strong></p>
+                    <p style="padding: 0.5rem; background: rgba(255,255,255,0.05); border-radius: 4px;">
+                        Quiero que <strong>vengas</strong>. | Espero que <strong>haya</strong> llegado.
+                    </p>
+                    <p style="margin-top: 1rem;"><strong>Главное в прошлом → Imperfecto de Subjuntivo</strong></p>
+                    <p style="padding: 0.5rem; background: rgba(255,255,255,0.05); border-radius: 4px;">
+                        Quería que <strong>vinieras</strong>. | Esperaba que <strong>hubiera</strong> llegado.
+                    </p>
+                </div>
+            </details>
         </section>
 
         <section class="section">
-            <h2>⚠️ Критическая ошибка</h2>
+            <h2>⚠️ Error crítico №1</h2>
             <div class="warning">
-                <h4>❌ Condicional вместо Imperfecto Subj. после "si"</h4>
-                <p><s>Si tendría dinero...</s> → <strong>Si tuviera dinero, compraría...</strong><br>После "si" в
-                    нереальных условиях → ТОЛЬКО Imperfecto de Subjuntivo!</p>
+                <h4>❌ Condicional вместо Imp. Subj. после «si»</h4>
+                <p><s>Si tendría dinero...</s> → <strong>Si tuviera dinero, viajaría...</strong><br>
+                    После «si» в нереальных условиях → <strong>ТОЛЬКО Imperfecto/Pluscuamperfecto de
+                        Subjuntivo!</strong></p>
+            </div>
+            <div class="warning">
+                <h4>❌ Presente Subj. при согласовании</h4>
+                <p><s>Quería que venga</s> → <strong>Quería que viniera</strong>. Главное в прошлом → придаточное тоже.
+                </p>
             </div>
         </section>
 
         <div style="text-align: center; margin-top: 2rem;">
-            <a href="../index.html" class="btn-back">← Назад к таблице</a>
+            <a href="../index.html" class="btn-back">← Volver a la tabla</a>
         </div>
     </div>
 </body>

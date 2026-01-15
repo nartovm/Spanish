@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presente de Subjuntivo — Испанский B2.1</title>
+    <title>Presente de Subjuntivo — Español B2.1</title>
     <link rel="stylesheet" href="../../../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -15,6 +15,7 @@
             --c-accent: #667eea;
             --c-orange: #ffa726;
             --c-blue: #42a5f5;
+            --c-green: #66bb6a;
         }
 
         body {
@@ -105,17 +106,11 @@
             color: #fff;
         }
 
-        .card p,
-        .card ul {
+        .card p {
             margin: 0;
             font-size: 0.85rem;
             color: var(--c-text-dim);
             line-height: 1.5;
-        }
-
-        .card ul {
-            padding-left: 1.2rem;
-            margin-top: 0.5rem;
         }
 
         .conj-table {
@@ -144,23 +139,43 @@
             color: var(--c-orange);
         }
 
-        .example {
+        .usage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        @media (max-width: 700px) {
+            .usage-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .usage-item {
             background: var(--c-bg-cell);
             border-left: 3px solid var(--c-blue);
-            padding: 0.6rem 1rem;
-            margin: 0.5rem 0;
+            padding: 0.75rem 1rem;
             border-radius: 0 6px 6px 0;
         }
 
-        .example .es {
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 0.25rem;
+        .usage-item h4 {
+            margin: 0 0 0.4rem 0;
+            font-size: 0.8rem;
+            color: var(--c-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .example .tr {
-            font-size: 0.85rem;
+        .usage-item .es {
+            font-weight: 600;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        .usage-item .tr {
+            font-size: 0.8rem;
             color: var(--c-text-dim);
+            margin-top: 0.25rem;
         }
 
         .warning {
@@ -193,138 +208,205 @@
             color: #fff;
             border: 1px solid #444;
         }
+
+        details {
+            background: rgba(102, 126, 234, 0.08);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            border-radius: 6px;
+            margin: 0.75rem 0;
+        }
+
+        details summary {
+            cursor: pointer;
+            padding: 0.6rem 1rem;
+            font-weight: 600;
+            color: var(--c-accent);
+            font-size: 0.9rem;
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        details .content {
+            padding: 1rem;
+            font-size: 0.85rem;
+            color: #bbb;
+            line-height: 1.6;
+        }
+
+        .note {
+            background: rgba(102, 186, 234, 0.1);
+            border-left: 3px solid #42a5f5;
+            padding: 0.6rem 1rem;
+            margin: 0.75rem 0;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.85rem;
+            color: #bbb;
+        }
     </style>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="breadcrumb">
-            <a href="../../../index.html">🏠</a> <span style="color:#666">→</span>
-            <a href="../../index.html">Теория</a> <span style="color:#666">→</span>
+            <a href="../../../index.html">🏠 Inicio</a> <span style="color:#666">→</span>
+            <a href="../../index.html">📚 Teoría</a> <span style="color:#666">→</span>
             <a href="../index.html">Sistema Verbal</a> <span style="color:#666">→</span>
-            <span style="color: var(--c-accent);">Presente de Subjuntivo</span>
+            <span style="color: var(--c-accent);">Presente Subj.</span>
         </div>
     </nav>
 
     <div class="container">
         <header class="tense-header">
             <h1>Presente de Subjuntivo</h1>
-            <p class="subtitle">Настоящее сослагательное наклонение</p>
+            <p class="subtitle">Настоящее сослагательное</p>
             <span class="position-badge">🤐 NO DECLARAR · 🔲 DENTRO · 📍 AQUÍ</span>
         </header>
 
         <section class="section">
-            <h2>📍 Позиция в системе</h2>
+            <h2>📍 Posición en el sistema — ¡Tiempo fundamental!</h2>
+            <div class="note">
+                <strong>⚡ Subjuntivo — это НЕ «сомнение»!</strong> Это выбор НЕ УТВЕРЖДАТЬ факт. Говорящий выражает
+                волю, эмоцию, оценку — но не сообщает информацию.
+            </div>
             <div class="info-grid">
                 <div class="card">
-                    <h4>Что означает NO DECLARAR?</h4>
-                    <p>Говорящий <strong>НЕ утверждает факт</strong>. Субхунтив выражает отношение (желание, сомнение,
-                        эмоцию), а не информацию.</p>
+                    <h4>Что означает?</h4>
+                    <p><strong>NO DECLARAR</strong>: я не утверждаю этот факт. Я выражаю желание, приказ, эмоцию,
+                        оценку, сомнение — но не ввожу информацию в «общий мир» разговора.</p>
                 </div>
                 <div class="card">
-                    <h4>Аналоги</h4>
-                    <p>🇷🇺 "чтобы" + прошедшее: <em>Хочу, чтобы он пришёл</em><br>
-                        🇬🇧 Subjunctive редок: <em>I suggest he be careful</em></p>
+                    <h4>Отличие от Indicativo</h4>
+                    <p>Indicativo: «Creo que viene» (декларирую факт).<br>
+                        Subjuntivo: «No creo que venga» (не декларирую — выражаю сомнение).</p>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <h2>📐 Образование: противоположная гласная</h2>
-            <p style="font-size:0.85rem; color:var(--c-text-dim); margin-bottom:0.75rem;">-AR → <strong>-e</strong> |
-                -ER/-IR → <strong>-a</strong> (от формы "yo" Presente)</p>
+            <h2>🔄 Comparación</h2>
+            <div class="info-grid">
+                <div class="card">
+                    <h4>🇷🇺 Русский</h4>
+                    <p>В русском Subjuntivo нет! Переводим через «чтобы», «пусть», сослагательное: <em>Хочу,
+                            <strong>чтобы</strong> ты пришёл</em>.</p>
+                </div>
+                <div class="card">
+                    <h4>🇬🇧 English</h4>
+                    <p>Subjunctive почти исчез: <em>I suggest he <strong>go</strong></em>. Чаще: <em>I want him
+                            <strong>to go</strong></em>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📐 Formación: base de yo/Presente + terminaciones «зеркальные»</h2>
             <table class="conj-table">
                 <tr>
                     <th></th>
                     <th>-AR (hablar)</th>
-                    <th>-ER (comer)</th>
-                    <th>-IR (vivir)</th>
+                    <th>-ER/-IR (comer/vivir)</th>
                 </tr>
                 <tr>
                     <td>yo</td>
                     <td>habl<strong>e</strong></td>
-                    <td>com<strong>a</strong></td>
-                    <td>viv<strong>a</strong></td>
+                    <td>com<strong>a</strong> / viv<strong>a</strong></td>
                 </tr>
                 <tr>
                     <td>tú</td>
                     <td>habl<strong>es</strong></td>
                     <td>com<strong>as</strong></td>
-                    <td>viv<strong>as</strong></td>
                 </tr>
                 <tr>
                     <td>él/ella</td>
                     <td>habl<strong>e</strong></td>
                     <td>com<strong>a</strong></td>
-                    <td>viv<strong>a</strong></td>
                 </tr>
                 <tr>
                     <td>nosotros</td>
                     <td>habl<strong>emos</strong></td>
                     <td>com<strong>amos</strong></td>
-                    <td>viv<strong>amos</strong></td>
                 </tr>
                 <tr>
                     <td>vosotros</td>
                     <td>habl<strong>éis</strong></td>
                     <td>com<strong>áis</strong></td>
-                    <td>viv<strong>áis</strong></td>
                 </tr>
                 <tr>
                     <td>ellos</td>
                     <td>habl<strong>en</strong></td>
                     <td>com<strong>an</strong></td>
-                    <td>viv<strong>an</strong></td>
                 </tr>
             </table>
-            <p style="margin-top:0.75rem; font-size:0.85rem; color:var(--c-text-dim);"><strong>Неправильные:</strong>
-                sea, vaya, haya, sepa, dé, esté</p>
+            <p style="margin-top:0.75rem; font-size:0.85rem; color:var(--c-text-dim);">«Зеркало»: -AR → -e, -ER/-IR →
+                -a. Основа от «yo» Presente.</p>
         </section>
 
         <section class="section">
-            <h2>💡 Когда использовать?</h2>
-            <div class="example">
-                <div class="es">Quiero que viva en Estocolmo.</div>
-                <div class="tr">VOLICIÓN: желание, просьба, приказ.</div>
+            <h2>💡 Usos principales (WEIRDO)</h2>
+            <div class="usage-grid">
+                <div class="usage-item">
+                    <h4>W — Wishes (желание)</h4>
+                    <div class="es">Quiero que <strong>vengas</strong>.</div>
+                    <div class="tr">Хочу, чтобы ты пришёл. Не факт — желание.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>E — Emotion</h4>
+                    <div class="es">Me alegro de que <strong>estés</strong> aquí.</div>
+                    <div class="tr">Рад, что ты здесь. Эмоция → Subjuntivo.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>I — Impersonal</h4>
+                    <div class="es">Es importante que <strong>estudies</strong>.</div>
+                    <div class="tr">Важно, чтобы учился. Оценка → Subjuntivo.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>R — Recommendations</h4>
+                    <div class="es">Te recomiendo que <strong>vayas</strong>.</div>
+                    <div class="tr">Рекомендую пойти. Совет/приказ.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>D — Doubt</h4>
+                    <div class="es">No creo que <strong>llueva</strong>.</div>
+                    <div class="tr">Не думаю, что пойдёт дождь. Сомнение.</div>
+                </div>
+                <div class="usage-item">
+                    <h4>O — Ojalá / «que»</h4>
+                    <div class="es">¡Ojalá <strong>venga</strong>! ¡Que te <strong>vaya</strong> bien!</div>
+                    <div class="tr">Пожелания, надежды.</div>
+                </div>
             </div>
-            <div class="example">
-                <div class="es">Me alegra que vengas.</div>
-                <div class="tr">ЭМОЦИИ: оценка, радость, страх.</div>
-            </div>
-            <div class="example">
-                <div class="es">No creo que sea verdad.</div>
-                <div class="tr">СОМНЕНИЕ/ОТРИЦАНИЕ: "no creo", "dudo", "es posible".</div>
-            </div>
-            <div class="example">
-                <div class="es">Busco un hotel que tenga piscina.</div>
-                <div class="tr">НЕОПРЕДЕЛЁННЫЙ антецедент (любой такой отель).</div>
-            </div>
-            <div class="example">
-                <div class="es">Cuando llegues, llámame.</div>
-                <div class="tr">ВРЕМЕННЫЕ союзы + будущее.</div>
-            </div>
-            <div class="example">
-                <div class="es">Te lo digo para que lo sepas.</div>
-                <div class="tr">ЦЕЛЬ: para que, a fin de que.</div>
-            </div>
+
+            <details>
+                <summary>📖 Больше контекстов Subjuntivo</summary>
+                <div class="content">
+                    <p><strong>После временных союзов (будущее):</strong> Cuando <strong>llegues</strong>, llámame.
+                        Antes de que <strong>se vaya</strong>.</p>
+                    <p><strong>После относительных (неизвестное):</strong> Busco a alguien que <strong>hable</strong>
+                        chino. (не знаю, есть ли такой)</p>
+                    <p><strong>После «para que», «sin que»:</strong> Lo digo para que <strong>sepas</strong>. Sin que
+                        nadie <strong>lo vea</strong>.</p>
+                    <p><strong>После «aunque» (гипотетическое):</strong> Aunque <strong>llueva</strong>, iré. (даже если
+                        пойдёт — не знаю)</p>
+                </div>
+            </details>
         </section>
 
         <section class="section">
-            <h2>⚠️ Типичные ошибки</h2>
+            <h2>⚠️ Errores típicos</h2>
             <div class="warning">
-                <h4>❌ "Creo que" + Subjuntivo</h4>
-                <p><s>Creo que sea verdad</s> → <strong>Creo que es verdad</strong><br>"Creo" = верю = утверждаю →
-                    Indicativo! Только "NO creo" → Subjuntivo.</p>
+                <h4>❌ Indicativo после триггеров Subjuntivo</h4>
+                <p><s>Quiero que vienes</s> → <strong>Quiero que vengas</strong>. После «quiero que» → Subjuntivo!</p>
             </div>
             <div class="warning">
-                <h4>❌ Subjuntivo без смены субъекта</h4>
-                <p><strong>Quiero que vengas</strong> (я ≠ ты) → Subjuntivo<br><strong>Quiero venir</strong> (я = я) →
-                    Инфинитив!</p>
+                <h4>❌ Subjuntivo после «creo que» (утверждение)</h4>
+                <p><s>Creo que venga</s> → <strong>Creo que viene</strong>. «Creo que» = декларирую → Indicativo.</p>
             </div>
         </section>
 
         <div style="text-align: center; margin-top: 2rem;">
-            <a href="../index.html" class="btn-back">← Назад к таблице</a>
+            <a href="../index.html" class="btn-back">← Volver a la tabla</a>
         </div>
     </div>
 </body>
