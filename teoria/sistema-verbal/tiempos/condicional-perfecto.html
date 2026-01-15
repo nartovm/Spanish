@@ -4,143 +4,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Condicional Perfecto — HABRÍA HABLADO</title>
+    <title>Condicional Perfecto — Испанский B2.1</title>
     <link rel="stylesheet" href="../../../styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c-bg-app: #0f0f1a;
+            --c-bg-cell: #2d2d44;
+            --c-text-dim: #90a4ae;
+            --c-accent: #667eea;
+            --c-orange: #ffa726;
+        }
+
+        body {
+            background: var(--c-bg-app);
+            color: #fff;
+        }
+
+        .navbar {
+            background: #1a1a2e;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar a {
+            color: #aaa;
+        }
+
+        .navbar a:hover {
+            color: #fff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .tense-header {
+            text-align: center;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .tense-header h1 {
+            font-size: 2rem;
+            color: #fff;
+            margin: 0 0 0.25rem 0;
+        }
+
+        .tense-header .subtitle {
+            color: var(--c-text-dim);
+            font-size: 1rem;
+            margin: 0 0 0.75rem 0;
+        }
+
+        .position-badge {
+            display: inline-block;
+            background: var(--c-orange);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: #fff;
+        }
+
+        .section {
+            margin-bottom: 1.5rem;
+        }
+
+        .section h2 {
+            font-size: 1rem;
+            color: var(--c-accent);
+            margin: 0 0 0.75rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #333;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--c-bg-cell);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .card h4 {
+            margin: 0 0 0.5rem 0;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--c-text-dim);
+            line-height: 1.5;
+        }
+
+        .conj-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            background: var(--c-bg-cell);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .conj-table th,
+        .conj-table td {
+            padding: 0.5rem 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #3a3a50;
+        }
+
+        .conj-table th {
+            background: #232336;
+            color: var(--c-text-dim);
+            font-weight: 600;
+        }
+
+        .conj-table strong {
+            color: var(--c-orange);
+        }
+
+        .example {
+            background: var(--c-bg-cell);
+            border-left: 3px solid var(--c-orange);
+            padding: 0.6rem 1rem;
+            margin: 0.5rem 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .example .es {
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.25rem;
+        }
+
+        .example .tr {
+            font-size: 0.85rem;
+            color: var(--c-text-dim);
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            background: var(--c-bg-cell);
+            color: #fff;
+            border: 1px solid #444;
+        }
+    </style>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="breadcrumb">
-            <a href="../../../index.html">🏠 Главная</a>
-            <span>→</span>
-            <a href="../../index.html">📚 Теория</a>
-            <span>→</span>
-            <a href="../index.html">Глагольная система</a>
-            <span>→</span>
-            <span style="color: var(--accent);">Condicional Perfecto</span>
+            <a href="../../../index.html">🏠</a> <span style="color:#666">→</span>
+            <a href="../../index.html">Теория</a> <span style="color:#666">→</span>
+            <a href="../index.html">Sistema Verbal</a> <span style="color:#666">→</span>
+            <span style="color: var(--c-accent);">Condicional Perfecto</span>
         </div>
     </nav>
 
     <div class="container">
         <header class="tense-header">
-            <h1 class="tense-title">HABRÍA HABLADO</h1>
-            <p class="tense-subtitle">Condicional Perfecto — Условное совершённое</p>
-            <span class="position-badge">📢 DECLARAR → 💭 IMAGINAR → ➡️🔲 FUERA → 📍 ALLÍ</span>
+            <h1>Condicional Perfecto</h1>
+            <p class="subtitle">Условное совершённое</p>
+            <span class="position-badge">📢 DECLARAR · 💭 IMAGINAR · ➡️🔲 FUERA · 🔭 ALLÍ</span>
         </header>
 
         <section class="section">
-            <h2>📍 Позиция в таблице</h2>
-            <div class="concept-box">
-                <p>Condicional Perfecto — завершённая гипотеза в прошлом:</p>
-                <ul style="margin-top: 1rem; color: var(--text-secondary);">
-                    <li><strong>DECLARAR</strong> — индикатив</li>
-                    <li><strong>IMAGINAR</strong> — воображаем другой исход</li>
-                    <li><strong>FUERA</strong> — действие было бы ЗАВЕРШЕНО</li>
-                    <li><strong>ALLÍ</strong> — в прошлом</li>
-                </ul>
-                <p style="margin-top: 1rem;">
-                    <em>= "Я бы уже сделал (но не сделал)". Нереализованная возможность в прошлом.</em>
-                </p>
+            <h2>📍 Позиция в системе</h2>
+            <div class="info-grid">
+                <div class="card">
+                    <h4>Что означает?</h4>
+                    <p>= Condicional + <strong>завершённость</strong>. Гипотеза о том, что <strong>было бы уже
+                            сделано</strong> (но не сделано). Нереализованная возможность.</p>
+                </div>
+                <div class="card">
+                    <h4>Аналоги</h4>
+                    <p>🇷🇺 "бы" + СВ: <em>Я бы уже сделал</em><br>
+                        🇬🇧 <em>I would have spoken</em> — точный аналог!</p>
+                </div>
             </div>
         </section>
 
         <section class="section">
-            <h2>📐 Образование</h2>
-            <p style="margin-bottom: 1rem; color: var(--text-secondary);">
-                <strong>HABER (condicional) + Participio pasado</strong>
-            </p>
-            <table class="conjugation-table">
-                <thead>
-                    <tr>
-                        <th>Лицо</th>
-                        <th>HABER (cond.)</th>
-                        <th>+ Participio</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>yo</td>
-                        <td>habría</td>
-                        <td rowspan="6" style="vertical-align: middle;">hablado / comido / vivido</td>
-                    </tr>
-                    <tr>
-                        <td>tú</td>
-                        <td>habrías</td>
-                    </tr>
-                    <tr>
-                        <td>él/ella</td>
-                        <td>habría</td>
-                    </tr>
-                    <tr>
-                        <td>nosotros</td>
-                        <td>habríamos</td>
-                    </tr>
-                    <tr>
-                        <td>vosotros</td>
-                        <td>habríais</td>
-                    </tr>
-                    <tr>
-                        <td>ellos</td>
-                        <td>habrían</td>
-                    </tr>
-                </tbody>
+            <h2>📐 Образование: HABER (condicional) + participio</h2>
+            <table class="conj-table">
+                <tr>
+                    <th>Лицо</th>
+                    <th>HABER (cond.)</th>
+                    <th>+ participio</th>
+                </tr>
+                <tr>
+                    <td>yo</td>
+                    <td><strong>habría</strong></td>
+                    <td rowspan="6" style="vertical-align:middle; text-align:center;">hablado, comido, vivido</td>
+                </tr>
+                <tr>
+                    <td>tú</td>
+                    <td><strong>habrías</strong></td>
+                </tr>
+                <tr>
+                    <td>él/ella</td>
+                    <td><strong>habría</strong></td>
+                </tr>
+                <tr>
+                    <td>nosotros</td>
+                    <td><strong>habríamos</strong></td>
+                </tr>
+                <tr>
+                    <td>vosotros</td>
+                    <td><strong>habríais</strong></td>
+                </tr>
+                <tr>
+                    <td>ellos</td>
+                    <td><strong>habrían</strong></td>
+                </tr>
             </table>
         </section>
 
         <section class="section">
             <h2>💡 Употребление</h2>
-
-            <h4 style="margin-top: 1rem; color: var(--accent);">1. Условные предложения III типа (нереальное прошлое)
-            </h4>
-            <div class="example-box">
-                <div class="spanish">Si hubiera estudiado más, habría aprobado.</div>
-                <div class="translation">🇷🇺 Если бы я больше учился, я бы сдал. (но не сдал)</div>
+            <div class="example">
+                <div class="es">Si hubiera estudiado, habría aprobado.</div>
+                <div class="tr">Условие III типа (нереальное прошлое). Не учился → не сдал.</div>
             </div>
-
-            <h4 style="margin-top: 1rem; color: var(--accent);">2. Предположение о прошлом (с завершённостью)</h4>
-            <div class="example-box">
-                <div class="spanish">Supongo que habría vivido en Beijing.</div>
-                <div class="translation">🇷🇺 Полагаю, он жил в Пекине. (гипотеза о прошлом)</div>
+            <div class="example">
+                <div class="es">Supongo que habría vivido en Beijing.</div>
+                <div class="tr">Предположение о завершённом прошлом.</div>
             </div>
-
-            <h4 style="margin-top: 1rem; color: var(--accent);">3. Сожаление, упрёк</h4>
-            <div class="example-box">
-                <div class="spanish">¡Habrías podido avisarme!</div>
-                <div class="translation">🇷🇺 Ты мог бы меня предупредить! (но не предупредил)</div>
+            <div class="example">
+                <div class="es">¡Habrías podido avisarme!</div>
+                <div class="tr">Упрёк: Ты мог бы предупредить! (но не предупредил)</div>
             </div>
-
-            <h4 style="margin-top: 1rem; color: var(--accent);">4. "Будущее в прошедшем" + завершённость</h4>
-            <div class="example-box">
-                <div class="spanish">Pensé que para hoy ya habría terminado.</div>
-                <div class="translation">🇷🇺 Я думал, что к сегодняшнему дню уже закончу.</div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>🔄 Сравнение с русским и английским</h2>
-            <div class="comparison-grid">
-                <div class="comparison-item">
-                    <h4>🇷🇺 Русский</h4>
-                    <p><em>"Я бы сделал" + контекст завершённости</em></p>
-                    <p style="margin-top: 0.5rem; color: var(--text-secondary);">
-                        Русский не различает "делал бы" и "сделал бы" формально.
-                    </p>
-                </div>
-                <div class="comparison-item">
-                    <h4>🇬🇧 English</h4>
-                    <p><em>I would have spoken</em></p>
-                    <p>Conditional Perfect — точный аналог!</p>
-                </div>
+            <div class="example">
+                <div class="es">Pensé que para hoy ya habría terminado.</div>
+                <div class="tr">"Будущее в прошедшем" + завершённость.</div>
             </div>
         </section>
 
         <div style="text-align: center; margin-top: 2rem;">
-            <a href="../index.html" class="btn btn-primary">← Назад к таблице</a>
+            <a href="../index.html" class="btn-back">← Назад к таблице</a>
         </div>
     </div>
-
-    <script src="../../../app.js"></script>
 </body>
 
 </html>

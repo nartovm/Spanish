@@ -4,137 +4,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pretérito Pluscuamperfecto — HABÍA HABLADO</title>
+    <title>Pretérito Pluscuamperfecto — Испанский B2.1</title>
     <link rel="stylesheet" href="../../../styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c-bg-app: #0f0f1a;
+            --c-bg-cell: #2d2d44;
+            --c-text-dim: #90a4ae;
+            --c-accent: #667eea;
+            --c-orange: #ffa726;
+            --c-yellow: #fdd835;
+        }
+
+        body {
+            background: var(--c-bg-app);
+            color: #fff;
+        }
+
+        .navbar {
+            background: #1a1a2e;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar a {
+            color: #aaa;
+        }
+
+        .navbar a:hover {
+            color: #fff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .tense-header {
+            text-align: center;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .tense-header h1 {
+            font-size: 2rem;
+            color: #fff;
+            margin: 0 0 0.25rem 0;
+        }
+
+        .tense-header .subtitle {
+            color: var(--c-text-dim);
+            font-size: 1rem;
+            margin: 0 0 0.75rem 0;
+        }
+
+        .position-badge {
+            display: inline-block;
+            background: var(--c-yellow);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: #333;
+        }
+
+        .section {
+            margin-bottom: 1.5rem;
+        }
+
+        .section h2 {
+            font-size: 1rem;
+            color: var(--c-accent);
+            margin: 0 0 0.75rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #333;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--c-bg-cell);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .card h4 {
+            margin: 0 0 0.5rem 0;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--c-text-dim);
+            line-height: 1.5;
+        }
+
+        .conj-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            background: var(--c-bg-cell);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .conj-table th,
+        .conj-table td {
+            padding: 0.5rem 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #3a3a50;
+        }
+
+        .conj-table th {
+            background: #232336;
+            color: var(--c-text-dim);
+            font-weight: 600;
+        }
+
+        .conj-table strong {
+            color: var(--c-orange);
+        }
+
+        .example {
+            background: var(--c-bg-cell);
+            border-left: 3px solid var(--c-yellow);
+            padding: 0.6rem 1rem;
+            margin: 0.5rem 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .example .es {
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.25rem;
+        }
+
+        .example .tr {
+            font-size: 0.85rem;
+            color: var(--c-text-dim);
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            background: var(--c-bg-cell);
+            color: #fff;
+            border: 1px solid #444;
+        }
+    </style>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="breadcrumb">
-            <a href="../../../index.html">🏠 Главная</a>
-            <span>→</span>
-            <a href="../../index.html">📚 Теория</a>
-            <span>→</span>
-            <a href="../index.html">Глагольная система</a>
-            <span>→</span>
-            <span style="color: var(--accent);">Pluscuamperfecto</span>
+            <a href="../../../index.html">🏠</a> <span style="color:#666">→</span>
+            <a href="../../index.html">Теория</a> <span style="color:#666">→</span>
+            <a href="../index.html">Sistema Verbal</a> <span style="color:#666">→</span>
+            <span style="color: var(--c-accent);">Pluscuamperfecto</span>
         </div>
     </nav>
 
     <div class="container">
         <header class="tense-header">
-            <h1 class="tense-title">HABÍA HABLADO</h1>
-            <p class="tense-subtitle">Pretérito Pluscuamperfecto — Давнопрошедшее</p>
-            <span class="position-badge">📢 DECLARAR → 👁️ AFIRMAR → ➡️🔲 FUERA → 📍 ALLÍ</span>
+            <h1>Pretérito Pluscuamperfecto</h1>
+            <p class="subtitle">Давнопрошедшее (предпрошедшее)</p>
+            <span class="position-badge">📢 DECLARAR · 👁️ AFIRMAR · ➡️🔲 FUERA · 🔭 ALLÍ</span>
         </header>
 
         <section class="section">
-            <h2>📍 Позиция в таблице</h2>
-            <div class="concept-box">
-                <p>Pluscuamperfecto — "прошлое в прошлом":</p>
-                <ul style="margin-top: 1rem; color: var(--text-secondary);">
-                    <li><strong>DECLARAR</strong> — факт</li>
-                    <li><strong>AFIRMAR</strong> — знаем это</li>
-                    <li><strong>FUERA</strong> — действие ЗАВЕРШЕНО до другого момента в прошлом</li>
-                    <li><strong>ALLÍ</strong> — точка отсчёта — прошлое</li>
-                </ul>
-                <p style="margin-top: 1rem;">
-                    <em>= Pretérito Perfecto сдвинутый в прошлое. "К тому моменту я уже..."</em>
-                </p>
+            <h2>📍 Позиция в системе</h2>
+            <div class="info-grid">
+                <div class="card">
+                    <h4>Что означает?</h4>
+                    <p>"Прошлое в прошлом". Действие <strong>завершено</strong> (FUERA) <strong>до</strong> другого
+                        момента в прошлом. "К тому времени уже..."</p>
+                </div>
+                <div class="card">
+                    <h4>Аналоги</h4>
+                    <p>🇷🇺 Нет формы! "Я уже сделал (к тому моменту)"<br>
+                        🇬🇧 <em>I had spoken</em> — Past Perfect, точный аналог!</p>
+                </div>
             </div>
         </section>
 
         <section class="section">
-            <h2>📐 Образование</h2>
-            <p style="margin-bottom: 1rem; color: var(--text-secondary);">
-                <strong>HABER (imperfecto) + Participio pasado</strong>
-            </p>
-            <table class="conjugation-table">
-                <thead>
-                    <tr>
-                        <th>Лицо</th>
-                        <th>HABER (imperf.)</th>
-                        <th>+ Participio</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>yo</td>
-                        <td>había</td>
-                        <td rowspan="6" style="vertical-align: middle;">hablado / comido / vivido</td>
-                    </tr>
-                    <tr>
-                        <td>tú</td>
-                        <td>habías</td>
-                    </tr>
-                    <tr>
-                        <td>él/ella</td>
-                        <td>había</td>
-                    </tr>
-                    <tr>
-                        <td>nosotros</td>
-                        <td>habíamos</td>
-                    </tr>
-                    <tr>
-                        <td>vosotros</td>
-                        <td>habíais</td>
-                    </tr>
-                    <tr>
-                        <td>ellos</td>
-                        <td>habían</td>
-                    </tr>
-                </tbody>
+            <h2>📐 Образование: HABER (imperfecto) + participio</h2>
+            <table class="conj-table">
+                <tr>
+                    <th>Лицо</th>
+                    <th>HABER (imperf.)</th>
+                    <th>+ participio</th>
+                </tr>
+                <tr>
+                    <td>yo</td>
+                    <td><strong>había</strong></td>
+                    <td rowspan="6" style="vertical-align:middle; text-align:center;">hablado, comido, vivido</td>
+                </tr>
+                <tr>
+                    <td>tú</td>
+                    <td><strong>habías</strong></td>
+                </tr>
+                <tr>
+                    <td>él/ella</td>
+                    <td><strong>había</strong></td>
+                </tr>
+                <tr>
+                    <td>nosotros</td>
+                    <td><strong>habíamos</strong></td>
+                </tr>
+                <tr>
+                    <td>vosotros</td>
+                    <td><strong>habíais</strong></td>
+                </tr>
+                <tr>
+                    <td>ellos</td>
+                    <td><strong>habían</strong></td>
+                </tr>
             </table>
         </section>
 
         <section class="section">
             <h2>💡 Употребление</h2>
-
-            <h4 style="margin-top: 1rem; color: var(--accent);">1. Действие до другого действия в прошлом</h4>
-            <div class="example-box">
-                <div class="spanish">Antes de 2021, había vivido en Barcelona.</div>
-                <div class="translation">🇷🇺 До 2021 года я жил в Барселоне.</div>
+            <div class="example">
+                <div class="es">Antes de 2021, había vivido en Barcelona.</div>
+                <div class="tr">До другого момента в прошлом.</div>
             </div>
-
-            <h4 style="margin-top: 1rem; color: var(--accent);">2. Объяснение предшествующей причины</h4>
-            <div class="example-box">
-                <div class="spanish">No quiso comer porque ya había desayunado.</div>
-                <div class="translation">🇷🇺 Он не захотел есть, потому что уже позавтракал.</div>
+            <div class="example">
+                <div class="es">No quiso comer porque ya había desayunado.</div>
+                <div class="tr">Причина, предшествующая событию.</div>
             </div>
-
-            <h4 style="margin-top: 1rem; color: var(--accent);">3. В условных предложениях III типа</h4>
-            <div class="example-box">
-                <div class="spanish">Si lo hubiera sabido, te lo había dicho.</div>
-                <div class="translation">🇷🇺 Если бы я знал, я бы тебе сказал. (нереальное прошлое)</div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>🔄 Сравнение с русским и английским</h2>
-            <div class="comparison-grid">
-                <div class="comparison-item">
-                    <h4>🇷🇺 Русский</h4>
-                    <p>Нет отдельной формы!</p>
-                    <p><em>"Я уже сделал (к тому моменту)"</em></p>
-                    <p style="margin-top: 0.5rem; color: var(--text-secondary);">
-                        Контекст + "уже" или "до этого" указывают на предшествование.
-                    </p>
-                </div>
-                <div class="comparison-item">
-                    <h4>🇬🇧 English</h4>
-                    <p><em>I had spoken</em></p>
-                    <p>Past Perfect — точный аналог!</p>
-                </div>
+            <div class="example">
+                <div class="es">Cuando llegué, ya se había ido.</div>
+                <div class="tr">Действие уже завершилось к моменту.</div>
             </div>
         </section>
 
         <div style="text-align: center; margin-top: 2rem;">
-            <a href="../index.html" class="btn btn-primary">← Назад к таблице</a>
+            <a href="../index.html" class="btn-back">← Назад к таблице</a>
         </div>
     </div>
-
-    <script src="../../../app.js"></script>
 </body>
 
 </html>

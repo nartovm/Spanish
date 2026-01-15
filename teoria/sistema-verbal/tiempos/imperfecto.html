@@ -4,168 +4,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pretérito Imperfecto — HABLABA</title>
+    <title>Pretérito Imperfecto — Испанский B2.1</title>
     <link rel="stylesheet" href="../../../styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c-bg-app: #0f0f1a;
+            --c-bg-cell: #2d2d44;
+            --c-text-dim: #90a4ae;
+            --c-accent: #667eea;
+            --c-orange: #ffa726;
+            --c-yellow: #fdd835;
+        }
+
+        body {
+            background: var(--c-bg-app);
+            color: #fff;
+        }
+
+        .navbar {
+            background: #1a1a2e;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar a {
+            color: #aaa;
+        }
+
+        .navbar a:hover {
+            color: #fff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .tense-header {
+            text-align: center;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .tense-header h1 {
+            font-size: 2rem;
+            color: #fff;
+            margin: 0 0 0.25rem 0;
+        }
+
+        .tense-header .subtitle {
+            color: var(--c-text-dim);
+            font-size: 1rem;
+            margin: 0 0 0.75rem 0;
+        }
+
+        .position-badge {
+            display: inline-block;
+            background: var(--c-yellow);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: #333;
+        }
+
+        .section {
+            margin-bottom: 1.5rem;
+        }
+
+        .section h2 {
+            font-size: 1rem;
+            color: var(--c-accent);
+            margin: 0 0 0.75rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #333;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--c-bg-cell);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .card h4 {
+            margin: 0 0 0.5rem 0;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--c-text-dim);
+            line-height: 1.5;
+        }
+
+        .conj-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            background: var(--c-bg-cell);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .conj-table th,
+        .conj-table td {
+            padding: 0.5rem 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #3a3a50;
+        }
+
+        .conj-table th {
+            background: #232336;
+            color: var(--c-text-dim);
+            font-weight: 600;
+        }
+
+        .conj-table strong {
+            color: var(--c-orange);
+        }
+
+        .example {
+            background: var(--c-bg-cell);
+            border-left: 3px solid var(--c-yellow);
+            padding: 0.6rem 1rem;
+            margin: 0.5rem 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .example .es {
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.25rem;
+        }
+
+        .example .tr {
+            font-size: 0.85rem;
+            color: var(--c-text-dim);
+        }
+
+        .warning {
+            background: rgba(233, 30, 99, 0.1);
+            border-left: 3px solid #e91e63;
+            padding: 0.6rem 1rem;
+            margin: 0.5rem 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .warning h4 {
+            margin: 0 0 0.3rem 0;
+            font-size: 0.85rem;
+            color: #e91e63;
+        }
+
+        .warning p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #ccc;
+            line-height: 1.5;
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            background: var(--c-bg-cell);
+            color: #fff;
+            border: 1px solid #444;
+        }
+    </style>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="breadcrumb">
-            <a href="../../../index.html">🏠 Главная</a>
-            <span>→</span>
-            <a href="../../index.html">📚 Теория</a>
-            <span>→</span>
-            <a href="../index.html">Глагольная система</a>
-            <span>→</span>
-            <span style="color: var(--accent);">Imperfecto</span>
+            <a href="../../../index.html">🏠</a> <span style="color:#666">→</span>
+            <a href="../../index.html">Теория</a> <span style="color:#666">→</span>
+            <a href="../index.html">Sistema Verbal</a> <span style="color:#666">→</span>
+            <span style="color: var(--c-accent);">Imperfecto</span>
         </div>
     </nav>
 
     <div class="container">
         <header class="tense-header">
-            <h1 class="tense-title">HABLABA</h1>
-            <p class="tense-subtitle">Pretérito Imperfecto — Прошедшее несовершённое</p>
-            <span class="position-badge">📢 DECLARAR → 👁️ AFIRMAR → 🔲 DENTRO → 📍 ALLÍ</span>
+            <h1>Pretérito Imperfecto</h1>
+            <p class="subtitle">Прошедшее несовершённое</p>
+            <span class="position-badge">📢 DECLARAR · 👁️ AFIRMAR · 🔲 DENTRO · 🔭 ALLÍ</span>
         </header>
 
         <section class="section">
-            <h2>📍 Позиция в таблице</h2>
-            <div class="concept-box">
-                <p>Imperfecto — это "Presente в прошлом":</p>
-                <ul style="margin-top: 1rem; color: var(--text-secondary);">
-                    <li><strong>DECLARAR</strong> — утверждаем факт</li>
-                    <li><strong>AFIRMAR</strong> — видели/знали это</li>
-                    <li><strong>DENTRO</strong> — мы ВНУТРИ действия, процесс без конца</li>
-                    <li><strong>ALLÍ</strong> — точка отсчёта — прошлое</li>
-                </ul>
-                <p style="margin-top: 1rem;">
-                    <em>Представь, что смотришь фильм изнутри: ты в прошлом, и всё происходит "сейчас" вокруг тебя.</em>
-                </p>
+            <h2>📍 Позиция в системе</h2>
+            <div class="info-grid">
+                <div class="card">
+                    <h4>Что означает?</h4>
+                    <p>= <strong>Presente в прошлом</strong>. Мы <strong>внутри</strong> действия (DENTRO), видим
+                        процесс без конца. Точка отсчёта — <strong>прошлое</strong> (ALLÍ).</p>
+                </div>
+                <div class="card">
+                    <h4>Аналоги</h4>
+                    <p>🇷🇺 Прошедшее НСВ: <em>читал, жил, говорил</em><br>
+                        🇬🇧 <em>I was speaking / I used to speak</em></p>
+                </div>
             </div>
         </section>
 
         <section class="section">
-            <h2>📐 Образование</h2>
-            <table class="conjugation-table">
-                <thead>
-                    <tr>
-                        <th>Лицо</th>
-                        <th>-AR (hablar)</th>
-                        <th>-ER/-IR (comer, vivir)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>yo</td>
-                        <td>habl<strong>aba</strong></td>
-                        <td>com<strong>ía</strong> / viv<strong>ía</strong></td>
-                    </tr>
-                    <tr>
-                        <td>tú</td>
-                        <td>habl<strong>abas</strong></td>
-                        <td>com<strong>ías</strong></td>
-                    </tr>
-                    <tr>
-                        <td>él/ella</td>
-                        <td>habl<strong>aba</strong></td>
-                        <td>com<strong>ía</strong></td>
-                    </tr>
-                    <tr>
-                        <td>nosotros</td>
-                        <td>habl<strong>ábamos</strong></td>
-                        <td>com<strong>íamos</strong></td>
-                    </tr>
-                    <tr>
-                        <td>vosotros</td>
-                        <td>habl<strong>abais</strong></td>
-                        <td>com<strong>íais</strong></td>
-                    </tr>
-                    <tr>
-                        <td>ellos</td>
-                        <td>habl<strong>aban</strong></td>
-                        <td>com<strong>ían</strong></td>
-                    </tr>
-                </tbody>
+            <h2>📐 Спряжение</h2>
+            <table class="conj-table">
+                <tr>
+                    <th></th>
+                    <th>-AR (hablar)</th>
+                    <th>-ER/-IR (comer, vivir)</th>
+                </tr>
+                <tr>
+                    <td>yo</td>
+                    <td>habl<strong>aba</strong></td>
+                    <td>com<strong>ía</strong> / viv<strong>ía</strong></td>
+                </tr>
+                <tr>
+                    <td>tú</td>
+                    <td>habl<strong>abas</strong></td>
+                    <td>com<strong>ías</strong></td>
+                </tr>
+                <tr>
+                    <td>él/ella</td>
+                    <td>habl<strong>aba</strong></td>
+                    <td>com<strong>ía</strong></td>
+                </tr>
+                <tr>
+                    <td>nosotros</td>
+                    <td>habl<strong>ábamos</strong></td>
+                    <td>com<strong>íamos</strong></td>
+                </tr>
+                <tr>
+                    <td>vosotros</td>
+                    <td>habl<strong>abais</strong></td>
+                    <td>com<strong>íais</strong></td>
+                </tr>
+                <tr>
+                    <td>ellos</td>
+                    <td>habl<strong>aban</strong></td>
+                    <td>com<strong>ían</strong></td>
+                </tr>
             </table>
-            <p style="margin-top: 1rem; color: var(--text-secondary);">
-                <strong>Только 3 неправильных:</strong> ser (era), ir (iba), ver (veía)
-            </p>
+            <p style="margin-top:0.75rem; font-size:0.85rem; color:var(--c-text-dim);"><strong>Только 3
+                    неправильных:</strong> ser → era, ir → iba, ver → veía</p>
         </section>
 
         <section class="section">
             <h2>💡 Употребление</h2>
-
-            <h4 style="margin-top: 1rem; color: var(--accent);">1. Фон, описание в прошлом</h4>
-            <div class="example-box">
-                <div class="spanish">De pequeño, vivía en Roma.</div>
-                <div class="translation">🇷🇺 В детстве я жил в Риме.</div>
+            <div class="example">
+                <div class="es">De pequeño, vivía en Roma.</div>
+                <div class="tr">Фон, описание в прошлом.</div>
             </div>
-
-            <h4 style="margin-top: 1rem; color: var(--accent);">2. Регулярные действия в прошлом</h4>
-            <div class="example-box">
-                <div class="spanish">Siempre desayunaba a las ocho.</div>
-                <div class="translation">🇷🇺 Я всегда завтракал в восемь.</div>
+            <div class="example">
+                <div class="es">Siempre desayunaba a las ocho.</div>
+                <div class="tr">Регулярные действия ("used to").</div>
             </div>
-
-            <h4 style="margin-top: 1rem; color: var(--accent);">3. Параллельные действия</h4>
-            <div class="example-box">
-                <div class="spanish">Mientras ella cocinaba, él leía.</div>
-                <div class="translation">🇷🇺 Пока она готовила, он читал.</div>
+            <div class="example">
+                <div class="es">Mientras ella cocinaba, él leía.</div>
+                <div class="tr">Параллельные действия.</div>
             </div>
-
-            <h4 style="margin-top: 1rem; color: var(--accent);">4. Фон для Indefinido</h4>
-            <div class="example-box">
-                <div class="spanish">Llovía cuando llegué a casa.</div>
-                <div class="translation">🇷🇺 Шёл дождь, когда я пришёл домой.</div>
+            <div class="example">
+                <div class="es">Llovía cuando llegué.</div>
+                <div class="tr">Фон для Indefinido (llovía = фон, llegué = событие).</div>
             </div>
-
-            <h4 style="margin-top: 1rem; color: var(--accent);">5. Вежливые просьбы</h4>
-            <div class="example-box">
-                <div class="spanish">Quería pedirte un favor.</div>
-                <div class="translation">🇷🇺 Я хотел попросить тебя об одолжении. (мягче, чем "quiero")</div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>🔄 Сравнение с русским и английским</h2>
-            <div class="comparison-grid">
-                <div class="comparison-item">
-                    <h4>🇷🇺 Русский</h4>
-                    <p>Прошедшее НСВ:</p>
-                    <p><em>"Я читал, жил, говорил"</em></p>
-                    <p style="margin-top: 0.5rem; color: var(--text-secondary);">
-                        Близкий аналог! НСВ = незавершённость, процесс.
-                    </p>
-                </div>
-                <div class="comparison-item">
-                    <h4>🇬🇧 English</h4>
-                    <p><em>I was speaking / I used to speak</em></p>
-                    <p style="margin-top: 0.5rem; color: var(--text-secondary);">
-                        Past Continuous (процесс) + "used to" (привычка).
-                    </p>
-                </div>
+            <div class="example">
+                <div class="es">Quería pedirte un favor.</div>
+                <div class="tr">Вежливость (мягче, чем "quiero").</div>
             </div>
         </section>
 
         <section class="section">
             <h2>⚠️ Типичные ошибки</h2>
-            <div class="warning-box">
-                <h4>❌ Imperfecto для однократного завершённого действия</h4>
-                <p>
-                    <strong>Неверно:</strong> Ayer <s>comía</s> pizza.<br>
-                    <strong>Верно:</strong> Ayer <strong>comí</strong> pizza.<br>
-                    <em>Однократное завершённое = Indefinido!</em>
+            <div class="warning">
+                <h4>❌ Imperfecto для однократного действия</h4>
+                <p><s>Ayer comía pizza</s> → <strong>Ayer comí pizza</strong><br>Однократное завершённое = Indefinido!
                 </p>
             </div>
         </section>
 
         <div style="text-align: center; margin-top: 2rem;">
-            <a href="../index.html" class="btn btn-primary">← Назад к таблице</a>
+            <a href="../index.html" class="btn-back">← Назад к таблице</a>
         </div>
     </div>
-
-    <script src="../../../app.js"></script>
 </body>
 
 </html>

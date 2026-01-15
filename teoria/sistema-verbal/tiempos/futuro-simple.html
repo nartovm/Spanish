@@ -4,188 +4,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futuro Simple — HABLARÉ</title>
+    <title>Futuro Simple — Испанский B2.1</title>
     <link rel="stylesheet" href="../../../styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c-bg-app: #0f0f1a;
+            --c-bg-cell: #2d2d44;
+            --c-text-dim: #90a4ae;
+            --c-accent: #667eea;
+            --c-orange: #ffa726;
+        }
+
+        body {
+            background: var(--c-bg-app);
+            color: #fff;
+        }
+
+        .navbar {
+            background: #1a1a2e;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar a {
+            color: #aaa;
+        }
+
+        .navbar a:hover {
+            color: #fff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .tense-header {
+            text-align: center;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .tense-header h1 {
+            font-size: 2rem;
+            color: #fff;
+            margin: 0 0 0.25rem 0;
+        }
+
+        .tense-header .subtitle {
+            color: var(--c-text-dim);
+            font-size: 1rem;
+            margin: 0 0 0.75rem 0;
+        }
+
+        .position-badge {
+            display: inline-block;
+            background: var(--c-bg-cell);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: #ccc;
+        }
+
+        .section {
+            margin-bottom: 1.5rem;
+        }
+
+        .section h2 {
+            font-size: 1rem;
+            color: var(--c-accent);
+            margin: 0 0 0.75rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #333;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--c-bg-cell);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .card h4 {
+            margin: 0 0 0.5rem 0;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--c-text-dim);
+            line-height: 1.5;
+        }
+
+        .conj-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            background: var(--c-bg-cell);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .conj-table th,
+        .conj-table td {
+            padding: 0.5rem 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #3a3a50;
+        }
+
+        .conj-table th {
+            background: #232336;
+            color: var(--c-text-dim);
+            font-weight: 600;
+        }
+
+        .conj-table strong {
+            color: var(--c-orange);
+        }
+
+        .example {
+            background: var(--c-bg-cell);
+            border-left: 3px solid var(--c-accent);
+            padding: 0.6rem 1rem;
+            margin: 0.5rem 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .example .es {
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.25rem;
+        }
+
+        .example .tr {
+            font-size: 0.85rem;
+            color: var(--c-text-dim);
+        }
+
+        .warning {
+            background: rgba(233, 30, 99, 0.1);
+            border-left: 3px solid #e91e63;
+            padding: 0.6rem 1rem;
+            margin: 0.5rem 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .warning h4 {
+            margin: 0 0 0.3rem 0;
+            font-size: 0.85rem;
+            color: #e91e63;
+        }
+
+        .warning p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #ccc;
+            line-height: 1.5;
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            background: var(--c-bg-cell);
+            color: #fff;
+            border: 1px solid #444;
+        }
+    </style>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="breadcrumb">
-            <a href="../../../index.html">🏠 Главная</a>
-            <span>→</span>
-            <a href="../../index.html">📚 Теория</a>
-            <span>→</span>
-            <a href="../index.html">Глагольная система</a>
-            <span>→</span>
-            <span style="color: var(--accent);">Futuro Simple</span>
+            <a href="../../../index.html">🏠</a> <span style="color:#666">→</span>
+            <a href="../../index.html">Теория</a> <span style="color:#666">→</span>
+            <a href="../index.html">Sistema Verbal</a> <span style="color:#666">→</span>
+            <span style="color: var(--c-accent);">Futuro Simple</span>
         </div>
     </nav>
 
     <div class="container">
         <header class="tense-header">
-            <h1 class="tense-title">HABLARÉ</h1>
-            <p class="tense-subtitle">Futuro Simple — Простое будущее</p>
-            <span class="position-badge">📢 DECLARAR → 💭 IMAGINAR → 🔲 DENTRO → 📍 AQUÍ</span>
+            <h1>Futuro Simple</h1>
+            <p class="subtitle">Простое будущее время</p>
+            <span class="position-badge">📢 DECLARAR · 💭 IMAGINAR · 🔲 DENTRO · 📍 AQUÍ</span>
         </header>
 
         <section class="section">
-            <h2>📍 Позиция в таблице</h2>
-            <div class="concept-box">
-                <p>Futuro Simple находится на пересечении:</p>
-                <ul style="margin-top: 1rem; color: var(--text-secondary);">
-                    <li><strong>DECLARAR</strong> — это индикатив (не субхунтив)</li>
-                    <li><strong>IMAGINAR</strong> — будущее мы не видим, мы его воображаем!</li>
-                    <li><strong>DENTRO</strong> — действие в процессе (не результат)</li>
-                    <li><strong>AQUÍ</strong> — точка отсчёта — настоящее</li>
-                </ul>
-                <p style="margin-top: 1rem;">
-                    <em>Важно: IMAGINAR ≠ нереальность. Это просто "я предполагаю/представляю", а не "я вижу факт".</em>
-                </p>
+            <h2>📍 Позиция в системе</h2>
+            <div class="info-grid">
+                <div class="card">
+                    <h4>Что означает?</h4>
+                    <p><strong>IMAGINAR</strong>: будущее мы не видим — мы его <strong>воображаем</strong>. Это не
+                        нереальность, а просто "не факт пока".</p>
+                </div>
+                <div class="card">
+                    <h4>Аналоги</h4>
+                    <p>🇷🇺 Будущее СВ/НСВ: <em>сделаю, буду делать</em><br>
+                        🇬🇧 <em>I will speak</em> — но вероятность = "probably"!</p>
+                </div>
             </div>
         </section>
 
         <section class="section">
-            <h2>📐 Образование</h2>
-            <p style="margin-bottom: 1rem; color: var(--text-secondary);">
-                <strong>Инфинитив + окончания</strong> (одинаковые для всех спряжений!)
-            </p>
-            <table class="conjugation-table">
-                <thead>
-                    <tr>
-                        <th>Лицо</th>
-                        <th>Окончание</th>
-                        <th>hablar</th>
-                        <th>comer</th>
-                        <th>vivir</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>yo</td>
-                        <td>-é</td>
-                        <td>hablaré</td>
-                        <td>comeré</td>
-                        <td>viviré</td>
-                    </tr>
-                    <tr>
-                        <td>tú</td>
-                        <td>-ás</td>
-                        <td>hablarás</td>
-                        <td>comerás</td>
-                        <td>vivirás</td>
-                    </tr>
-                    <tr>
-                        <td>él/ella</td>
-                        <td>-á</td>
-                        <td>hablará</td>
-                        <td>comerá</td>
-                        <td>vivirá</td>
-                    </tr>
-                    <tr>
-                        <td>nosotros</td>
-                        <td>-emos</td>
-                        <td>hablaremos</td>
-                        <td>comeremos</td>
-                        <td>viviremos</td>
-                    </tr>
-                    <tr>
-                        <td>vosotros</td>
-                        <td>-éis</td>
-                        <td>hablaréis</td>
-                        <td>comeréis</td>
-                        <td>viviréis</td>
-                    </tr>
-                    <tr>
-                        <td>ellos</td>
-                        <td>-án</td>
-                        <td>hablarán</td>
-                        <td>comerán</td>
-                        <td>vivirán</td>
-                    </tr>
-                </tbody>
+            <h2>📐 Образование: Infinitivo + окончания</h2>
+            <table class="conj-table">
+                <tr>
+                    <th></th>
+                    <th>hablar</th>
+                    <th>comer</th>
+                    <th>vivir</th>
+                </tr>
+                <tr>
+                    <td>yo</td>
+                    <td>hablar<strong>é</strong></td>
+                    <td>comer<strong>é</strong></td>
+                    <td>vivir<strong>é</strong></td>
+                </tr>
+                <tr>
+                    <td>tú</td>
+                    <td>hablar<strong>ás</strong></td>
+                    <td>comer<strong>ás</strong></td>
+                    <td>vivir<strong>ás</strong></td>
+                </tr>
+                <tr>
+                    <td>él/ella</td>
+                    <td>hablar<strong>á</strong></td>
+                    <td>comer<strong>á</strong></td>
+                    <td>vivir<strong>á</strong></td>
+                </tr>
+                <tr>
+                    <td>nosotros</td>
+                    <td>hablar<strong>emos</strong></td>
+                    <td>comer<strong>emos</strong></td>
+                    <td>vivir<strong>emos</strong></td>
+                </tr>
+                <tr>
+                    <td>vosotros</td>
+                    <td>hablar<strong>éis</strong></td>
+                    <td>comer<strong>éis</strong></td>
+                    <td>vivir<strong>éis</strong></td>
+                </tr>
+                <tr>
+                    <td>ellos</td>
+                    <td>hablar<strong>án</strong></td>
+                    <td>comer<strong>án</strong></td>
+                    <td>vivir<strong>án</strong></td>
+                </tr>
             </table>
-            <p style="margin-top: 1rem; color: var(--text-secondary);">
-                <strong>Неправильные:</strong> tener → tendr-, salir → saldr-, poder → podr-, saber → sabr-,
-                hacer → har-, decir → dir-, querer → querr-, venir → vendr-, poner → pondr-
-            </p>
+            <p style="margin-top:0.75rem; font-size:0.85rem; color:var(--c-text-dim);"><strong>Неправильные
+                    основы:</strong> tendr-, saldr-, podr-, sabr-, har-, dir-, querr-, vendr-, pondr-</p>
         </section>
 
         <section class="section">
             <h2>💡 Употребление</h2>
-
-            <h4 style="margin-top: 1rem; color: var(--accent);">1. Действие в будущем</h4>
-            <div class="example-box">
-                <div class="spanish">El año que viene viviré en Granada.</div>
-                <div class="translation">🇷🇺 В следующем году буду жить в Гранаде.</div>
+            <div class="example">
+                <div class="es">El año que viene viviré en Granada.</div>
+                <div class="tr">Действие в будущем.</div>
             </div>
-
-            <h4 style="margin-top: 1rem; color: var(--accent);">2. Предположение о НАСТОЯЩЕМ (futuro de probabilidad)
-            </h4>
-            <div class="example-box">
-                <div class="spanish">— ¿Dónde está María? — No sé, estará en casa.</div>
-                <div class="translation">🇷🇺 — Где Мария? — Не знаю, наверное дома. | 🇬🇧 She's probably at home.
-                </div>
+            <div class="example">
+                <div class="es">— ¿Dónde está María? — Estará en casa.</div>
+                <div class="tr">⚡ Вероятность в НАСТОЯЩЕМ! = Наверное, дома.</div>
             </div>
-
-            <h4 style="margin-top: 1rem; color: var(--accent);">3. Обещания, угрозы, решения</h4>
-            <div class="example-box">
-                <div class="spanish">Te lo prometo, nunca lo haré otra vez.</div>
-                <div class="translation">🇷🇺 Обещаю, больше никогда не сделаю этого.</div>
+            <div class="example">
+                <div class="es">Tendrá unos 30 años.</div>
+                <div class="tr">⚡ Предположение: Ему, наверное, около 30 (СЕЙЧАС).</div>
             </div>
-
-            <h4 style="margin-top: 1rem; color: var(--accent);">4. Приказы (категоричный тон)</h4>
-            <div class="example-box">
-                <div class="spanish">¡Harás lo que yo diga!</div>
-                <div class="translation">🇷🇺 Будешь делать, что я скажу!</div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>🔄 Сравнение с русским и английским</h2>
-            <div class="comparison-grid">
-                <div class="comparison-item">
-                    <h4>🇷🇺 Русский</h4>
-                    <p>Будущее СВ: <em>сделаю, напишу</em></p>
-                    <p>Будущее НСВ: <em>буду делать</em></p>
-                    <p style="margin-top: 0.5rem; color: var(--text-secondary);">
-                        Испанский Futuro Simple = оба варианта!
-                    </p>
-                </div>
-                <div class="comparison-item">
-                    <h4>🇬🇧 English</h4>
-                    <p><em>I will speak</em></p>
-                    <p style="margin-top: 0.5rem; color: var(--text-secondary);">
-                        Но! Для вероятности в настоящем: англ. "probably" = исп. Futuro
-                    </p>
-                </div>
+            <div class="example">
+                <div class="es">¡Harás lo que yo diga!</div>
+                <div class="tr">Приказ (категоричный тон).</div>
             </div>
         </section>
 
         <section class="section">
             <h2>⚠️ Типичные ошибки</h2>
-            <div class="warning-box">
+            <div class="warning">
                 <h4>❌ Futuro в придаточных времени</h4>
-                <p>
-                    <strong>Неверно:</strong> Cuando <s>llegaré</s>, te llamaré.<br>
-                    <strong>Верно:</strong> Cuando <strong>llegue</strong>, te llamaré.<br>
-                    <em>"Cuando" + Subjuntivo, если говорим о будущем!</em>
-                </p>
+                <p><s>Cuando llegaré, te llamaré</s> → <strong>Cuando llegue, te llamaré</strong><br>"Cuando" + будущее
+                    → Subjuntivo!</p>
             </div>
-            <div class="warning-box">
+            <div class="warning">
                 <h4>⚡ Futuro de probabilidad — не про будущее!</h4>
-                <p>
-                    "Tendrá unos 30 años" = "Ему, наверное, около 30" (СЕЙЧАС, не в будущем!)
-                </p>
+                <p>"Serán las tres" = "Наверное, три часа" (СЕЙЧАС, не потом!)</p>
             </div>
         </section>
 
         <div style="text-align: center; margin-top: 2rem;">
-            <a href="../index.html" class="btn btn-primary">← Назад к таблице</a>
+            <a href="../index.html" class="btn-back">← Назад к таблице</a>
         </div>
     </div>
-
-    <script src="../../../app.js"></script>
 </body>
 
 </html>
