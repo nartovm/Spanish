@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1: Textos A-D — Unidad 1</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../css/exercises.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .text-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .text-card-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 1rem 1.5rem;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .text-card-body {
+            padding: 1.5rem;
+        }
+
+        .text-card-body p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .vocab-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .vocab-item label {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .vocab-item strong {
+            color: var(--accent);
+            font-size: 0.95rem;
+        }
+
+        .vocab-item input {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            padding: 0.5rem;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+        }
+
+        .vocab-item input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        @media (max-width: 600px) {
+            .vocab-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body data-exercise-id="ejercicio-01">
+    <nav class="navbar">
+        <div class="breadcrumb">
+            <a href="../../index.html">🏠 Inicio</a>
+            <span>→</span>
+            <a href="../index.html">✏️ Práctica</a>
+            <span>→</span>
+            <a href="index.html">Unidad 1</a>
+            <span>→</span>
+            <span>Ejercicio 1</span>
+        </div>
+    </nav>
+
+    <div class="container" style="max-width: 900px;">
+        <header class="exercise-header">
+            <h1>Ejercicio 1: Textos A-D</h1>
+            <p style="color: var(--text-secondary);">Lee el texto y explícaselo a tus compañeros/as. Después busca un
+                título para él.</p>
+        </header>
+
+        <form id="exercise-form">
+            <!-- Texto A -->
+            <div class="text-card">
+                <div class="text-card-header">Texto A</div>
+                <div class="text-card-body">
+                    <p>Para Félix Aguilar, <strong>funcionario</strong> del Registro Civil de Madrid con 15 años de
+                        experiencia en este <strong>puesto</strong>, muchos padres ya tienen pensado el nombre de su
+                        bebé cuando llegan a las oficinas del Registro Civil. En cambio, hay otros padres que se
+                        <strong>presentan</strong> sin pensar todavía qué nombre quieren ponerle a su hijo. "Estos
+                        padres suelen irse. Se van a casa hasta que lo deciden –explica–, ya que tienen hasta 30 días
+                        para hacerlo".</p>
+                    <p>En todos estos años de profesión, Félix ha visto todo tipo de situaciones, desde los que intentan
+                        convencerlo para que inscriba al niño en otro día diferente al del nacimiento, hasta los que le
+                        ponen un segundo nombre no <strong>acordado</strong> con su pareja; incluso llegan padres que
+                        todavía no lo tienen claro, discuten frente a su mesa y se van dejando al bebé olvidado allí por
+                        culpa del enfado…</p>
+
+                    <div class="vocab-grid">
+                        <div class="vocab-item">
+                            <label><strong>funcionario/a</strong><input type="text" name="q_funcionario"
+                                    placeholder="significado..."></label>
+                        </div>
+                        <div class="vocab-item">
+                            <label><strong>puesto</strong><input type="text" name="q_puesto"
+                                    placeholder="significado..."></label>
+                        </div>
+                        <div class="vocab-item">
+                            <label><strong>presentarse</strong><input type="text" name="q_presentarse"
+                                    placeholder="significado..."></label>
+                        </div>
+                        <div class="vocab-item">
+                            <label><strong>acordar</strong><input type="text" name="q_acordar"
+                                    placeholder="significado..."></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Texto B -->
+            <div class="text-card">
+                <div class="text-card-header">Texto B</div>
+                <div class="text-card-body">
+                    <p>La ley permite ahora <strong>inscribir</strong> al bebé con algunos nombres
+                        <strong>coloquiales</strong>. Hasta 1977, el artículo 54 de la Ley de Registro Civil limitaba la
+                        libertad a la hora de poner el nombre. La ley establecía la obligatoria castellanidad y
+                        <strong>ortodoxia</strong> de los nombres. Félix Aguilar explica: "Lola o Nacho no se podían
+                        poner, pero ahora sí. Además, a los niños españoles se les puede poner nombres extranjeros, pero
+                        hay que escribirlos <strong>tal y como</strong> se escriben en ese idioma; por ejemplo, se puede
+                        poner Jean Pierre, pero no Yanpier".</p>
+
+                    <div class="vocab-grid">
+                        <div class="vocab-item">
+                            <label><strong>inscribir</strong><input type="text" name="q_inscribir"
+                                    placeholder="significado..."></label>
+                        </div>
+                        <div class="vocab-item">
+                            <label><strong>coloquial</strong><input type="text" name="q_coloquial"
+                                    placeholder="significado..."></label>
+                        </div>
+                        <div class="vocab-item">
+                            <label><strong>ortodoxia</strong><input type="text" name="q_ortodoxia"
+                                    placeholder="significado..."></label>
+                        </div>
+                        <div class="vocab-item">
+                            <label><strong>tal y como</strong><input type="text" name="q_talycomo"
+                                    placeholder="significado..."></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Texto C -->
+            <div class="text-card">
+                <div class="text-card-header">Texto C</div>
+                <div class="text-card-body">
+                    <p>Los padres tienen muchas opciones para decidir el nombre de su hijo. Eso sí, la ley establece que
+                        el juez puede <strong>rechazar</strong> algunos nombres que puedan resultar
+                        <strong>perjudiciales</strong> para el bebé. <strong>Anécdotas</strong> de nombres que no se han
+                        podido poner también ha vivido Félix Aguilar: "Un día unos padres querían poner al niño
+                        'Drácula' y obviamente no les <strong>dejaron</strong>".</p>
+                    <p>No se pueden poner nombres de dictadores o personajes conocidos que se consideren negativos, ya
+                        que pueden suponer un perjuicio futuro para el menor. No existe una lista con los nombres que no
+                        pueden ponerse, es algo que la ley deja al criterio del funcionario. La ley solamente dice:
+                        "Quedan prohibidos los nombres que objetivamente perjudiquen a la persona".</p>
+
+                    <div class="vocab-grid">
+                        <div class="vocab-item">
+                            <label><strong>rechazar</strong><input type="text" name="q_rechazar"
+                                    placeholder="significado..."></label>
+                        </div>
+                        <div class="vocab-item">
+                            <label><strong>perjudicial</strong><input type="text" name="q_perjudicial"
+                                    placeholder="significado..."></label>
+                        </div>
+                        <div class="vocab-item">
+                            <label><strong>anécdota</strong><input type="text" name="q_anecdota"
+                                    placeholder="significado..."></label>
+                        </div>
+                        <div class="vocab-item">
+                            <label><strong>dejar</strong><input type="text" name="q_dejar"
+                                    placeholder="significado..."></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Texto D -->
+            <div class="text-card">
+                <div class="text-card-header">Texto D</div>
+                <div class="text-card-body">
+                    <p>En España solamente se puede registrar al niño con dos nombres. Cuando los padres son extranjeros
+                        y el niño no es español, sí se les <strong>permite</strong> a los padres poner los nombres que
+                        les dejen en su país. "Por ejemplo, en Francia les dejan poner tres y cuatro nombres a los
+                        niños: si los padres son extranjeros podrán poner todos esos nombres, pero si ese niño tiene un
+                        día la nacionalidad española, se le quitarán los que <strong>sobran</strong> hasta llegar a
+                        dos", señala Félix Aguilar.</p>
+                    <p>Hoy en día <strong>prácticamente</strong> ha desaparecido la costumbre de poner a los bebés el
+                        mismo nombre de los padres, de los abuelos o el del <strong>santo</strong> del día en el que se
+                        nace. Tampoco es común elegir nombres religiosos como Adoración o Sagrario. Según los datos del
+                        Instituto Nacional de Estadística, en 2023 los nombres más puestos en nuestro país fueron Lucía
+                        para niña y Hugo para niño.</p>
+
+                    <div class="vocab-grid">
+                        <div class="vocab-item">
+                            <label><strong>permitir</strong><input type="text" name="q_permitir"
+                                    placeholder="significado..."></label>
+                        </div>
+                        <div class="vocab-item">
+                            <label><strong>sobrar</strong><input type="text" name="q_sobrar"
+                                    placeholder="significado..."></label>
+                        </div>
+                        <div class="vocab-item">
+                            <label><strong>prácticamente</strong><input type="text" name="q_practicamente"
+                                    placeholder="significado..."></label>
+                        </div>
+                        <div class="vocab-item">
+                            <label><strong>santo/a</strong><input type="text" name="q_santo"
+                                    placeholder="significado..."></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Partner activity -->
+            <div class="partner-activity">
+                <p><strong>Habla con tus compañeros/as y completa también el significado de las palabras de sus textos.
+                        ¡Atención a cómo se escriben para hacer tu propia lista!</strong></p>
+            </div>
+        </form>
+
+        <!-- Action buttons -->
+        <div class="exercise-actions">
+            <button type="submit" form="exercise-form" class="btn btn-primary btn-check">✓ Comprobar</button>
+            <button type="button" class="btn btn-secondary btn-reset" onclick="ExerciseEngine.reset()">↺
+                Reiniciar</button>
+            <a href="https://www.perplexity.ai/search?q=Vocabulario+registro+civil+nombres+bebes+espanol+B2"
+                target="_blank" class="btn btn-ai">🤖 IA</a>
+        </div>
+
+        <div id="results" class="results-box" hidden></div>
+
+        <div class="exercise-nav">
+            <a href="index.html" class="disabled">← Anterior</a>
+            <a href="index.html">📋 Lista</a>
+            <a href="ejercicio-02-tildes-teoria.html">Siguiente →</a>
+        </div>
+    </div>
+
+    <script src="../js/exercise-engine.js"></script>
+    <script>
+        ExerciseEngine.init({
+            "q_funcionario": { correct: ["empleado publico", "trabajador del estado"], explanation: "Empleado publico, trabaja para el gobierno.", strict: false },
+            "q_puesto": { correct: ["trabajo", "empleo", "cargo"], explanation: "Trabajo, cargo, posicion laboral.", strict: false },
+            "q_presentarse": { correct: ["aparecer", "llegar", "ir"], explanation: "Aparecer, llegar a un lugar.", strict: false },
+            "q_acordar": { correct: ["decidir juntos", "ponerse de acuerdo"], explanation: "Decidir algo juntos.", strict: false },
+            "q_inscribir": { correct: ["registrar", "apuntar"], explanation: "Registrar oficialmente.", strict: false },
+            "q_coloquial": { correct: ["informal", "familiar"], explanation: "Informal, del uso cotidiano.", strict: false },
+            "q_ortodoxia": { correct: ["tradicion", "normas tradicionales"], explanation: "Conformidad con las normas tradicionales.", strict: false },
+            "q_talycomo": { correct: ["exactamente igual", "de la misma manera"], explanation: "Exactamente igual.", strict: false },
+            "q_rechazar": { correct: ["no aceptar", "denegar"], explanation: "No aceptar algo.", strict: false },
+            "q_perjudicial": { correct: ["danino", "malo"], explanation: "Que causa dano.", strict: false },
+            "q_anecdota": { correct: ["historia corta", "relato breve"], explanation: "Historia breve de un suceso curioso.", strict: false },
+            "q_dejar": { correct: ["permitir", "autorizar"], explanation: "Permitir hacer algo.", strict: false },
+            "q_permitir": { correct: ["dejar", "autorizar"], explanation: "Autorizar, dar permiso.", strict: false },
+            "q_sobrar": { correct: ["quedar de mas", "exceder"], explanation: "Haber mas de lo necesario.", strict: false },
+            "q_practicamente": { correct: ["casi", "casi totalmente"], explanation: "Casi, en la practica.", strict: false },
+            "q_santo": { correct: ["persona santa", "dia del nombre"], explanation: "Dia del ano asociado con un nombre.", strict: false }
+        }, { exerciseId: 'ejercicio-01', unitId: 'unidad-1' });
+        ExerciseEngine.enableAutoSave();
+    </script>
+</body>
+
+</html>

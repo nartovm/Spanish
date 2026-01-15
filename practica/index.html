@@ -4,34 +4,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Практика — Испанский B2.1</title>
+    <title>Práctica — Español B2.1</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="css/exercises.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <nav class="navbar">
-        <a href="../index.html">🏠 Главная</a>
-        <a href="../teoria/index.html">📚 Теория</a>
-        <a href="index.html" class="active">✏️ Практика</a>
+        <a href="../index.html">🏠 Inicio</a>
+        <a href="../teoria/index.html">📚 Teoría</a>
+        <a href="index.html" class="active">✏️ Práctica</a>
     </nav>
 
     <div class="container">
         <header class="page-header">
-            <h1>✏️ Практика</h1>
-            <p class="subtitle">Интерактивные упражнения с проверкой</p>
+            <h1>✏️ Práctica</h1>
+            <p class="subtitle">Ejercicios interactivos con verificación</p>
         </header>
 
-        <div class="concept-box" style="text-align: center;">
-            <h2>🚧 Раздел в разработке</h2>
-            <p style="color: var(--text-secondary); margin-top: 1rem;">
-                Здесь появятся интерактивные упражнения из PDF материалов курса.<br>
-                Загрузи PDF с заданиями, и мы конвертируем их в интерактивный формат!
-            </p>
+        <div class="card-grid">
+            <a href="unidad-1/index.html" class="card-link">
+                <div class="card">
+                    <h3>📘 Unidad 1</h3>
+                    <p>Expresar situaciones y procesos pasados</p>
+                    <ul
+                        style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem; padding-left: 1.2rem;">
+                        <li>AQUÍ y ALLÍ — Marcadores temporales</li>
+                        <li>Formas: HABLABA, HABLÉ, HE HABLADO, HABÍA HABLADO</li>
+                        <li>Tildes y acentuación</li>
+                        <li>Reorganización de frases</li>
+                    </ul>
+                    <div class="progress-bar" style="margin-top: 1rem;">
+                        <div class="progress-bar-fill" id="unit1-progress" style="width: 0%"></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Future units - placeholders -->
+            <div class="card" style="opacity: 0.5; cursor: not-allowed;">
+                <h3>📗 Unidad 2</h3>
+                <p style="color: var(--text-secondary);">Próximamente...</p>
+            </div>
+
+            <div class="card" style="opacity: 0.5; cursor: not-allowed;">
+                <h3>📙 Unidad 3</h3>
+                <p style="color: var(--text-secondary);">Próximamente...</p>
+            </div>
+        </div>
+
+        <div class="concept-box" style="margin-top: 2rem;">
+            <h3>💡 Cómo usar</h3>
+            <ul style="color: var(--text-secondary); line-height: 1.8; padding-left: 1.5rem;">
+                <li><strong>Haz los ejercicios en orden</strong> o elige el tema que necesites</li>
+                <li><strong>Comprueba las respuestas</strong> con el botón "✓ Comprobar"</li>
+                <li><strong>Lee las explicaciones</strong> de las respuestas incorrectas</li>
+                <li><strong>Usa la IA</strong> para explicaciones adicionales (botón 🤖)</li>
+                <li><strong>El progreso se guarda</strong> automáticamente en el navegador</li>
+            </ul>
         </div>
     </div>
 
-    <script src="../app.js"></script>
+    <script src="js/exercise-engine.js"></script>
+    <script>
+        // Update Unit 1 progress
+        document.addEventListener('DOMContentLoaded', function () {
+            const progress = ExerciseEngine.getProgress('unidad-1');
+            const completed = Object.keys(progress).length;
+            const total = 18; // Total exercises in Unit 1
+            const percentage = Math.round((completed / total) * 100);
+
+            const progressBar = document.getElementById('unit1-progress');
+            if (progressBar) {
+                progressBar.style.width = percentage + '%';
+            }
+        });
+    </script>
 </body>
 
 </html>

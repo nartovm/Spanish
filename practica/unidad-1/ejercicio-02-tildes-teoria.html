@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2: Teoría de tildes — Unidad 1</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../css/exercises.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <style>
+        .rule-box {
+            background: rgba(76, 175, 80, 0.1);
+            border-left: 4px solid #4CAF50;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .rule-box h4 {
+            color: #4CAF50;
+            margin-bottom: 0.75rem;
+        }
+
+        .example-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+
+        .mermaid {
+            background: transparent !important;
+        }
+    </style>
+</head>
+
+<body data-exercise-id="ejercicio-02">
+    <nav class="navbar">
+        <div class="breadcrumb">
+            <a href="../../index.html">🏠 Inicio</a>
+            <span>→</span>
+            <a href="../index.html">✏️ Práctica</a>
+            <span>→</span>
+            <a href="index.html">Unidad 1</a>
+            <span>→</span>
+            <span>Ejercicio 2</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="exercise-header">
+            <h1>📚 Cómo leer las palabras y poner tildes</h1>
+            <p class="instruction">Теория: правила чтения испанских слов и постановка ударения (tilde)</p>
+        </header>
+
+        <!-- Section 1: Cómo leer las palabras -->
+        <div class="theory-block">
+            <h2>1️⃣ Cómo leer las palabras</h2>
+
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                Как определить ударный слог в испанском слове?
+            </p>
+
+            <div class="mermaid">
+                flowchart TD
+                A["¿Cuál es fuerte?<br /><span style='font-size:0.85em;color:#90a4ae'>Какой слог ударный?</span>"]
+                B["¿La palabra tiene tilde?<br /><span style='font-size:0.85em;color:#90a4ae'>Есть ли знак
+                    ударения?</span>"]
+                C["<strong>SÍ</strong> → Fuerte: con tilde<br /><span style='font-size:0.85em;color:#90a4ae'>Ударение на
+                    слоге с (´)</span><br /><span
+                    style='background:#1a1a2e;padding:4px 8px;border-radius:4px;font-size:0.9em'>círculo, árbol,
+                    sofá</span>"]
+                D["<strong>NO</strong> → ¿Última letra es<br />vocal, -n o -s?"]
+                E["<strong>SÍ</strong> → Fuerte: penúltima<br /><span
+                    style='font-size:0.85em;color:#90a4ae'>Предпоследний слог</span><br /><span
+                    style='background:#1a1a2e;padding:4px 8px;border-radius:4px;font-size:0.9em'>casa, hablan,
+                    casas</span>"]
+                F["<strong>NO</strong> → Fuerte: última<br /><span style='font-size:0.85em;color:#90a4ae'>Последний
+                    слог</span><br /><span
+                    style='background:#1a1a2e;padding:4px 8px;border-radius:4px;font-size:0.9em'>reloj, papel,
+                    verdad</span>"]
+
+                A --> B
+                B -->|SÍ| C
+                B -->|NO| D
+                D -->|SÍ| E
+                D -->|NO| F
+
+                style A fill:#1a1a2e,stroke:#667eea,stroke-width:2px,color:#fff
+                style B fill:#1a1a2e,stroke:#667eea,stroke-width:2px,color:#fff
+                style C fill:#1a2e1a,stroke:#4CAF50,stroke-width:2px,color:#fff
+                style D fill:#2e1a1a,stroke:#FF9800,stroke-width:2px,color:#fff
+                style E fill:#1a2e2e,stroke:#4CAF50,stroke-width:2px,color:#fff
+                style F fill:#2e1a2e,stroke:#e91e63,stroke-width:2px,color:#fff
+            </div>
+
+            <div class="concept-box" style="background: rgba(255, 193, 7, 0.1); margin-top: 1.5rem;">
+                <h4>🔔 ¡RECUERDA!</h4>
+                <p><strong>i/u + otra vocal</strong> = una sílaba (diptongo):</p>
+                <div class="example-grid">
+                    <div><strong>llu-via</strong></div>
+                    <div><strong>cua-tro</strong></div>
+                    <div><strong>hie-lo</strong></div>
+                    <div><strong>hue-vo</strong></div>
+                    <div><strong>i-dio-ma</strong></div>
+                    <div><strong>ciu-dad</strong></div>
+                    <div><strong>pai-sa-je</strong></div>
+                    <div><strong>au-la</strong></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Poner tildes -->
+        <div class="theory-block">
+            <h2>2️⃣ Poner tildes</h2>
+
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                Когда нужен знак ударения (tilde)?
+            </p>
+
+            <div class="rule-box">
+                <h4>Regla 1: Palabras terminadas en vocal, -n o -s</h4>
+                <p><strong>Escribe la palabra sin tilde y piensa cuál es la sílaba fuerte según las reglas para
+                        leer.</strong></p>
+                <ol style="padding-left: 1.5rem; color: var(--text-secondary); margin-top: 0.75rem; line-height: 1.8;">
+                    <li>Reglas: <strong style="color: var(--text-primary);">-n</strong> (fuerte → penúltima) → esperamos
+                        <span style="color: #4CAF50; font-weight: 600;">HA-blan</span></li>
+                    <li>Pronunciación real: <strong style="color: var(--accent);">HA</strong>-blan ✓</li>
+                    <li>¿Coincide? <span style="color: #4CAF50;">SÍ</span> → <strong>hablan</strong> (sin tilde)</li>
+                </ol>
+            </div>
+
+            <div class="rule-box">
+                <h4>Regla 2: Palabras terminadas en otras consonantes</h4>
+                <p><strong>Piensa cuál es la sílaba fuerte cuando oyes la palabra.</strong></p>
+                <ol style="padding-left: 1.5rem; color: var(--text-secondary); margin-top: 0.75rem; line-height: 1.8;">
+                    <li>Reglas: <strong style="color: var(--text-primary);">-o</strong> (vocal → penúltima) → esperamos
+                        te-le-<span style="color: #FF9800;">FO</span>-no</li>
+                    <li>Pronunciación real: <strong style="color: var(--accent);">te-LÉ-fo-no</strong></li>
+                    <li>¿Coincide? <span style="color: #e91e63;">NO</span> → <strong>teléfono</strong> (con tilde en LÉ)
+                    </li>
+                </ol>
+            </div>
+
+            <div class="rule-box">
+                <h4>Regla 3: Diptongos (i/u + otra vocal)</h4>
+                <p><strong>Si las dos vocales son iguales:</strong> es regular, no pones tilde</p>
+                <p style="margin-left: 1.5rem; color: var(--text-secondary);">Ejemplo: <strong>cuatro</strong> → <span
+                        style="color: var(--accent);">CUA</span>-tro ✓</p>
+
+                <p style="margin-top: 0.75rem;"><strong>Si son diferentes:</strong> es irregular, pones tilde en la
+                    vocal fuerte</p>
+                <p style="margin-left: 1.5rem; color: var(--text-secondary);">Ejemplo: <strong>día</strong> → <span
+                        style="color: var(--accent);">DÍ</span>-a (tilde rompe el diptongo)</p>
+            </div>
+
+            <div class="example-box" style="margin-top: 1.5rem;">
+                <p class="spanish"><strong>Ejemplo:</strong> telefono → ¿tilde?</p>
+                <p class="translation">• Termina en -o (vocal) → regla: penúltima sílaba =
+                    te-le-<strong>FO</strong>-no<br>
+                    • Pronunciación: te-<strong>LÉ</strong>-fo-no<br>
+                    • No coincide → necesita tilde: <strong>teléfono</strong></p>
+            </div>
+        </div>
+
+        <!-- Note -->
+        <div class="concept-box" style="background: rgba(255, 193, 7, 0.05); border: 1px solid rgba(255, 193, 7, 0.3);">
+            <p style="color: var(--text-secondary);">
+                📌 <strong>Esto es teoría.</strong> Los ejercicios para practicar estas reglas están en el siguiente
+                ejercicio.
+            </p>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="exercise-actions">
+            <a href="https://www.perplexity.ai/search?q=Explica+las+reglas+de+acentuación+en+español+con+ejemplos+nivel+B2"
+                target="_blank" class="btn btn-ai">🤖 Preguntar a IA sobre las tildes</a>
+        </div>
+
+        <!-- Navigation -->
+        <div class="exercise-nav">
+            <a href="ejercicio-01-textos.html">← Anterior</a>
+            <a href="index.html">📋 Volver a lista</a>
+            <a href="ejercicio-03-tildes.html">Siguiente →</a>
+        </div>
+    </div>
+
+    <script src="../js/exercise-engine.js"></script>
+    <script>
+        // Initialize Mermaid
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            themeVariables: {
+                primaryColor: '#1a1a2e',
+                primaryTextColor: '#fff',
+                primaryBorderColor: '#667eea',
+                lineColor: '#667eea',
+                secondaryColor: '#2d2d44',
+                tertiaryColor: '#0f0f1a',
+                fontSize: '14px'
+            }
+        });
+
+        // Mark as completed
+        ExerciseEngine.init({}, {
+            exerciseId: 'ejercicio-02',
+            unitId: 'unidad-1'
+        });
+
+        ExerciseEngine.saveProgress(1, 1);
+    </script>
+</body>
+
+</html>
