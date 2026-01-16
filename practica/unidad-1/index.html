@@ -29,6 +29,10 @@
             transform: translateX(4px);
         }
 
+        .exercise-card.theory {
+            border-left: 3px solid #ffc107;
+        }
+
         .exercise-number {
             width: 40px;
             height: 40px;
@@ -40,6 +44,11 @@
             font-weight: 700;
             font-size: 1.1rem;
             flex-shrink: 0;
+        }
+
+        .exercise-card.theory .exercise-number {
+            background: linear-gradient(135deg, #ffc107, #ff9800);
+            font-size: 0.9rem;
         }
 
         .exercise-card.completed .exercise-number {
@@ -59,6 +68,13 @@
         .exercise-desc {
             font-size: 0.85rem;
             color: var(--text-secondary);
+        }
+
+        .exercise-pages {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            opacity: 0.7;
+            margin-top: 0.15rem;
         }
 
         .exercise-status {
@@ -144,7 +160,7 @@
         <div class="progress-container">
             <div class="progress-header">
                 <span>📊 Progreso</span>
-                <span id="progress-text">0/15</span>
+                <span id="progress-text">0/16</span>
             </div>
             <div class="progress-bar">
                 <div class="progress-bar-fill" id="progress-fill" style="width: 0%"></div>
@@ -156,129 +172,155 @@
         <a href="ejercicio-01-textos.html" class="exercise-card" data-exercise="ejercicio-01">
             <div class="exercise-number">1</div>
             <div class="exercise-info">
-                <div class="exercise-title">Textos A-D: Vocabulario</div>
-                <div class="exercise-desc">Nombres de bebés — Registro Civil</div>
+                <div class="exercise-title">Vocabulario: Nombres de bebés</div>
+                <div class="exercise-desc">Textos A-D sobre el Registro Civil</div>
+                <div class="exercise-pages">📄 pp. 2-3</div>
             </div>
             <div class="exercise-status">✓</div>
         </a>
 
-        <a href="ejercicio-02-tildes-teoria.html" class="exercise-card" data-exercise="ejercicio-02">
-            <div class="exercise-number">2</div>
+        <a href="ejercicio-02-tildes-teoria.html" class="exercise-card theory" data-exercise="ejercicio-02">
+            <div class="exercise-number">📚</div>
             <div class="exercise-info">
-                <div class="exercise-title">Teoría de tildes</div>
-                <div class="exercise-desc">Cómo leer palabras + Poner tildes</div>
+                <div class="exercise-title">Teoría: Tildes y acentuación</div>
+                <div class="exercise-desc">Cómo leer palabras + Reglas de tildes</div>
+                <div class="exercise-pages">📄 pp. 4-5</div>
             </div>
             <div class="exercise-status">✓</div>
         </a>
 
         <a href="ejercicio-03-tildes.html" class="exercise-card" data-exercise="ejercicio-03">
-            <div class="exercise-number">3</div>
+            <div class="exercise-number">2</div>
             <div class="exercise-info">
-                <div class="exercise-title">Práctica de tildes</div>
-                <div class="exercise-desc">Corregir errores + Dictado</div>
+                <div class="exercise-title">Práctica: Tildes</div>
+                <div class="exercise-desc">Corregir errores + Dictado en parejas</div>
+                <div class="exercise-pages">📄 pp. 6-7</div>
             </div>
             <div class="exercise-status">✓</div>
         </a>
 
-        <div class="section-divider">⏰ Tiempos del Pasado</div>
+        <div class="section-divider">⏰ Perfecto vs Indefinido</div>
+
+        <a href="ejercicio-04-teoria.html" class="exercise-card theory" data-exercise="ejercicio-04-teoria">
+            <div class="exercise-number">📚</div>
+            <div class="exercise-info">
+                <div class="exercise-title">Teoría: AQUÍ vs ALLÍ</div>
+                <div class="exercise-desc">Espacios temporales — Perfecto/Indefinido</div>
+                <div class="exercise-pages">📄 pp. 8-9</div>
+            </div>
+            <div class="exercise-status">✓</div>
+        </a>
 
         <a href="ejercicio-04-perfecto-indefinido.html" class="exercise-card" data-exercise="ejercicio-04">
-            <div class="exercise-number">4</div>
+            <div class="exercise-number">3</div>
             <div class="exercise-info">
-                <div class="exercise-title">Perfecto vs Indefinido</div>
-                <div class="exercise-desc">Teoría AQUÍ/ALLÍ + Ejercicios</div>
+                <div class="exercise-title">Práctica: Perfecto vs Indefinido</div>
+                <div class="exercise-desc">Ej. 24 — Elegir tiempo verbal</div>
+                <div class="exercise-pages">📄 pp. 8-9</div>
             </div>
             <div class="exercise-status">✓</div>
         </a>
 
         <a href="ejercicio-05-verbos-51.html" class="exercise-card" data-exercise="ejercicio-05">
-            <div class="exercise-number">5</div>
+            <div class="exercise-number">4</div>
             <div class="exercise-info">
-                <div class="exercise-title">Ejercicio 51</div>
-                <div class="exercise-desc">Indefinido o Perfecto — completar</div>
+                <div class="exercise-title">Verbos: Conjugación pasado</div>
+                <div class="exercise-desc">Ej. 51 — Completar con Indefinido/Perfecto</div>
+                <div class="exercise-pages">📄 pp. 10-11</div>
             </div>
             <div class="exercise-status">✓</div>
         </a>
 
+        <div class="section-divider">🔄 Indefinido vs Imperfecto</div>
+
         <a href="ejercicio-06-verbos-64.html" class="exercise-card" data-exercise="ejercicio-06">
-            <div class="exercise-number">6</div>
+            <div class="exercise-number">5</div>
             <div class="exercise-info">
-                <div class="exercise-title">Ejercicio 64</div>
-                <div class="exercise-desc">Indefinido vs Imperfecto — elegir</div>
+                <div class="exercise-title">Indefinido vs Imperfecto</div>
+                <div class="exercise-desc">Ej. 64 — Elegir + Historia</div>
+                <div class="exercise-pages">📄 p. 12</div>
             </div>
             <div class="exercise-status">✓</div>
         </a>
 
         <a href="ejercicio-07-verbos-82.html" class="exercise-card" data-exercise="ejercicio-07">
-            <div class="exercise-number">7</div>
+            <div class="exercise-number">6</div>
             <div class="exercise-info">
-                <div class="exercise-title">Ejercicio 82</div>
-                <div class="exercise-desc">Imperfecto o Indefinido — completar</div>
+                <div class="exercise-title">Imperfecto o Indefinido</div>
+                <div class="exercise-desc">Ej. 82 — Completar frases</div>
+                <div class="exercise-pages">📄 p. 13</div>
             </div>
             <div class="exercise-status">✓</div>
         </a>
 
         <a href="ejercicio-08-verbos-83.html" class="exercise-card" data-exercise="ejercicio-08">
-            <div class="exercise-number">8</div>
+            <div class="exercise-number">7</div>
             <div class="exercise-info">
-                <div class="exercise-title">Ejercicio 83</div>
-                <div class="exercise-desc">Narrativo — verbos del recuadro</div>
+                <div class="exercise-title">Narrativa con verbos</div>
+                <div class="exercise-desc">Ej. 83 — Verbos del recuadro</div>
+                <div class="exercise-pages">📄 p. 14</div>
             </div>
             <div class="exercise-status">✓</div>
         </a>
 
         <a href="ejercicio-09-estar-gerundio.html" class="exercise-card" data-exercise="ejercicio-09">
-            <div class="exercise-number">9</div>
+            <div class="exercise-number">8</div>
             <div class="exercise-info">
-                <div class="exercise-title">Ejercicio 65</div>
-                <div class="exercise-desc">Estar + Gerundio — testigos</div>
+                <div class="exercise-title">Estar + Gerundio</div>
+                <div class="exercise-desc">Ej. 65 — Testigos del accidente</div>
+                <div class="exercise-pages">📄 pp. 15-16</div>
             </div>
             <div class="exercise-status">✓</div>
         </a>
 
         <a href="ejercicio-10-pluscuamperfecto.html" class="exercise-card" data-exercise="ejercicio-10">
-            <div class="exercise-number">10</div>
+            <div class="exercise-number">9</div>
             <div class="exercise-info">
                 <div class="exercise-title">Pluscuamperfecto</div>
-                <div class="exercise-desc">Una las frases + Consecuencias</div>
+                <div class="exercise-desc">Unir frases + Consecuencias</div>
+                <div class="exercise-pages">📄 p. 17</div>
             </div>
             <div class="exercise-status">✓</div>
         </a>
 
-        <div class="section-divider">🎯 Imperfecto vs Indefinido: Usos</div>
+        <div class="section-divider">🎯 Usos avanzados: Imperfecto vs Indefinido</div>
 
         <a href="ejercicio-11-forma-verbal.html" class="exercise-card" data-exercise="ejercicio-11">
-            <div class="exercise-number">11</div>
+            <div class="exercise-number">10</div>
             <div class="exercise-info">
-                <div class="exercise-title">Forma verbal</div>
-                <div class="exercise-desc">Interpretación + Procesos</div>
+                <div class="exercise-title">Interpretación de formas</div>
+                <div class="exercise-desc">Ej. A2-81 — Procesos completos vs partes</div>
+                <div class="exercise-pages">📄 pp. 19-20</div>
             </div>
             <div class="exercise-status">✓</div>
         </a>
 
         <a href="ejercicio-12-cualidades.html" class="exercise-card" data-exercise="ejercicio-12">
-            <div class="exercise-number">12</div>
+            <div class="exercise-number">11</div>
             <div class="exercise-info">
-                <div class="exercise-title">Cualidades</div>
+                <div class="exercise-title">Cualidades estáticas y dinámicas</div>
                 <div class="exercise-desc">¿Cómo era? vs ¿Cómo fue?</div>
+                <div class="exercise-pages">📄 pp. 20-21</div>
             </div>
             <div class="exercise-status">✓</div>
         </a>
 
         <a href="ejercicio-13-situaciones.html" class="exercise-card" data-exercise="ejercicio-13">
-            <div class="exercise-number">13</div>
+            <div class="exercise-number">12</div>
             <div class="exercise-info">
                 <div class="exercise-title">Situaciones regulares</div>
-                <div class="exercise-desc">Hechos completos vs habituales</div>
+                <div class="exercise-desc">Ej. A2-81 — Hechos completos vs habituales</div>
+                <div class="exercise-pages">📄 p. 22</div>
             </div>
             <div class="exercise-status">✓</div>
         </a>
 
         <a href="ejercicio-14-historias.html" class="exercise-card" data-exercise="ejercicio-14">
-            <div class="exercise-number">14</div>
+            <div class="exercise-number">13</div>
             <div class="exercise-info">
                 <div class="exercise-title">Contar historias</div>
-                <div class="exercise-desc">Email narrativo — completar</div>
+                <div class="exercise-desc">Ej. B1-82 — Email narrativo</div>
+                <div class="exercise-pages">📄 pp. 23-25</div>
             </div>
             <div class="exercise-status">✓</div>
         </a>
@@ -286,10 +328,11 @@
         <div class="section-divider">📝 Participio & Voz Pasiva</div>
 
         <a href="ejercicio-15-participio.html" class="exercise-card" data-exercise="ejercicio-15">
-            <div class="exercise-number">15</div>
+            <div class="exercise-number">14</div>
             <div class="exercise-info">
                 <div class="exercise-title">Ser/Estar + Participio</div>
-                <div class="exercise-desc">Voz pasiva — completar</div>
+                <div class="exercise-desc">Ej. 115 — Voz pasiva</div>
+                <div class="exercise-pages">📄 p. 26</div>
             </div>
             <div class="exercise-status">✓</div>
         </a>

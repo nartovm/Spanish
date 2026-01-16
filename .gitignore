@@ -1,5 +1,5 @@
 # Assets - large files (PDFs, images)
-assets/
+/assets/
 
 # Agent configuration
 .agent/
