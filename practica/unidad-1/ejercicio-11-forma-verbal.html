@@ -127,20 +127,98 @@
             </div>
         </div>
 
-        <!-- Theory: Procesos completos vs partes -->
+        <!-- Theory: Procesos completos vs partes - with SVG -->
         <div class="concept-box" style="margin: 2rem 0; padding: 1.25rem;">
-            <h4 style="margin-bottom: 1rem;">📚 Procesos completos (Indefinido) vs Partes (Imperfecto)</h4>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; font-size: 0.9rem;">
+            <h4 style="margin-bottom: 1rem;">📚 B. Procesos completos (Indefinido) y partes de un proceso (Imperfecto).
+            </h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">
+                ■ Podemos hablar de procesos breves (comerse un bocadillo) o más largos (estudiar Medicina durante cinco
+                años). La duración no importa:
+            </p>
+
+            <!-- SVG: Timeline with procesos breves vs largos -->
+            <svg width="100%" height="180" viewBox="0 0 700 180"
+                style="max-width: 700px; display: block; margin: 0 auto;">
+                <!-- PROCESOS BREVES side -->
+                <rect x="20" y="15" width="320" height="150" rx="8" fill="rgba(76,175,80,0.08)" stroke="#4CAF50" />
+                <text x="180" y="40" text-anchor="middle" fill="#4CAF50" font-size="12" font-weight="bold">PROCESOS
+                    BREVES</text>
+
+                <!-- Carlos eating bocadillo -->
+                <g transform="translate(60, 55) scale(0.6)">
+                    <ellipse cx="30" cy="12" rx="20" ry="12" fill="#5D4037" />
+                    <ellipse cx="30" cy="22" rx="16" ry="18" fill="#ffdbac" />
+                    <path d="M14 18 Q20 8 30 10 Q40 8 46 18" fill="#5D4037" />
+                    <ellipse cx="24" cy="22" rx="3" ry="4" fill="#333" />
+                    <ellipse cx="36" cy="22" rx="3" ry="4" fill="#333" />
+                    <path d="M24 33 Q30 38 36 33" stroke="#333" stroke-width="1.5" fill="none" />
+                    <rect x="15" y="40" width="30" height="28" fill="#2196F3" rx="4" />
+                </g>
+                <!-- Bocadillo -->
+                <ellipse cx="115" cy="85" rx="15" ry="8" fill="#F5DEB3" stroke="#DEB887" stroke-width="1" />
+
+                <text x="180" y="75" text-anchor="middle" fill="#fff" font-size="11">Me <tspan font-weight="bold"
+                        fill="#4CAF50">comí</tspan></text>
+                <text x="180" y="90" text-anchor="middle" fill="#fff" font-size="11">el bocadillo</text>
+                <text x="180" y="108" text-anchor="middle" fill="#4CAF50" font-size="11" font-weight="bold">en tres
+                    minutos</text>
+
+                <!-- Timeline: 3 minutes -->
+                <line x1="130" y1="130" x2="230" y2="130" stroke="#4CAF50" stroke-width="2" />
+                <circle cx="130" cy="130" r="4" fill="#4CAF50" />
+                <circle cx="230" cy="130" r="4" fill="#4CAF50" />
+                <text x="130" y="150" text-anchor="middle" fill="#888" font-size="9">0 min</text>
+                <text x="230" y="150" text-anchor="middle" fill="#888" font-size="9">3 min</text>
+
+                <!-- PROCESOS LARGOS side -->
+                <rect x="360" y="15" width="320" height="150" rx="8" fill="rgba(102,126,234,0.08)" stroke="#667eea" />
+                <text x="520" y="40" text-anchor="middle" fill="#667eea" font-size="12" font-weight="bold">PROCESOS
+                    LARGOS</text>
+
+                <!-- Maria studying -->
+                <g transform="translate(400, 50) scale(0.55)">
+                    <ellipse cx="30" cy="30" rx="22" ry="28" fill="#8B4513" />
+                    <ellipse cx="30" cy="20" rx="15" ry="17" fill="#ffdbac" />
+                    <path d="M15 18 Q18 8 30 6 Q42 8 45 18" fill="#8B4513" />
+                    <ellipse cx="24" cy="20" rx="3" ry="3.5" fill="#fff" />
+                    <ellipse cx="36" cy="20" rx="3" ry="3.5" fill="#fff" />
+                    <circle cx="24" cy="20" r="2" fill="#1a1a1a" />
+                    <circle cx="36" cy="20" r="2" fill="#1a1a1a" />
+                    <path d="M25 30 Q30 34 35 30" stroke="#E91E63" stroke-width="1.5" fill="none" />
+                    <rect x="18" y="40" width="24" height="15" fill="#E91E63" rx="3" />
+                </g>
+                <!-- Books -->
+                <rect x="460" y="75" width="12" height="15" fill="#2196F3" rx="1" />
+                <rect x="474" y="78" width="10" height="12" fill="#4CAF50" rx="1" />
+                <rect x="486" y="76" width="11" height="14" fill="#FF9800" rx="1" />
+
+                <text x="520" y="75" text-anchor="middle" fill="#fff" font-size="11">Violeta estuvo</text>
+                <text x="520" y="90" text-anchor="middle" fill="#fff" font-size="11">estudiando Medicina</text>
+                <text x="520" y="108" text-anchor="middle" fill="#667eea" font-size="11" font-weight="bold">cinco
+                    años</text>
+
+                <!-- Timeline: 5 years -->
+                <line x1="420" y1="130" x2="620" y2="130" stroke="#667eea" stroke-width="2" />
+                <circle cx="420" cy="130" r="4" fill="#667eea" />
+                <circle cx="620" cy="130" r="4" fill="#667eea" />
+                <text x="420" y="150" text-anchor="middle" fill="#888" font-size="9">2011</text>
+                <text x="470" y="150" text-anchor="middle" fill="#888" font-size="8">12</text>
+                <text x="520" y="150" text-anchor="middle" fill="#888" font-size="8">13</text>
+                <text x="570" y="150" text-anchor="middle" fill="#888" font-size="8">14</text>
+                <text x="620" y="150" text-anchor="middle" fill="#888" font-size="9">2015</text>
+            </svg>
+
+            <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; font-size: 0.9rem; margin-top: 1rem;">
                 <div style="padding: 1rem; background: rgba(76,175,80,0.1); border-radius: 8px;">
                     <p><strong style="color: #4CAF50;">PROCESO COMPLETO = Indefinido</strong></p>
                     <p>Nos situamos "después" del proceso</p>
-                    <p style="margin-top: 0.5rem;">• Me <strong>comí</strong> el bocadillo <strong>en tres
-                            minutos</strong></p>
                 </div>
                 <div style="padding: 1rem; background: rgba(255,152,0,0.1); border-radius: 8px;">
                     <p><strong style="color: #FF9800;">PARTE DE UN PROCESO = Imperfecto</strong></p>
                     <p>Nos situamos "dentro" del proceso</p>
                     <p style="margin-top: 0.5rem;">• A la 1:07, <strong>estaba</strong> comiéndome un bocadillo</p>
+                    <p>• En 2014 "estaba estudiando Medicina"</p>
                 </div>
             </div>
         </div>
@@ -151,7 +229,7 @@
         </div>
 
         <div class="exercise-nav">
-            <a href="ejercicio-10-pluscuamperfecto.html">← Anterior</a>
+            <a href="ejercicio-11-teoria.html">← Anterior</a>
             <a href="index.html">📋 Lista</a>
             <a href="ejercicio-12-cualidades.html">Siguiente →</a>
         </div>
