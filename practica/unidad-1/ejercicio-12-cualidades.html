@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12: Cualidades — Unidad 1</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../css/exercises.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body data-exercise-id="ejercicio-12">
+    <nav class="navbar">
+        <div class="breadcrumb">
+            <a href="../../index.html">🏠 Inicio</a>
+            <span>→</span>
+            <a href="../index.html">✏️ Práctica</a>
+            <span>→</span>
+            <a href="index.html">Unidad 1</a>
+            <span>→</span>
+            <span>Ejercicio 12</span>
+        </div>
+    </nav>
+
+    <div class="container" style="max-width: 900px;">
+        <header class="exercise-header">
+            <h1>Cualidades estáticas vs dinámicas</h1>
+            <p style="color: var(--text-secondary);">¿Cómo era? o ¿Cómo fue? — Decide entre Imperfecto e Indefinido.</p>
+        </header>
+
+        <!-- Theory -->
+        <div class="concept-box" style="margin-bottom: 2rem; padding: 1.25rem;">
+            <h4 style="margin-bottom: 1rem;">📚 ¿Cómo era? vs ¿Cómo fue?</h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; font-size: 0.9rem;">
+                <div style="padding: 1rem; background: rgba(255,152,0,0.1); border-radius: 8px;">
+                    <p><strong style="color: #FF9800;">CUALIDADES ESTÁTICAS = Imperfecto</strong></p>
+                    <p>Describimos cómo ERA ese objeto</p>
+                    <p style="margin-top: 0.5rem;">• Una chica muy divertida</p>
+                    <p>• La chica que conocí ayer <strong>era</strong> muy divertida</p>
+                </div>
+                <div style="padding: 1rem; background: rgba(76,175,80,0.1); border-radius: 8px;">
+                    <p><strong style="color: #4CAF50;">CUALIDADES DINÁMICAS = Indefinido</strong></p>
+                    <p>Contamos cómo FUE ese proceso</p>
+                    <p style="margin-top: 0.5rem;">• Una fiesta muy divertida</p>
+                    <p>• La fiesta del sábado <strong>fue</strong> muy divertida</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercise 1: ¿Cómo era/fue? -->
+        <div class="text-card" data-section="1">
+            <div class="text-card-header">¿Cómo era? o ¿Cómo fue?</div>
+            <div class="text-card-body">
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">Forma la pregunta correcta para cada
+                    respuesta.</p>
+                <div class="vocab-grid" style="grid-template-columns: 1fr;">
+                    <div class="vocab-item" data-answer="q1">
+                        <label>
+                            <span>1. La fiesta de cumpleaños → <input type="text" style="width: 250px;"
+                                    placeholder="¿Cómo...?"> — Estupenda. Lo pasamos muy bien.</span>
+                            <span class="answer-reveal">¿Cómo fue la fiesta de cumpleaños?</span>
+                        </label>
+                    </div>
+                    <div class="vocab-item" data-answer="q2">
+                        <label>
+                            <span>2. Tu profesora de español → <input type="text" style="width: 250px;"
+                                    placeholder="¿Cómo...?"> — Un poco seria, pero muy buena profesional.</span>
+                            <span class="answer-reveal">¿Cómo era tu profesora de español?</span>
+                        </label>
+                    </div>
+                    <div class="vocab-item" data-answer="q3">
+                        <label>
+                            <span>3. Tu primera casa → <input type="text" style="width: 250px;" placeholder="¿Cómo...?">
+                                — Enorme. Teníamos cinco dormitorios.</span>
+                            <span class="answer-reveal">¿Cómo era tu primera casa?</span>
+                        </label>
+                    </div>
+                    <div class="vocab-item" data-answer="q4">
+                        <label>
+                            <span>4. El partido de fútbol → <input type="text" style="width: 250px;"
+                                    placeholder="¿Cómo...?"> — Aburridísimo. No metieron ningún gol.</span>
+                            <span class="answer-reveal">¿Cómo fue el partido de fútbol?</span>
+                        </label>
+                    </div>
+                    <div class="vocab-item" data-answer="q5">
+                        <label>
+                            <span>5. La conferencia → <input type="text" style="width: 250px;" placeholder="¿Cómo...?">
+                                — Horrible. No había nadie, y ahora comprendo por qué.</span>
+                            <span class="answer-reveal">¿Cómo fue la conferencia?</span>
+                        </label>
+                    </div>
+                    <div class="vocab-item" data-answer="q6">
+                        <label>
+                            <span>6. El hotel donde dormiste → <input type="text" style="width: 250px;"
+                                    placeholder="¿Cómo...?"> — De tres estrellas, bastante nuevo.</span>
+                            <span class="answer-reveal">¿Cómo era el hotel donde dormiste?</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="section-actions"><button type="button" class="btn-check-section"
+                        onclick="checkSection('1')">✓ Comprobar</button></div>
+                <div class="section-result" id="result-1"></div>
+            </div>
+        </div>
+
+        <!-- Exercise 2: Imperfecto o Indefinido -->
+        <div class="text-card" data-section="2">
+            <div class="text-card-header">B1-82 ¿Imperfecto o Indefinido?</div>
+            <div class="text-card-body">
+                <div class="concept-box" style="margin-bottom: 1rem; padding: 0.75rem;">
+                    <strong>Verbos:</strong> llevar · ser · estar
+                </div>
+                <div class="vocab-grid" style="grid-template-columns: 1fr;">
+                    <div class="vocab-item" data-answer="q2_1">
+                        <label>
+                            <span>1. Recuerdo perfectamente que aquel fiesta <input type="text" style="width: 100px;">
+                                puesto su abrigo negro, ese tan bonito. <input type="text" style="width: 100px;"> puesto
+                                su abrigo negro toda la noche.</span>
+                            <span class="answer-reveal">llevaba / Llevó</span>
+                        </label>
+                    </div>
+                    <div class="vocab-item" data-answer="q2_2">
+                        <label>
+                            <span>2. Cuando yo la conocí, Elisa <input type="text" style="width: 100px;"> una buena
+                                estudiante. Luego cambió mucho.</span>
+                            <span class="answer-reveal">era</span>
+                        </label>
+                    </div>
+                    <div class="vocab-item" data-answer="q2_3">
+                        <label>
+                            <span>3. Gonzalo <input type="text" style="width: 100px;"> muy gordo una temporada, pero se
+                                puso a régimen y adelgazó.</span>
+                            <span class="answer-reveal">estuvo</span>
+                        </label>
+                    </div>
+                    <div class="vocab-item" data-answer="q2_4">
+                        <label>
+                            <span>4. Gonzalo <input type="text" style="width: 100px;"> muy gordo, por eso se puso a
+                                régimen, para adelgazar.</span>
+                            <span class="answer-reveal">estaba</span>
+                        </label>
+                    </div>
+                    <div class="vocab-item" data-answer="q2_5">
+                        <label>
+                            <span>5. Cuando se construyó, el edificio del ayuntamiento <input type="text"
+                                    style="width: 100px;"> azul.</span>
+                            <span class="answer-reveal">era</span>
+                        </label>
+                    </div>
+                    <div class="vocab-item" data-answer="q2_6">
+                        <label>
+                            <span>6. El edificio del ayuntamiento <input type="text" style="width: 100px;"> azul durante
+                                varios siglos, pero ahora es blanco.</span>
+                            <span class="answer-reveal">fue</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="section-actions"><button type="button" class="btn-check-section"
+                        onclick="checkSection('2')">✓ Comprobar</button></div>
+                <div class="section-result" id="result-2"></div>
+            </div>
+        </div>
+
+        <div class="exercise-actions">
+            <a href="https://www.perplexity.ai/search?q=Diferencia+imperfecto+indefinido+cualidades+estaticas+dinamicas+espanol"
+                target="_blank" class="btn btn-ai">🤖 Preguntar a IA</a>
+        </div>
+
+        <div class="exercise-nav">
+            <a href="ejercicio-11-forma-verbal.html">← Anterior</a>
+            <a href="index.html">📋 Lista</a>
+            <a href="ejercicio-13-situaciones.html">Siguiente →</a>
+        </div>
+    </div>
+
+    <script src="../js/exercise-engine.js"></script>
+    <script>
+        const answers1 = {
+            q1: ["como fue", "cómo fue"],
+            q2: ["como era", "cómo era"],
+            q3: ["como era", "cómo era"],
+            q4: ["como fue", "cómo fue"],
+            q5: ["como fue", "cómo fue"],
+            q6: ["como era", "cómo era"]
+        };
+
+        const answers2 = {
+            q2_1: ["llevaba"],
+            q2_2: ["era"],
+            q2_3: ["estuvo"],
+            q2_4: ["estaba"],
+            q2_5: ["era"],
+            q2_6: ["fue"]
+        };
+
+        function normalizeText(text) {
+            return text.toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        }
+
+        function checkSection(section) {
+            const card = document.querySelector(`[data-section="${section}"]`);
+            const items = card.querySelectorAll('.vocab-item');
+            const answers = section === '1' ? answers1 : answers2;
+            let correct = 0, total = items.length;
+
+            items.forEach(item => {
+                const key = item.dataset.answer;
+                const input = item.querySelector('input');
+                const userAnswer = normalizeText(input.value);
+                const correctAnswers = answers[key].map(a => normalizeText(a));
+
+                item.classList.remove('correct', 'incorrect');
+
+                if (!input.value.trim()) {
+                    item.classList.add('incorrect');
+                } else if (correctAnswers.some(a => userAnswer.includes(a))) {
+                    item.classList.add('correct');
+                    correct++;
+                } else {
+                    item.classList.add('incorrect');
+                }
+            });
+
+            const resultDiv = document.getElementById(`result-${section}`);
+            resultDiv.classList.add('visible');
+            resultDiv.className = correct === total ? 'section-result visible success' : 'section-result visible has-errors';
+            resultDiv.innerHTML = correct === total ? `✅ ¡Perfecto! ${correct}/${total}` : `📝 ${correct}/${total} correctas`;
+        }
+    </script>
+</body>
+
+</html>

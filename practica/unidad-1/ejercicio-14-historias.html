@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14: Contar historias — Unidad 1</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../css/exercises.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body data-exercise-id="ejercicio-14">
+    <nav class="navbar">
+        <div class="breadcrumb">
+            <a href="../../index.html">🏠 Inicio</a>
+            <span>→</span>
+            <a href="../index.html">✏️ Práctica</a>
+            <span>→</span>
+            <a href="index.html">Unidad 1</a>
+            <span>→</span>
+            <span>Ejercicio 14</span>
+        </div>
+    </nav>
+
+    <div class="container" style="max-width: 900px;">
+        <header class="exercise-header">
+            <h1>B1-82 Contar historias</h1>
+            <p style="color: var(--text-secondary);">Complete los emails con la forma correcta del verbo: Imperfecto o
+                Perfecto.</p>
+        </header>
+
+        <!-- Theory -->
+        <div class="concept-box" style="margin-bottom: 2rem; padding: 1.25rem;">
+            <h4 style="margin-bottom: 1rem;">📚 Contar historias</h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; font-size: 0.9rem;">
+                <div style="padding: 0.75rem; background: rgba(255,152,0,0.1); border-radius: 8px;">
+                    <p><strong style="color: #FF9800;">IMPERFECTO</strong></p>
+                    <p>Detenemos el tiempo para describir una situación momentánea</p>
+                </div>
+                <div style="padding: 0.75rem; background: rgba(76,175,80,0.1); border-radius: 8px;">
+                    <p><strong style="color: #4CAF50;">INDEFINIDO</strong></p>
+                    <p>Indicamos que algo pasó completamente y hacemos avanzar el tiempo</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercise: Email to Carolina -->
+        <div class="text-card" data-section="1">
+            <div class="text-card-header">Email a Carolina</div>
+            <div class="text-card-body">
+                <div class="concept-box"
+                    style="margin-bottom: 1rem; padding: 0.75rem; background: rgba(255,255,255,0.02);">
+                    <p style="font-size: 0.85rem;">
+                        <strong>Verbos:</strong> poder · ir · ser · hablar · invitar · querer · conocer · decir · ver ·
+                        creer · ser · estar · tener · hacerse
+                    </p>
+                </div>
+                <div class="vocab-grid" style="grid-template-columns: 1fr;">
+                    <p style="line-height: 2.2; margin-bottom: 1rem;">
+                        <strong>Hola, Carolina:</strong><br><br>
+                        Te escribo este mail para contarte por qué no <input type="text" data-key="e1"
+                            style="width: 80px;"> ir a tu fiesta. Es que esta tarde
+                        <input type="text" data-key="e2" style="width: 80px;"> al cine con Mario. Sí, ese chico que (2)
+                        <input type="text" data-key="e3" style="width: 80px;"> tan tímido, ¿recuerdas? Te lo presenté
+                        el otro día en el café y, después, te (3) <input type="text" data-key="e4" style="width: 80px;">
+                        varias veces de él. Bueno, pues resulta que, después del cine,
+                        Mario me (4) <input type="text" data-key="e5" style="width: 80px;"> a cenar en su casa. Yo no
+                        (5) <input type="text" data-key="e6" style="width: 80px;"> pero, al final, (6) <input
+                            type="text" data-key="e7" style="width: 80px;"> a
+                        cenar a su casa con Hans, un amigo. Mario no lo (7) <input type="text" data-key="e8"
+                            style="width: 80px;">, así que le (8) <input type="text" data-key="e9" style="width: 80px;">
+                        que Hans
+                        (9) <input type="text" data-key="e10" style="width: 80px;"> mi novio y se lo (10) <input
+                            type="text" data-key="e11" style="width: 80px;">. Al final, la cena (11) <input type="text"
+                            data-key="e12" style="width: 80px;"> un poco extraña: la
+                        comida (12) <input type="text" data-key="e13" style="width: 80px;"> buenísima, pero (13) <input
+                            type="text" data-key="e14" style="width: 80px;"> que escuchar durante toda la cena un disco
+                        de
+                        grandes éxitos de Julio Iglesias. Creo que, además, Mario y Hans (14) <input type="text"
+                            data-key="e15" style="width: 80px;"> muy amigos.<br><br>
+                        Bueno, nos vemos mañana y te cuento más.<br>
+                        Un abrazo,<br>
+                        <strong>Elena</strong>
+                    </p>
+                </div>
+                <div class="section-actions"><button type="button" class="btn-check-section" onclick="checkEmail()">✓
+                        Comprobar</button></div>
+                <div class="section-result" id="result-1"></div>
+            </div>
+        </div>
+
+        <div class="exercise-actions">
+            <a href="https://www.perplexity.ai/search?q=Imperfecto+indefinido+contar+historias+narrativo+espanol"
+                target="_blank" class="btn btn-ai">🤖 Preguntar a IA</a>
+        </div>
+
+        <div class="exercise-nav">
+            <a href="ejercicio-13-situaciones.html">← Anterior</a>
+            <a href="index.html">📋 Lista</a>
+            <a href="ejercicio-15-participio.html">Siguiente →</a>
+        </div>
+    </div>
+
+    <script src="../js/exercise-engine.js"></script>
+    <script>
+        const emailAnswers = {
+            e1: "pude", e2: "fui", e3: "era", e4: "hablé", e5: "invitó",
+            e6: "quería", e7: "fui", e8: "conocía", e9: "dije",
+            e10: "era", e11: "creí", e12: "fue", e13: "estaba", e14: "tuve", e15: "se hicieron"
+        };
+
+        function normalizeText(text) {
+            return text.toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        }
+
+        function checkEmail() {
+            const inputs = document.querySelectorAll('[data-key]');
+            let correct = 0, total = inputs.length, errors = [];
+
+            inputs.forEach(input => {
+                const key = input.dataset.key;
+                const userAnswer = normalizeText(input.value);
+                const correctAnswer = normalizeText(emailAnswers[key]);
+
+                input.style.borderColor = '';
+                input.style.background = '';
+
+                if (!input.value.trim()) {
+                    input.style.borderColor = '#e91e63';
+                    input.style.background = 'rgba(233,30,99,0.1)';
+                    errors.push(`${key.replace('e', '')}: ${emailAnswers[key]}`);
+                } else if (userAnswer === correctAnswer) {
+                    input.style.borderColor = '#66bb6a';
+                    input.style.background = 'rgba(102,187,106,0.1)';
+                    correct++;
+                } else {
+                    input.style.borderColor = '#e91e63';
+                    input.style.background = 'rgba(233,30,99,0.1)';
+                    errors.push(`${key.replace('e', '')}: ${emailAnswers[key]}`);
+                }
+            });
+
+            const resultDiv = document.getElementById('result-1');
+            resultDiv.classList.add('visible');
+            resultDiv.className = correct === total ? 'section-result visible success' : 'section-result visible has-errors';
+            resultDiv.innerHTML = correct === total ? `✅ ¡Perfecto! ${correct}/${total}` :
+                `📝 ${correct}/${total} correctas<br><small>Respuestas: ${errors.slice(0, 5).join(', ')}${errors.length > 5 ? '...' : ''}</small>`;
+        }
+    </script>
+</body>
+
+</html>

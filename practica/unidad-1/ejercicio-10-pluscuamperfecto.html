@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10: Pluscuamperfecto — Unidad 1</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../css/exercises.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body data-exercise-id="ejercicio-10">
+    <nav class="navbar">
+        <div class="breadcrumb">
+            <a href="../../index.html">🏠 Inicio</a>
+            <span>→</span>
+            <a href="../index.html">✏️ Práctica</a>
+            <span>→</span>
+            <a href="index.html">Unidad 1</a>
+            <span>→</span>
+            <span>Ejercicio 10</span>
+        </div>
+    </nav>
+
+    <div class="container" style="max-width: 900px;">
+        <header class="exercise-header">
+            <h1>Una las dos frases / Pluscuamperfecto</h1>
+            <p style="color: var(--text-secondary);">Conecte las acciones con sus consecuencias usando el
+                pluscuamperfecto.</p>
+            <a href="../../teoria/sistema-verbal/index.html" style="font-size: 0.85rem; color: var(--accent);">→ Ver
+                tabla de tiempos</a>
+        </header>
+
+        <!-- Example -->
+        <div class="concept-box" style="margin-bottom: 2rem; padding: 1rem;">
+            <h4 style="margin-bottom: 0.5rem;">📝 Ejemplo</h4>
+            <p style="font-size: 0.95rem;">
+                La reunión acabó → llegué a la oficina.<br>
+                <strong style="color: var(--accent);">Cuando llegué a la oficina, la reunión había acabado.</strong>
+            </p>
+        </div>
+
+        <!-- Exercise: Una las frases -->
+        <div class="text-card" data-section="1">
+            <div class="text-card-header">Una las dos frases</div>
+            <div class="text-card-body">
+                <div class="vocab-grid" style="grid-template-columns: 1fr;">
+                    <div class="vocab-item" data-answer="q1">
+                        <label>
+                            <span>1. El avión se fue → llegamos al aeropuerto.</span>
+                            <input type="text" style="width: 100%;" placeholder="Cuando llegamos al aeropuerto...">
+                            <span class="answer-reveal">Cuando llegamos al aeropuerto, el avión se había ido.</span>
+                        </label>
+                    </div>
+                    <div class="vocab-item" data-answer="q2">
+                        <label>
+                            <span>2. Recogimos toda la casa → llegaron mis padres.</span>
+                            <input type="text" style="width: 100%;" placeholder="Cuando llegaron mis padres...">
+                            <span class="answer-reveal">Cuando llegaron mis padres, habíamos recogido toda la
+                                casa.</span>
+                        </label>
+                    </div>
+                    <div class="vocab-item" data-answer="q3">
+                        <label>
+                            <span>3. Cerraron las tiendas → Aurora quiso comprar comida.</span>
+                            <input type="text" style="width: 100%;" placeholder="Cuando Aurora quiso comprar...">
+                            <span class="answer-reveal">Cuando Aurora quiso comprar comida, habían cerrado las
+                                tiendas.</span>
+                        </label>
+                    </div>
+                    <div class="vocab-item" data-answer="q4">
+                        <label>
+                            <span>4. La película acabó → llegué al cine.</span>
+                            <input type="text" style="width: 100%;" placeholder="Cuando llegué al cine...">
+                            <span class="answer-reveal">Cuando llegué al cine, la película había acabado.</span>
+                        </label>
+                    </div>
+                    <div class="vocab-item" data-answer="q5">
+                        <label>
+                            <span>5. Hubo un accidente → Nos pararon en la carretera.</span>
+                            <input type="text" style="width: 100%;" placeholder="Nos pararon porque...">
+                            <span class="answer-reveal">Nos pararon en la carretera porque había habido un
+                                accidente.</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="section-actions"><button type="button" class="btn-check-section"
+                        onclick="checkSection('1')">✓ Comprobar</button></div>
+                <div class="section-result" id="result-1"></div>
+            </div>
+        </div>
+
+        <!-- Exercise: Acciones y consecuencias -->
+        <div class="text-card" data-section="2">
+            <div class="text-card-header">Una las acciones con sus consecuencias</div>
+            <div class="text-card-body">
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">Relaciona cada acción (1-10) con su
+                    consecuencia (a-j).</p>
+
+                <div
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 1.5rem; font-size: 0.9rem;">
+                    <div>
+                        <p><strong>Acciones:</strong></p>
+                        <ol style="padding-left: 1.5rem; line-height: 1.8;">
+                            <li>Me dejé la tarjeta de crédito.</li>
+                            <li>Mis padres se dejaron encendidas las luces.</li>
+                            <li>Félix y Paqui se dejaron las llaves dentro.</li>
+                            <li>No comiste nada.</li>
+                            <li>Armando tuvo una enfermedad.</li>
+                            <li>Paloma se tiñó el pelo.</li>
+                            <li>Mila estudió mucho.</li>
+                            <li>Víctor tuvo un pequeño accidente.</li>
+                            <li>El profesor se fue.</li>
+                            <li>Ramón no compró comida.</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <p><strong>Consecuencias:</strong></p>
+                        <ol style="padding-left: 1.5rem; line-height: 1.8; list-style: lower-alpha;">
+                            <li>Estaba muy delgado.</li>
+                            <li>Aprobó todo.</li>
+                            <li>Tuvieron que volver a casa.</li>
+                            <li>No pude comprar nada.</li>
+                            <li>No pudieron entrar en casa.</li>
+                            <li>No pudimos comer en casa.</li>
+                            <li>Te desmayaste.</li>
+                            <li>No pude hablar con él.</li>
+                            <li>No la reconocimos.</li>
+                            <li>Llegó tarde.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="vocab-grid">
+                    <div class="vocab-item" data-answer="m1"><label><strong>1</strong> → <select>
+                                <option value="">—</option>
+                                <option value="a">a</option>
+                                <option value="b">b</option>
+                                <option value="c">c</option>
+                                <option value="d">d</option>
+                                <option value="e">e</option>
+                                <option value="f">f</option>
+                                <option value="g">g</option>
+                                <option value="h">h</option>
+                                <option value="i">i</option>
+                                <option value="j">j</option>
+                            </select></label></div>
+                    <div class="vocab-item" data-answer="m2"><label><strong>2</strong> → <select>
+                                <option value="">—</option>
+                                <option value="a">a</option>
+                                <option value="b">b</option>
+                                <option value="c">c</option>
+                                <option value="d">d</option>
+                                <option value="e">e</option>
+                                <option value="f">f</option>
+                                <option value="g">g</option>
+                                <option value="h">h</option>
+                                <option value="i">i</option>
+                                <option value="j">j</option>
+                            </select></label></div>
+                    <div class="vocab-item" data-answer="m3"><label><strong>3</strong> → <select>
+                                <option value="">—</option>
+                                <option value="a">a</option>
+                                <option value="b">b</option>
+                                <option value="c">c</option>
+                                <option value="d">d</option>
+                                <option value="e">e</option>
+                                <option value="f">f</option>
+                                <option value="g">g</option>
+                                <option value="h">h</option>
+                                <option value="i">i</option>
+                                <option value="j">j</option>
+                            </select></label></div>
+                    <div class="vocab-item" data-answer="m4"><label><strong>4</strong> → <select>
+                                <option value="">—</option>
+                                <option value="a">a</option>
+                                <option value="b">b</option>
+                                <option value="c">c</option>
+                                <option value="d">d</option>
+                                <option value="e">e</option>
+                                <option value="f">f</option>
+                                <option value="g">g</option>
+                                <option value="h">h</option>
+                                <option value="i">i</option>
+                                <option value="j">j</option>
+                            </select></label></div>
+                    <div class="vocab-item" data-answer="m5"><label><strong>5</strong> → <select>
+                                <option value="">—</option>
+                                <option value="a">a</option>
+                                <option value="b">b</option>
+                                <option value="c">c</option>
+                                <option value="d">d</option>
+                                <option value="e">e</option>
+                                <option value="f">f</option>
+                                <option value="g">g</option>
+                                <option value="h">h</option>
+                                <option value="i">i</option>
+                                <option value="j">j</option>
+                            </select></label></div>
+                    <div class="vocab-item" data-answer="m6"><label><strong>6</strong> → <select>
+                                <option value="">—</option>
+                                <option value="a">a</option>
+                                <option value="b">b</option>
+                                <option value="c">c</option>
+                                <option value="d">d</option>
+                                <option value="e">e</option>
+                                <option value="f">f</option>
+                                <option value="g">g</option>
+                                <option value="h">h</option>
+                                <option value="i">i</option>
+                                <option value="j">j</option>
+                            </select></label></div>
+                    <div class="vocab-item" data-answer="m7"><label><strong>7</strong> → <select>
+                                <option value="">—</option>
+                                <option value="a">a</option>
+                                <option value="b">b</option>
+                                <option value="c">c</option>
+                                <option value="d">d</option>
+                                <option value="e">e</option>
+                                <option value="f">f</option>
+                                <option value="g">g</option>
+                                <option value="h">h</option>
+                                <option value="i">i</option>
+                                <option value="j">j</option>
+                            </select></label></div>
+                    <div class="vocab-item" data-answer="m8"><label><strong>8</strong> → <select>
+                                <option value="">—</option>
+                                <option value="a">a</option>
+                                <option value="b">b</option>
+                                <option value="c">c</option>
+                                <option value="d">d</option>
+                                <option value="e">e</option>
+                                <option value="f">f</option>
+                                <option value="g">g</option>
+                                <option value="h">h</option>
+                                <option value="i">i</option>
+                                <option value="j">j</option>
+                            </select></label></div>
+                    <div class="vocab-item" data-answer="m9"><label><strong>9</strong> → <select>
+                                <option value="">—</option>
+                                <option value="a">a</option>
+                                <option value="b">b</option>
+                                <option value="c">c</option>
+                                <option value="d">d</option>
+                                <option value="e">e</option>
+                                <option value="f">f</option>
+                                <option value="g">g</option>
+                                <option value="h">h</option>
+                                <option value="i">i</option>
+                                <option value="j">j</option>
+                            </select></label></div>
+                    <div class="vocab-item" data-answer="m10"><label><strong>10</strong> → <select>
+                                <option value="">—</option>
+                                <option value="a">a</option>
+                                <option value="b">b</option>
+                                <option value="c">c</option>
+                                <option value="d">d</option>
+                                <option value="e">e</option>
+                                <option value="f">f</option>
+                                <option value="g">g</option>
+                                <option value="h">h</option>
+                                <option value="i">i</option>
+                                <option value="j">j</option>
+                            </select></label></div>
+                </div>
+                <div class="section-actions"><button type="button" class="btn-check-section" onclick="checkMatching()">✓
+                        Comprobar</button></div>
+                <div class="section-result" id="result-2"></div>
+            </div>
+        </div>
+
+        <div class="exercise-actions">
+            <a href="https://www.perplexity.ai/search?q=Preterito+pluscuamperfecto+uso+espanol+B2" target="_blank"
+                class="btn btn-ai">🤖 Preguntar a IA</a>
+        </div>
+
+        <div class="exercise-nav">
+            <a href="ejercicio-09-estar-gerundio.html">← Anterior</a>
+            <a href="index.html">📋 Lista</a>
+            <a href="ejercicio-11-forma-verbal.html">Siguiente →</a>
+        </div>
+    </div>
+
+    <script src="../js/exercise-engine.js"></script>
+    <script>
+        const answers1 = {
+            q1: ["se habia ido", "habia ido", "había ido"],
+            q2: ["habiamos recogido", "habíamos recogido"],
+            q3: ["habian cerrado", "habían cerrado"],
+            q4: ["habia acabado", "había acabado"],
+            q5: ["habia habido", "había habido"]
+        };
+
+        const matchingAnswers = {
+            m1: "d", m2: "c", m3: "e", m4: "g", m5: "a",
+            m6: "i", m7: "b", m8: "j", m9: "h", m10: "f"
+        };
+
+        function normalizeText(text) {
+            return text.toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        }
+
+        function checkSection(section) {
+            const card = document.querySelector(`[data-section="${section}"]`);
+            const items = card.querySelectorAll('.vocab-item');
+            let correct = 0, total = items.length;
+
+            items.forEach(item => {
+                const key = item.dataset.answer;
+                const input = item.querySelector('input');
+                const userAnswer = normalizeText(input.value);
+                const correctAnswers = answers1[key].map(a => normalizeText(a));
+
+                item.classList.remove('correct', 'incorrect');
+
+                if (!input.value.trim()) {
+                    item.classList.add('incorrect');
+                } else if (correctAnswers.some(a => userAnswer.includes(a))) {
+                    item.classList.add('correct');
+                    correct++;
+                } else {
+                    item.classList.add('incorrect');
+                }
+            });
+
+            const resultDiv = document.getElementById(`result-${section}`);
+            resultDiv.classList.add('visible');
+            resultDiv.className = correct === total ? 'section-result visible success' : 'section-result visible has-errors';
+            resultDiv.innerHTML = correct === total ? `✅ ¡Perfecto! ${correct}/${total}` : `📝 ${correct}/${total} correctas`;
+        }
+
+        function checkMatching() {
+            const items = document.querySelectorAll('[data-section="2"] .vocab-item');
+            let correct = 0, total = items.length;
+
+            items.forEach(item => {
+                const key = item.dataset.answer;
+                const select = item.querySelector('select');
+
+                item.classList.remove('correct', 'incorrect');
+
+                if (!select.value) {
+                    item.classList.add('incorrect');
+                } else if (select.value === matchingAnswers[key]) {
+                    item.classList.add('correct');
+                    correct++;
+                } else {
+                    item.classList.add('incorrect');
+                }
+            });
+
+            const resultDiv = document.getElementById('result-2');
+            resultDiv.classList.add('visible');
+            resultDiv.className = correct === total ? 'section-result visible success' : 'section-result visible has-errors';
+            resultDiv.innerHTML = correct === total ? `✅ ¡Perfecto! ${correct}/${total}` : `📝 ${correct}/${total} correctas`;
+        }
+    </script>
+</body>
+
+</html>

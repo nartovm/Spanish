@@ -4,9 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Теория — Испанский B2.1</title>
+    <title>Teoría — Español B2.1</title>
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .theory-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .theory-section h2 {
+            font-size: 1.1rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .theory-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            transition: background 0.2s;
+        }
+
+        .theory-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .theory-item a {
+            color: var(--text-primary);
+            text-decoration: none;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .theory-item .emoji {
+            font-size: 1.2rem;
+        }
+
+        .theory-item .title {
+            font-weight: 500;
+        }
+
+        .theory-item .desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-left: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,30 +67,38 @@
         <a href="../practica/index.html">✏️ Práctica</a>
     </nav>
 
-    <div class="container">
+    <div class="container" style="max-width: 700px;">
         <header class="page-header">
             <h1>📚 Teoría</h1>
-            <p class="subtitle">Грамматические темы курса B2.1</p>
+            <p class="subtitle">Gramática del español B2.1</p>
         </header>
 
-        <div class="card-grid">
-            <a href="sistema-verbal/index.html" class="card-link">
-                <div class="card">
-                    <h3>🕐 Sistema verbal español</h3>
-                    <p>Интерактивная таблица 12 времён испанского языка с объяснением логики их использования</p>
-                </div>
-            </a>
-
-            <!-- Место для будущих тем -->
-            <div class="card" style="opacity: 0.5; cursor: not-allowed;">
-                <h3>🔜 Subjuntivo</h3>
-                <p>Сослагательное наклонение — скоро</p>
+        <!-- Sistema Verbal -->
+        <div class="theory-section">
+            <h2>🕐 Sistema Verbal</h2>
+            <div class="theory-item">
+                <a href="sistema-verbal/index.html">
+                    <span class="emoji">📊</span>
+                    <span class="title">Tabla del sistema verbal</span>
+                    <span class="desc">12 tiempos + 4 ejes</span>
+                </a>
             </div>
+        </div>
 
-            <div class="card" style="opacity: 0.5; cursor: not-allowed;">
-                <h3>🔜 Perífrasis verbales</h3>
-                <p>Глагольные перифразы — скоро</p>
+        <!-- Ortografía -->
+        <div class="theory-section">
+            <h2>🔤 Ortografía</h2>
+            <div class="theory-item">
+                <a href="../practica/unidad-1/ejercicio-02-tildes-teoria.html">
+                    <span class="emoji">📖</span>
+                    <span class="title">Reglas de acentuación (Tildes)</span>
+                    <span class="desc">Unidad 1</span>
+                </a>
             </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="../index.html" class="btn btn-secondary">← Volver a Inicio</a>
         </div>
     </div>
 

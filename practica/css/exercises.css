@@ -565,3 +565,51 @@
         grid-template-columns: 1fr;
     }
 }
+/* ===========================================
+   Reusable Card Components
+   =========================================== */
+
+.text-card { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; margin-bottom: 2rem; overflow: hidden; }
+.text-card-header { background: linear-gradient(135deg, #667eea, #764ba2); padding: 1rem 1.5rem; font-weight: 700; font-size: 1.2rem; }
+.text-card-body { padding: 1.5rem; }
+.text-card-body p { line-height: 1.8; margin-bottom: 1rem; }
+
+.vocab-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); }
+.vocab-item { background: rgba(255,255,255,0.03); padding: 0.75rem 1rem; border-radius: 8px; border-left: 3px solid var(--accent); }
+.vocab-item label { display: flex; flex-direction: column; gap: 0.5rem; }
+.vocab-item strong { color: var(--accent); font-size: 0.95rem; }
+.vocab-item input { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; padding: 0.5rem; color: var(--text-primary); font-size: 0.9rem; }
+.vocab-item input:focus { outline: none; border-color: var(--accent); }
+@media (max-width: 600px) { .vocab-grid { grid-template-columns: 1fr; } }
+
+
+/* Section Check Button */
+.section-actions { display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.05); }
+.btn-check-section { background: linear-gradient(135deg, #66bb6a, #4caf50); color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.9rem; cursor: pointer; transition: transform 0.2s; }
+.btn-check-section:hover { transform: translateY(-1px); }
+.section-result { padding: 0.75rem; border-radius: 6px; margin-top: 0.75rem; font-size: 0.9rem; display: none; }
+.section-result.visible { display: block; }
+.section-result.success { background: rgba(102,187,106,0.15); border: 1px solid #66bb6a; }
+.section-result.has-errors { background: rgba(233,30,99,0.1); border: 1px solid #e91e63; }
+
+
+/* ===========================================
+   Form Elements (Inputs, Selects)
+   =========================================== */
+
+select, .exercise-select { width: 100%; padding: 0.5rem; background: #2d2d44; border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; color: var(--text-primary); font-size: 0.9rem; cursor: pointer; }
+select:focus, .exercise-select:focus { outline: none; border-color: var(--accent); }
+select option { background: #2d2d44; color: var(--text-primary); padding: 0.5rem; }
+
+input[type='text'], .exercise-input { width: 100%; padding: 0.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; color: var(--text-primary); font-size: 0.9rem; }
+input[type='text']:focus, .exercise-input:focus { outline: none; border-color: var(--accent); }
+
+
+/* ===========================================
+   Answer Display
+   =========================================== */
+
+.answer-reveal { font-size: 0.85rem; color: #66bb6a; margin-top: 0.25rem; display: none; }
+.vocab-item.incorrect .answer-reveal { display: block; }
+.vocab-item.correct .answer-reveal { display: none; }
+

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3: Tildes — Unidad 1</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../css/exercises.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body data-exercise-id="ejercicio-03">
+    <nav class="navbar">
+        <div class="breadcrumb">
+            <a href="../../index.html">🏠 Inicio</a>
+            <span>→</span>
+            <a href="../index.html">✏️ Práctica</a>
+            <span>→</span>
+            <a href="index.html">Unidad 1</a>
+            <span>→</span>
+            <span>Ejercicio 3</span>
+        </div>
+    </nav>
+
+    <div class="container" style="max-width: 900px;">
+        <header class="exercise-header">
+            <h1>Ejercicio 3: Corregir y poner tildes</h1>
+        </header>
+
+        <!-- Rules reminder -->
+        <div class="concept-box" style="margin-bottom: 2rem; padding: 1rem 1.5rem;">
+            <h4 style="margin-bottom: 0.75rem;">📌 REGLAS</h4>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; font-size: 0.9rem;">
+                <div><strong>A.</strong> termina en vocal, -n o -s → penúltima<br><span
+                        style="color: var(--text-secondary);">CAsa, venTAnas, DIcen</span></div>
+                <div><strong>B.</strong> termina de otra forma → última<br><span
+                        style="color: var(--text-secondary);">paPEL, haBLAR, reLOJ</span></div>
+                <div><strong>C.</strong> excepción → ponemos tilde ´<br><span
+                        style="color: var(--text-secondary);">canCIÓN, ÚLtimo, ÁRbol</span></div>
+            </div>
+        </div>
+
+        <!-- Ejercicio 1 -->
+        <div class="text-card" data-section="1">
+            <div class="text-card-header">Ejercicio 1: Corrige los errores</div>
+            <div class="text-card-body">
+                <p>Las siguientes palabras están escritas sin tilde, pero hay algunos errores. La sílaba más fuerte está
+                    marcada. Corrige los errores.</p>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;"><strong>Ejemplo:</strong> telefono
+                    (te-LE-fo-no) → <strong>teléfono</strong></p>
+
+                <div class="vocab-grid">
+                    <div class="vocab-item" data-answer="colera"><label><strong>1. colera</strong> (CO-le-ra)<input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="pensamiento"><label><strong>2. pensamiento</strong>
+                            (pen-sa-MIEN-to)<input type="text"></label></div>
+                    <div class="vocab-item" data-answer="universidad"><label><strong>3. universidad</strong>
+                            (u-ni-ver-si-DAD)<input type="text"></label></div>
+                    <div class="vocab-item" data-answer="sofa"><label><strong>4. sofa</strong> (so-FA)<input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="emocion"><label><strong>5. emocion</strong> (e-mo-CION)<input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="principal"><label><strong>6. principal</strong>
+                            (prin-ci-PAL)<input type="text"></label></div>
+                    <div class="vocab-item" data-answer="farmacia"><label><strong>7. farmacia</strong>
+                            (far-MA-cia)<input type="text"></label></div>
+                    <div class="vocab-item" data-answer="acordarse"><label><strong>8. acordarse</strong>
+                            (a-cor-DAR-se)<input type="text"></label></div>
+                    <div class="vocab-item" data-answer="carcel"><label><strong>9. carcel</strong> (CAR-cel)<input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="brujula"><label><strong>10. brujula</strong> (BRU-ju-la)<input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="trabaje1"><label><strong>11. trabaje</strong> (tra-BA-je)<input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="trabaje2"><label><strong>12. trabaje</strong> (tra-ba-JE)<input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="cesped"><label><strong>13. cesped</strong> (CES-ped)<input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="metodico"><label><strong>14. metodico</strong>
+                            (me-TO-di-co)<input type="text"></label></div>
+                    <div class="vocab-item" data-answer="virtud"><label><strong>15. virtud</strong> (vir-TUD)<input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="escaner"><label><strong>16. escaner</strong> (es-CA-ner)<input
+                                type="text"></label></div>
+                </div>
+                <div class="section-actions"><button type="button" class="btn-check-section"
+                        onclick="checkSection('1')">✓ Comprobar</button></div>
+                <div class="section-result" id="result-1"></div>
+            </div>
+        </div>
+
+        <!-- Ejercicio 2 -->
+        <div class="text-card" data-section="2">
+            <div class="text-card-header">Ejercicio 2: Pon la tilde si es necesario</div>
+            <div class="text-card-body">
+                <p>Ahora pon la tilde, si es necesario, en estas palabras que ya conoces.</p>
+
+                <div class="vocab-grid">
+                    <div class="vocab-item" data-answer="pajaro"><label><strong>1. pajaro</strong><input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="dinero"><label><strong>2. dinero</strong><input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="gramatica"><label><strong>3. gramatica</strong><input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="cancion"><label><strong>4. cancion</strong><input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="ordenador"><label><strong>5. ordenador</strong><input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="volvi"><label><strong>6. volvi</strong><input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="pensais"><label><strong>7. pensais</strong><input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="exterior"><label><strong>8. exterior</strong><input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="raton"><label><strong>9. raton</strong><input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="metal"><label><strong>10. metal</strong><input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="tambien"><label><strong>11. tambien</strong><input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="sillon"><label><strong>12. sillon</strong><input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="lampara"><label><strong>13. lampara</strong><input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="habitacion"><label><strong>14. habitacion</strong><input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="pared"><label><strong>15. pared</strong><input
+                                type="text"></label></div>
+                    <div class="vocab-item" data-answer="nariz"><label><strong>16. nariz</strong><input
+                                type="text"></label></div>
+                </div>
+                <div class="section-actions"><button type="button" class="btn-check-section"
+                        onclick="checkSection('2')">✓ Comprobar</button></div>
+                <div class="section-result" id="result-2"></div>
+            </div>
+        </div>
+
+        <!-- Ejercicio A (pair work) -->
+        <div class="text-card" data-section="A">
+            <div class="text-card-header" style="background: linear-gradient(135deg, #ffa726, #ff9800);">Ejercicio A:
+                Dictado (tú lees 1-15)</div>
+            <div class="text-card-body">
+                <p>Primero, mira estas palabras y subraya la sílaba fuerte. Después, lee las palabras 1-15 a tu
+                    compañero. Tu compañero escribe 16-30.</p>
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin: 1rem 0; font-size: 0.95rem;">
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">1. corrupción
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">2. medicamento
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">3. básico
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">4. temporal
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">5. médico
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">6. collar
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">7. céntricas
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">8. cónsul
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">9. medico
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">10. creativo
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">11. teclado
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">12. medicó
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">13. César
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">14. caracol
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">15. duchándose
+                    </div>
+                </div>
+
+                <p style="margin-top: 1.5rem;"><strong>Tu compañero te lee 16-30. Escríbelas:</strong></p>
+                <div class="vocab-grid">
+                    <div class="vocab-item" data-answer="a16"><label><strong>16.</strong><input type="text"></label>
+                    </div>
+                    <div class="vocab-item" data-answer="a17"><label><strong>17.</strong><input type="text"></label>
+                    </div>
+                    <div class="vocab-item" data-answer="a18"><label><strong>18.</strong><input type="text"></label>
+                    </div>
+                    <div class="vocab-item" data-answer="a19"><label><strong>19.</strong><input type="text"></label>
+                    </div>
+                    <div class="vocab-item" data-answer="a20"><label><strong>20.</strong><input type="text"></label>
+                    </div>
+                    <div class="vocab-item" data-answer="a21"><label><strong>21.</strong><input type="text"></label>
+                    </div>
+                    <div class="vocab-item" data-answer="a22"><label><strong>22.</strong><input type="text"></label>
+                    </div>
+                    <div class="vocab-item" data-answer="a23"><label><strong>23.</strong><input type="text"></label>
+                    </div>
+                    <div class="vocab-item" data-answer="a24"><label><strong>24.</strong><input type="text"></label>
+                    </div>
+                    <div class="vocab-item" data-answer="a25"><label><strong>25.</strong><input type="text"></label>
+                    </div>
+                    <div class="vocab-item" data-answer="a26"><label><strong>26.</strong><input type="text"></label>
+                    </div>
+                    <div class="vocab-item" data-answer="a27"><label><strong>27.</strong><input type="text"></label>
+                    </div>
+                    <div class="vocab-item" data-answer="a28"><label><strong>28.</strong><input type="text"></label>
+                    </div>
+                    <div class="vocab-item" data-answer="a29"><label><strong>29.</strong><input type="text"></label>
+                    </div>
+                    <div class="vocab-item" data-answer="a30"><label><strong>30.</strong><input type="text"></label>
+                    </div>
+                </div>
+                <div class="section-actions"><button type="button" class="btn-check-section"
+                        onclick="checkSection('A')">✓ Comprobar</button></div>
+                <div class="section-result" id="result-A"></div>
+            </div>
+        </div>
+
+        <!-- Ejercicio B (pair work) -->
+        <div class="text-card" data-section="B">
+            <div class="text-card-header" style="background: linear-gradient(135deg, #42a5f5, #1e88e5);">Ejercicio B:
+                Dictado (tú lees 16-30)</div>
+            <div class="text-card-body">
+                <p>Tu compañero te lee las palabras 1-15. Escríbelas:</p>
+
+                <div class="vocab-grid">
+                    <div class="vocab-item" data-answer="b1"><label><strong>1.</strong><input type="text"></label></div>
+                    <div class="vocab-item" data-answer="b2"><label><strong>2.</strong><input type="text"></label></div>
+                    <div class="vocab-item" data-answer="b3"><label><strong>3.</strong><input type="text"></label></div>
+                    <div class="vocab-item" data-answer="b4"><label><strong>4.</strong><input type="text"></label></div>
+                    <div class="vocab-item" data-answer="b5"><label><strong>5.</strong><input type="text"></label></div>
+                    <div class="vocab-item" data-answer="b6"><label><strong>6.</strong><input type="text"></label></div>
+                    <div class="vocab-item" data-answer="b7"><label><strong>7.</strong><input type="text"></label></div>
+                    <div class="vocab-item" data-answer="b8"><label><strong>8.</strong><input type="text"></label></div>
+                    <div class="vocab-item" data-answer="b9"><label><strong>9.</strong><input type="text"></label></div>
+                    <div class="vocab-item" data-answer="b10"><label><strong>10.</strong><input type="text"></label>
+                    </div>
+                    <div class="vocab-item" data-answer="b11"><label><strong>11.</strong><input type="text"></label>
+                    </div>
+                    <div class="vocab-item" data-answer="b12"><label><strong>12.</strong><input type="text"></label>
+                    </div>
+                    <div class="vocab-item" data-answer="b13"><label><strong>13.</strong><input type="text"></label>
+                    </div>
+                    <div class="vocab-item" data-answer="b14"><label><strong>14.</strong><input type="text"></label>
+                    </div>
+                    <div class="vocab-item" data-answer="b15"><label><strong>15.</strong><input type="text"></label>
+                    </div>
+                </div>
+
+                <p style="margin-top: 1.5rem;"><strong>Ahora lee las palabras 16-30 a tu compañero:</strong></p>
+                <div
+                    style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin: 1rem 0; font-size: 0.95rem;">
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">16. clásicas
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">17. póstumo
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">18. menú</div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">19. género
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">20. cable
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">21. crisis
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">22. antebrazo
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">23. genero
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">24. cartel
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">25. generó
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">26. tétrico
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">27. golosina
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">28. exámenes
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">29. examen
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 4px;">30. veintitrés
+                    </div>
+                </div>
+                <div class="section-actions"><button type="button" class="btn-check-section"
+                        onclick="checkSection('B')">✓ Comprobar</button></div>
+                <div class="section-result" id="result-B"></div>
+            </div>
+        </div>
+
+        <div class="exercise-actions">
+            <a href="https://www.perplexity.ai/search?q=Reglas+de+acentuacion+tildes+espanol+B2" target="_blank"
+                class="btn btn-ai">🤖 Preguntar a IA</a>
+        </div>
+
+        <div class="exercise-nav">
+            <a href="ejercicio-02-tildes-teoria.html">← Anterior</a>
+            <a href="index.html">📋 Lista</a>
+            <a href="ejercicio-04-perfecto-indefinido.html">Siguiente →</a>
+        </div>
+    </div>
+
+    <script src="../js/exercise-engine.js"></script>
+    <script>
+        const answers1 = {
+            colera: "cólera", pensamiento: "pensamiento", universidad: "universidad", sofa: "sofá",
+            emocion: "emoción", principal: "principal", farmacia: "farmacia", acordarse: "acordarse",
+            carcel: "cárcel", brujula: "brújula", trabaje1: "trabaje", trabaje2: "trabajé",
+            cesped: "césped", metodico: "metódico", virtud: "virtud", escaner: "escáner"
+        };
+
+        const answers2 = {
+            pajaro: "pájaro", dinero: "dinero", gramatica: "gramática", cancion: "canción",
+            ordenador: "ordenador", volvi: "volví", pensais: "pensáis", exterior: "exterior",
+            raton: "ratón", metal: "metal", tambien: "también", sillon: "sillón",
+            lampara: "lámpara", habitacion: "habitación", pared: "pared", nariz: "nariz"
+        };
+
+        // Words from B that A writes (16-30)
+        const answersA = {
+            a16: "clásicas", a17: "póstumo", a18: "menú", a19: "género", a20: "cable",
+            a21: "crisis", a22: "antebrazo", a23: "genero", a24: "cartel", a25: "generó",
+            a26: "tétrico", a27: "golosina", a28: "exámenes", a29: "examen", a30: "veintitrés"
+        };
+
+        // Words from A that B writes (1-15)
+        const answersB = {
+            b1: "corrupción", b2: "medicamento", b3: "básico", b4: "temporal", b5: "médico",
+            b6: "collar", b7: "céntricas", b8: "cónsul", b9: "medico", b10: "creativo",
+            b11: "teclado", b12: "medicó", b13: "César", b14: "caracol", b15: "duchándose"
+        };
+
+        function normalizeForComparison(text) {
+            return text.toLowerCase().trim();
+        }
+
+        function checkSection(section) {
+            const card = document.querySelector(`[data-section="${section}"]`);
+            const items = card.querySelectorAll('.vocab-item');
+            const answers = section === '1' ? answers1 : section === '2' ? answers2 : section === 'A' ? answersA : answersB;
+            let correct = 0, total = items.length, errors = [];
+
+            items.forEach(item => {
+                const key = item.dataset.answer;
+                const input = item.querySelector('input');
+                const userAnswer = normalizeForComparison(input.value);
+                const correctAnswer = normalizeForComparison(answers[key]);
+
+                item.classList.remove('correct', 'incorrect');
+
+                if (!input.value.trim()) {
+                    item.classList.add('incorrect');
+                } else if (userAnswer === correctAnswer) {
+                    item.classList.add('correct');
+                    correct++;
+                } else {
+                    item.classList.add('incorrect');
+                    errors.push(`<strong>${key.replace(/[a-z]/gi, '')}</strong>: ${answers[key]}`);
+                }
+            });
+
+            const resultDiv = document.getElementById(`result-${section}`);
+            resultDiv.classList.add('visible');
+            resultDiv.className = correct === total ? 'section-result visible success' : 'section-result visible has-errors';
+            resultDiv.innerHTML = correct === total ? `✅ ¡Perfecto! ${correct}/${total}` :
+                `📝 ${correct}/${total}` + (errors.length ? `<br><small>${errors.join(', ')}</small>` : '');
+        }
+    </script>
+</body>
+
+</html>
