@@ -4,214 +4,520 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 2: Teoría de tildes — Unidad 1</title>
+    <title>Teoría: Tildes y acentuación — Unidad 1</title>
     <link rel="stylesheet" href="../../styles.css">
     <link rel="stylesheet" href="../css/exercises.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap"
+        rel="stylesheet">
     <style>
-        .rule-box {
-            background: rgba(76, 175, 80, 0.1);
-            border-left: 4px solid #4CAF50;
+        /* Theory specific styles */
+        .theory-section {
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .theory-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-family: 'Kalam', cursive;
+            font-size: 2.5rem;
+            color: #fff;
+        }
+
+        /* Flowchart Styles */
+        .flowchart-container {
+            background: #fff;
+            border-radius: 20px;
+            padding: 2rem;
+            color: #333;
+            border: 2px solid #000;
+            box-shadow: 5px 5px 0px #000;
+            position: relative;
+            font-family: 'Kalam', cursive;
+        }
+
+        .flow-node {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .decision-oval {
+            border: 2px solid #e91e63;
+            border-radius: 50%;
+            padding: 1rem 2rem;
+            min-width: 250px;
+            text-align: center;
+            font-weight: bold;
+            color: #e91e63;
+            background: #fff;
+            z-index: 2;
+        }
+
+        .result-box {
+            border: 2px solid #4caf50;
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            min-width: 200px;
+            text-align: center;
+            font-weight: bold;
+            color: #4caf50;
+            background: #fff;
+            box-shadow: 3px 3px 0 rgba(76, 175, 80, 0.2);
+        }
+
+        .path-label {
+            background: #fff;
+            border: 1px solid #667eea;
+            color: #667eea;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .examples-list {
+            list-style: none;
+            padding-left: 1rem;
+            font-family: 'Inter', sans-serif;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            text-align: left;
+        }
+
+        .examples-list li span {
+            color: #9c27b0;
+            /* Purple used in original */
+            text-decoration: underline;
+        }
+
+        .arrow-right {
+            flex: 1;
+            height: 2px;
+            background: #000;
+            position: relative;
+        }
+
+        .arrow-right::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -4px;
+            border-left: 8px solid #000;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+        }
+
+        .arrow-down-dotted {
+            position: absolute;
+            left: 125px;
+            /* Center of oval */
+            top: 100%;
+            height: 3rem;
+            border-left: 2px dashed #000;
+            z-index: 1;
+        }
+
+        .arrow-down-dotted::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -5px;
+            border-top: 8px solid #000;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+        }
+
+        .syllable-icon {
+            display: flex;
+            gap: 2px;
+            justify-content: center;
+            margin-top: 5px;
+        }
+
+        .s-block {
+            width: 12px;
+            height: 20px;
+            border: 1px solid #333;
+        }
+
+        .s-block.filled {
+            background: #f44336;
+            /* Red */
+        }
+
+        .syllable-icon {
+            position: relative;
+            margin-bottom: 5px;
+        }
+
+        .syllable-arrow {
+            position: absolute;
+            top: -15px;
+            color: #ff9800;
+            /* Orange */
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Remember Box */
+        .remember-box {
+            border: 3px solid #ff3d00;
+            background: #fff;
+            color: #333;
             padding: 1.5rem;
-            margin: 1rem 0;
-            border-radius: 0 8px 8px 0;
+            box-shadow: 5px 5px 0 rgba(255, 61, 0, 0.2);
+            font-family: 'Inter', sans-serif;
         }
 
-        .rule-box h4 {
-            color: #4CAF50;
-            margin-bottom: 0.75rem;
+        .remember-title {
+            color: #ff3d00;
+            font-weight: 800;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
         }
 
-        .example-grid {
+        .word-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 0.5rem;
-            margin-top: 0.75rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem 2rem;
+            font-size: 1.1rem;
         }
 
-        .mermaid {
-            background: transparent !important;
+        .syllable-strong {
+            font-weight: 800;
+        }
+
+        /* Page 5: Process Styles */
+        .process-step {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #66bb6a;
+            line-height: 1;
+        }
+
+        .step-text {
+            font-size: 1.2rem;
+            line-height: 1.4;
+        }
+
+        .comparison-cards {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .comp-card {
+            background: #fff;
+            color: #333;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .word-analysis {
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-style: italic;
+            color: #0288d1;
+            text-align: right;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #0288d1;
+            /* display: inline-block; ignored with float */
+            float: right;
+        }
+
+        .rule-line {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .arrow-green {
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        .arrow-red {
+            color: #f44336;
+            font-weight: bold;
+        }
+
+        .result-final {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        /* Characters */
+        .character-overlay {
+            position: absolute;
+            width: 150px;
+            z-index: 10;
         }
     </style>
 </head>
 
-<body data-exercise-id="ejercicio-02">
+<body>
     <nav class="navbar">
         <div class="breadcrumb">
             <a href="../../index.html">🏠 Inicio</a>
             <span>→</span>
             <a href="../index.html">✏️ Práctica</a>
             <span>→</span>
-            <a href="index.html">Unidad 1</a>
+            <a href="../index.html">Unidad 1</a>
             <span>→</span>
-            <span>Ejercicio 2</span>
+            <span>Teoría: Tildes</span>
         </div>
     </nav>
 
-    <div class="container">
-        <header class="exercise-header">
-            <h1>📚 Cómo leer las palabras y poner tildes</h1>
-            <p class="instruction">Теория: правила чтения испанских слов и постановка ударения (tilde)</p>
-        </header>
+    <div class="container" style="max-width: 1000px;">
 
-        <!-- Section 1: Cómo leer las palabras -->
-        <div class="theory-block">
-            <h2>1️⃣ Cómo leer las palabras</h2>
+        <!-- SECTION 1: CÓMO LEER -->
+        <div class="theory-section">
+            <h1 class="theory-header">Cómo leer las palabras</h1>
 
-            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
-                Как определить ударный слог в испанском слове?
-            </p>
+            <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem;">
 
-            <div class="mermaid">
-                flowchart TD
-                A["¿Cuál es fuerte?<br /><span style='font-size:0.85em;color:#90a4ae'>Какой слог ударный?</span>"]
-                B["¿La palabra tiene tilde?<br /><span style='font-size:0.85em;color:#90a4ae'>Есть ли знак
-                    ударения?</span>"]
-                C["<strong>SÍ</strong> → Fuerte: con tilde<br /><span style='font-size:0.85em;color:#90a4ae'>Ударение на
-                    слоге с (´)</span><br /><span
-                    style='background:#1a1a2e;padding:4px 8px;border-radius:4px;font-size:0.9em'>círculo, árbol,
-                    sofá</span>"]
-                D["<strong>NO</strong> → ¿Última letra es<br />vocal, -n o -s?"]
-                E["<strong>SÍ</strong> → Fuerte: penúltima<br /><span
-                    style='font-size:0.85em;color:#90a4ae'>Предпоследний слог</span><br /><span
-                    style='background:#1a1a2e;padding:4px 8px;border-radius:4px;font-size:0.9em'>casa, hablan,
-                    casas</span>"]
-                F["<strong>NO</strong> → Fuerte: última<br /><span style='font-size:0.85em;color:#90a4ae'>Последний
-                    слог</span><br /><span
-                    style='background:#1a1a2e;padding:4px 8px;border-radius:4px;font-size:0.9em'>reloj, papel,
-                    verdad</span>"]
+                <!-- Flowchart Column -->
+                <div class="flowchart-container">
+                    <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2rem;">¿Cuál es fuerte?</h2>
 
-                A --> B
-                B -->|SÍ| C
-                B -->|NO| D
-                D -->|SÍ| E
-                D -->|NO| F
+                    <!-- Node 1 -->
+                    <div class="flow-node">
+                        <div class="decision-oval">¿La palabra<br>tiene tilde?</div>
+                        <div class="path-label">SÍ</div>
+                        <div class="arrow-right"></div>
+                        <div class="result-box">
+                            Fuerte: con tilde
+                            <ul class="examples-list">
+                                <li><span style="color: #9c27b0;"><u>cír</u>culo</span></li>
+                                <li><span style="color: #9c27b0;"><u>ár</u>bol</span></li>
+                                <li><span style="color: #9c27b0;">so<u>fá</u></span></li>
+                            </ul>
+                        </div>
+                        <div class="arrow-down-dotted"><span class="path-label"
+                                style="position: absolute; top: 10px; left: -30px;">NO</span></div>
+                    </div>
 
-                style A fill:#1a1a2e,stroke:#667eea,stroke-width:2px,color:#fff
-                style B fill:#1a1a2e,stroke:#667eea,stroke-width:2px,color:#fff
-                style C fill:#1a2e1a,stroke:#4CAF50,stroke-width:2px,color:#fff
-                style D fill:#2e1a1a,stroke:#FF9800,stroke-width:2px,color:#fff
-                style E fill:#1a2e2e,stroke:#4CAF50,stroke-width:2px,color:#fff
-                style F fill:#2e1a2e,stroke:#e91e63,stroke-width:2px,color:#fff
-            </div>
+                    <div style="height: 3rem;"></div>
 
-            <div class="concept-box" style="background: rgba(255, 193, 7, 0.1); margin-top: 1.5rem;">
-                <h4>🔔 ¡RECUERDA!</h4>
-                <p><strong>i/u + otra vocal</strong> = una sílaba (diptongo):</p>
-                <div class="example-grid">
-                    <div><strong>llu-via</strong></div>
-                    <div><strong>cua-tro</strong></div>
-                    <div><strong>hie-lo</strong></div>
-                    <div><strong>hue-vo</strong></div>
-                    <div><strong>i-dio-ma</strong></div>
-                    <div><strong>ciu-dad</strong></div>
-                    <div><strong>pai-sa-je</strong></div>
-                    <div><strong>au-la</strong></div>
+                    <!-- Node 2 -->
+                    <div class="flow-node">
+                        <div class="decision-oval">¿La última letra es<br>vocal, -n o -s?</div>
+                        <div class="path-label">SÍ</div>
+                        <div class="arrow-right"></div>
+                        <div class="result-box">
+                            Fuerte: penúltima
+                            <div class="syllable-icon">
+                                <div class="syllable-arrow" style="left: 0;">↓</div>
+                                <div class="s-block filled"></div>
+                                <div class="s-block"></div>
+                            </div>
+                            <ul class="examples-list">
+                                <li><span style="color: #9c27b0;">cir<u>cu</u>lo</span></li>
+                                <li><span style="color: #9c27b0;"><u>can</u>tan</span></li>
+                                <li><span style="color: #9c27b0;">a<u>mi</u>gas</span></li>
+                            </ul>
+                        </div>
+                        <div class="arrow-down-dotted"><span class="path-label"
+                                style="position: absolute; top: 10px; left: -30px;">NO</span></div>
+                    </div>
+
+                    <div style="height: 3rem;"></div>
+
+                    <!-- Node 3 (Result Only) -->
+                    <div class="flow-node" style="padding-left: 0;">
+                        <div style="width: 250px; display: flex; justify-content: center;">
+                            <div class="result-box">
+                                Fuerte: última
+                                <div class="syllable-icon">
+                                    <div class="syllable-arrow" style="right: 0;">↓</div>
+                                    <div class="s-block"></div>
+                                    <div class="s-block filled"></div>
+                                </div>
+                                <ul class="examples-list">
+                                    <li><span style="color: #9c27b0;">circu<u>lar</u></span></li>
+                                    <li><span style="color: #9c27b0;">pa<u>pel</u></span></li>
+                                    <li><span style="color: #9c27b0;">re<u>loj</u></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Remember Box Column -->
+                <div style="position: relative;">
+                    <!-- Kira pointing -->
+                    <img src="../assets/characters/kira.svg"
+                        style="position: absolute; bottom: -20px; right: -50px; width: 140px;" alt="Kira">
+
+                    <div class="remember-box">
+                        <div class="remember-title">¡Recuerda!</div>
+                        <p style="font-size: 1.1rem; margin-bottom: 1rem;">
+                            <strong>i/u + otra vocal</strong> es una sílaba:
+                        </p>
+                        <div class="word-grid">
+                            <div>llu-<strong>via</strong></div>
+                            <div>c<strong>ua</strong>-tro</div>
+                            <div>h<strong>ie</strong>-lo</div>
+                            <div>h<strong>ue</strong>-vo</div>
+                            <div>i-d<strong>io</strong>-ma</div>
+                            <div>in-di-vi-d<strong>uo</strong></div>
+                            <div>c<strong>iu</strong>-dad</div>
+                            <div>o</div>
+                            <div>p<strong>ai</strong>-sa-je</div>
+                            <div><strong>au</strong>-la</div>
+                            <div>a-c<strong>ei</strong>-te</div>
+                            <div>r<strong>eu</strong>-nión</div>
+                            <div></div>
+                            <div>r<strong>ui</strong>-do</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Section 2: Poner tildes -->
-        <div class="theory-block">
-            <h2>2️⃣ Poner tildes</h2>
+        <!-- SECTION 2: PONER TILDES -->
+        <div class="theory-section">
+            <h1 class="theory-header">Poner tildes</h1>
 
-            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
-                Когда нужен знак ударения (tilde)?
-            </p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
 
-            <div class="rule-box">
-                <h4>Regla 1: Palabras terminadas en vocal, -n o -s</h4>
-                <p><strong>Escribe la palabra sin tilde y piensa cuál es la sílaba fuerte según las reglas para
-                        leer.</strong></p>
-                <ol style="padding-left: 1.5rem; color: var(--text-secondary); margin-top: 0.75rem; line-height: 1.8;">
-                    <li>Reglas: <strong style="color: var(--text-primary);">-n</strong> (fuerte → penúltima) → esperamos
-                        <span style="color: #4CAF50; font-weight: 600;">HA-blan</span></li>
-                    <li>Pronunciación real: <strong style="color: var(--accent);">HA</strong>-blan ✓</li>
-                    <li>¿Coincide? <span style="color: #4CAF50;">SÍ</span> → <strong>hablan</strong> (sin tilde)</li>
-                </ol>
-            </div>
+                <!-- Steps Column -->
+                <div>
+                    <!-- Carlos explaining -->
+                    <div
+                        style="display: flex; gap: 1rem; margin-bottom: 2rem; background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 12px;">
+                        <img src="../assets/characters/carlos.svg" style="width: 80px;" alt="Carlos">
+                        <p style="font-style: italic;">"Sigue estos pasos para saber si una palabra lleva tilde o no."
+                        </p>
+                    </div>
 
-            <div class="rule-box">
-                <h4>Regla 2: Palabras terminadas en otras consonantes</h4>
-                <p><strong>Piensa cuál es la sílaba fuerte cuando oyes la palabra.</strong></p>
-                <ol style="padding-left: 1.5rem; color: var(--text-secondary); margin-top: 0.75rem; line-height: 1.8;">
-                    <li>Reglas: <strong style="color: var(--text-primary);">-o</strong> (vocal → penúltima) → esperamos
-                        te-le-<span style="color: #FF9800;">FO</span>-no</li>
-                    <li>Pronunciación real: <strong style="color: var(--accent);">te-LÉ-fo-no</strong></li>
-                    <li>¿Coincide? <span style="color: #e91e63;">NO</span> → <strong>teléfono</strong> (con tilde en LÉ)
-                    </li>
-                </ol>
-            </div>
+                    <div class="process-step">
+                        <div class="step-number">1.</div>
+                        <div class="step-text">
+                            Escribes la palabra sin tilde y piensas cuál es la sílaba fuerte <span
+                                class="arrow-green">según las reglas</span> para leer.
+                        </div>
+                    </div>
 
-            <div class="rule-box">
-                <h4>Regla 3: Diptongos (i/u + otra vocal)</h4>
-                <p><strong>Si las dos vocales son iguales:</strong> es regular, no pones tilde</p>
-                <p style="margin-left: 1.5rem; color: var(--text-secondary);">Ejemplo: <strong>cuatro</strong> → <span
-                        style="color: var(--accent);">CUA</span>-tro ✓</p>
+                    <div class="process-step">
+                        <div class="step-number">2.</div>
+                        <div class="step-text">
+                            Piensas cuál es la sílaba fuerte <span class="arrow-red">cuando oyes</span>.
+                        </div>
+                    </div>
 
-                <p style="margin-top: 0.75rem;"><strong>Si son diferentes:</strong> es irregular, pones tilde en la
-                    vocal fuerte</p>
-                <p style="margin-left: 1.5rem; color: var(--text-secondary);">Ejemplo: <strong>día</strong> → <span
-                        style="color: var(--accent);">DÍ</span>-a (tilde rompe el diptongo)</p>
-            </div>
+                    <div class="process-step">
+                        <div class="step-number">3.</div>
+                        <div class="step-text">
+                            Si las dos son <strong>iguales</strong>: es regular, no pones tilde.
+                        </div>
+                    </div>
 
-            <div class="example-box" style="margin-top: 1.5rem;">
-                <p class="spanish"><strong>Ejemplo:</strong> telefono → ¿tilde?</p>
-                <p class="translation">• Termina en -o (vocal) → regla: penúltima sílaba =
-                    te-le-<strong>FO</strong>-no<br>
-                    • Pronunciación: te-<strong>LÉ</strong>-fo-no<br>
-                    • No coincide → necesita tilde: <strong>teléfono</strong></p>
+                    <div class="process-step">
+                        <div class="step-number">4.</div>
+                        <div class="step-text">
+                            Si son <strong>diferentes</strong>: es irregular, pones tilde en la sílaba fuerte.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Examples Column -->
+                <div class="comparison-cards">
+
+                    <!-- Card 1 -->
+                    <div class="comp-card">
+                        <div
+                            style="display: grid; grid-template-columns: 1fr auto auto; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                            <div>1. Reglas: <strong>-n</strong> (fuerte → HA)</div>
+                            <div style="color: #4caf50; font-size: 1.5rem;">➜</div>
+                            <div style="text-align: right;">
+                                <span
+                                    style="color: #0288d1; font-size: 1.4rem; font-style: italic; text-decoration: underline; text-decoration-color: #4caf50; text-decoration-thickness: 2px;">hablan</span>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display: grid; grid-template-columns: 1fr auto auto; gap: 1rem; align-items: center;">
+                            <div>2. Pronunciación: <em style="color: #f44336;">HA-blan</em></div>
+                            <div style="color: #f44336; font-size: 1.5rem;">➜</div>
+                            <div style="text-align: right; font-size: 2rem;">=</div>
+                        </div>
+
+                        <div class="result-final">
+                            3. ¿es regular? <span style="color: #9c27b0; font-weight: bold;">sí</span> → <strong>sin
+                                tilde</strong>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="comp-card">
+                        <div
+                            style="display: grid; grid-template-columns: 1fr auto auto; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                            <div>1. Reglas: <strong>-o</strong> (fuerte → FO)</div>
+                            <div style="color: #4caf50; font-size: 1.5rem;">➜</div>
+                            <div style="text-align: right;">
+                                <span
+                                    style="color: #0288d1; font-size: 1.4rem; font-style: italic; text-decoration: underline; text-decoration-color: #4caf50; text-decoration-thickness: 2px;">teléfono</span>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display: grid; grid-template-columns: 1fr auto auto; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                            <div>2. Pronunciación: <em style="color: #f44336;">te-LE-fo-no</em></div>
+                            <div style="color: #f44336; font-size: 1.5rem;">➜</div>
+                            <div style="text-align: right;">
+                                <div style="font-size: 2rem;">≠</div>
+                            </div>
+                        </div>
+
+                        <div style="text-align: right; margin: 0 0 0.5rem 0;">
+                            <div style="font-size: 0.9rem; color: #666;">⇓</div>
+                            <div style="color: #0288d1; font-weight: bold; font-size: 1.2rem; font-style: italic;">
+                                teléfono</div>
+                        </div>
+
+                        <div class="result-final">
+                            3. ¿es regular? <span style="color: #ff9800; font-weight: bold;">no</span> → <strong>con
+                                tilde</strong>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </div>
 
-        <!-- Note -->
-        <div class="concept-box" style="background: rgba(255, 193, 7, 0.05); border: 1px solid rgba(255, 193, 7, 0.3);">
-            <p style="color: var(--text-secondary);">
-                📌 <strong>Esto es teoría.</strong> Los ejercicios para practicar estas reglas están en el siguiente
-                ejercicio.
-            </p>
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <a href="https://www.perplexity.ai/search?q=Explica+las+reglas+de+acentuación+en+español+agudas+llanas+esdrújulas+con+ejemplos"
+                target="_blank" class="btn btn-ai">🤖 Preguntar a IA</a>
         </div>
 
-        <!-- Action buttons -->
-        <div class="exercise-actions">
-            <a href="https://www.perplexity.ai/search?q=Explica+las+reglas+de+acentuación+en+español+con+ejemplos+nivel+B2"
-                target="_blank" class="btn btn-ai">🤖 Preguntar a IA sobre las tildes</a>
-        </div>
-
-        <!-- Navigation -->
         <div class="exercise-nav">
-            <a href="ejercicio-01-textos.html">← Anterior</a>
-            <a href="index.html">📋 Volver a lista</a>
-            <a href="ejercicio-03-tildes.html">Siguiente →</a>
+            <a href="ejercicio-01-textos.html" class="btn-nav">← Anterior</a>
+            <a href="index.html" class="btn-nav">📋 Lista</a>
+            <a href="ejercicio-03-tildes.html" class="btn-nav">Siguiente →</a>
         </div>
+
     </div>
-
-    <script src="../js/exercise-engine.js"></script>
-    <script>
-        // Initialize Mermaid
-        mermaid.initialize({
-            startOnLoad: true,
-            theme: 'dark',
-            themeVariables: {
-                primaryColor: '#1a1a2e',
-                primaryTextColor: '#fff',
-                primaryBorderColor: '#667eea',
-                lineColor: '#667eea',
-                secondaryColor: '#2d2d44',
-                tertiaryColor: '#0f0f1a',
-                fontSize: '14px'
-            }
-        });
-
-        // Mark as completed
-        ExerciseEngine.init({}, {
-            exerciseId: 'ejercicio-02',
-            unitId: 'unidad-1'
-        });
-
-        ExerciseEngine.saveProgress(1, 1);
-    </script>
 </body>
 
 </html>
